@@ -20,6 +20,8 @@ PYTHON_TARGETS_STR = " ".join([str(p) for p in PYTHON_TARGETS])
 ANSIBLE_TARGETS = [ROOT_DIR]
 ANSIBLE_TARGETS_STR = " ".join([str(t) for t in ANSIBLE_TARGETS])
 
+SAFETY_IGNORE = [42923]
+
 
 def _run(c, command, env=None):
     # type: (Context, str, Optional[Dict]) -> Result
@@ -89,10 +91,13 @@ def flake8(c):
 def safety(c):
     # type: (Context) -> None
     """Run safety."""
+    safety_options = ["--stdin", "--full-report"]
+    if SAFETY_IGNORE:
+        safety_options += ["-i", *[str(ignore) for ignore in SAFETY_IGNORE]]
     _run(
         c,
         "poetry export --dev --format=requirements.txt --without-hashes | "
-        "poetry run safety check --stdin --full-report",
+        f"poetry run safety check {' '.join(safety_options)}",
     )
 
 
