@@ -1,0 +1,9 @@
+exclude_paths:
+  - .github/
+  - .roles/
+  - .collections/
+  - .cache/
+  - ~/.cache/ansible-lint/
+  - ~/.cache/ansible-compat/
+skip_list:
+  - '106'
