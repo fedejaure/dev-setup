@@ -629,7 +629,7 @@ python-versions = "*"
 
 [[package]]
 name = "molecule"
-version = "3.6.0"
+version = "3.6.1"
 description = "Molecule aids in the development and testing of Ansible roles"
 category = "dev"
 optional = false
@@ -1175,7 +1175,7 @@ pyyaml = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "<3.11,>=3.10"
-content-hash = "962df3c14f67741a664300e1c09ac1605056576a10b4151523513b8752aea67f"
+content-hash = "56f2ee337e24e5ffcd7bd46b9860bffa1851ea61f253968a5caa56af921db6cc"
 
 [metadata.files]
 ansible = [
@@ -1544,8 +1544,8 @@ mccabe = [
     {file = "mccabe-0.6.1.tar.gz", hash = "sha256:dd8d182285a0fe56bace7f45b5e7d1a6ebcbf524e8f3bd87eb0f125271b8831f"},
 ]
 molecule = [
-    {file = "molecule-3.6.0-py3-none-any.whl", hash = "sha256:2ff4134a6b5da276a3eac67eb5214bedeb3b62575d8f9131e22e8f3551a0e63a"},
-    {file = "molecule-3.6.0.tar.gz", hash = "sha256:2efeeea8c0cdb6d987c9e6374725b99e745a669ff7489346e69ab7a62dc86448"},
+    {file = "molecule-3.6.1-py3-none-any.whl", hash = "sha256:f7f57d6b3b775e876bea2a46e368eee72d391e163f8175acf29fef797a280248"},
+    {file = "molecule-3.6.1.tar.gz", hash = "sha256:3b7d5ba2978c15a034df8c7aa59dec5436f7d3260d1f9db2c78ae14ae3a9deeb"},
 ]
 molecule-docker = [
     {file = "molecule-docker-1.1.0.tar.gz", hash = "sha256:e15133395f10dbf60f75125aae7145f47747fc7158f2317698885013796252bf"},
