@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2.4.0
+        with:
+          ref: develop
 
       - name: Set up Python 3.10
         uses: actions/setup-python@v2.3.2
@@ -37,3 +39,6 @@ jobs:
             
             - Update pre-commit hooks to the latest version.
           delete-branch: true
+          labels: |
+            dependencies
+            python

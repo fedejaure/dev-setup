@@ -17,8 +17,12 @@ PYTHON_TARGETS = [
 ]
 PYTHON_TARGETS_STR = " ".join([str(p) for p in PYTHON_TARGETS])
 
-ANSIBLE_TARGETS = [ROOT_DIR]
+MOLECULE_DIR = ROOT_DIR / "molecule"
+ROLES_DIR = ROOT_DIR / "roles"
+PLAYBOOKS_DIR = ROOT_DIR / "playbooks"
+ANSIBLE_TARGETS = [MOLECULE_DIR, PLAYBOOKS_DIR]
 ANSIBLE_TARGETS_STR = " ".join([str(t) for t in ANSIBLE_TARGETS])
+ANSIBLE_ROLES_PATH = f"{ROOT_DIR / '.roles'}:ROLES_DIR"
 
 SAFETY_IGNORE = [42923]
 
@@ -133,7 +137,7 @@ def mypy(c):
 def tests(c):
     # type: (Context) -> None
     """Run ansible molecule test."""
-    print("ToDo ...")
+    _run(c, "poetry run molecule test", env={"ANSIBLE_ROLES_PATH": ANSIBLE_ROLES_PATH})
 
 
 @task(
@@ -155,7 +159,7 @@ def playbook(c, tag, skip_tag, list_tags=False, target="main"):
         playbook_options += ["--skip-tags", f'"{ ",".join(skip_tag) }"']
     if list_tags:
         playbook_options.append("--list-tags")
-    print("ToDo ...")
+    _run(c, f"poetry run ansible-playbook playbooks/{target}.yml {' '.join(playbook_options)}")
 
 
 @task(
