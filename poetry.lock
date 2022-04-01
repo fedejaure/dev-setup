@@ -1,13 +1,13 @@
 [[package]]
 name = "ansible"
-version = "5.4.0"
+version = "5.5.0"
 description = "Radically simple IT automation"
 category = "main"
 optional = false
 python-versions = ">=3.8"
 
 [package.dependencies]
-ansible-core = ">=2.12.2,<2.13.0"
+ansible-core = ">=2.12.3,<2.13.0"
 
 [[package]]
 name = "ansible-compat"
@@ -26,7 +26,7 @@ test = ["coverage", "flaky", "pip-tools", "pytest", "pytest-markdown", "pytest-m
 
 [[package]]
 name = "ansible-core"
-version = "2.12.2"
+version = "2.12.4"
 description = "Radically simple IT automation"
 category = "main"
 optional = false
@@ -1175,18 +1175,18 @@ pyyaml = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "<3.11,>=3.10"
-content-hash = "14823f0330e17a70f7b9c542aad8b2fe8c8e2489b14d58221a013331cd03b231"
+content-hash = "f61b11d6dbd79a1a259e11450f075d1787fb55a601129fa038b357f0743fcfd6"
 
 [metadata.files]
 ansible = [
-    {file = "ansible-5.4.0.tar.gz", hash = "sha256:2f0ecbd8a3232e520bf3e3bc23f40dda60b9ce7924ca194bd35f4de4027100fc"},
+    {file = "ansible-5.5.0.tar.gz", hash = "sha256:b8a76d737889c9bfd0e6b0f2276dcf8d836da667067a355776f3504d7a66d518"},
 ]
 ansible-compat = [
     {file = "ansible-compat-1.0.0.tar.gz", hash = "sha256:2ade2acbd1d7868eeb602c682afe92bc8c05480333205c328b4c2a1b09f970a4"},
     {file = "ansible_compat-1.0.0-py3-none-any.whl", hash = "sha256:8b9c9678e82c328df9574cd7eb3777e7f25cf1530bc48e612597213bc6e4bd0d"},
 ]
 ansible-core = [
-    {file = "ansible-core-2.12.2.tar.gz", hash = "sha256:bc79e1723a5a92cbc105d581b25b66840d15bb5f4c98925c936ef5a71f92e7c3"},
+    {file = "ansible-core-2.12.4.tar.gz", hash = "sha256:827af75985a6f04b980bd371027bf038cb187640628557298acb9983a8f2c2da"},
 ]
 ansible-lint = [
     {file = "ansible-lint-5.4.0.tar.gz", hash = "sha256:2160a60b4ab034c04006d701a1779340ffb0f6e28f030ff8de958e1062a88962"},
