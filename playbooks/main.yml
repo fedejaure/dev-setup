@@ -3,5 +3,5 @@
   
   tasks:
   - name: Hello World
-    debug:
+    ansible.builtin.debug:
       msg: hello world
