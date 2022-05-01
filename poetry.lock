@@ -11,11 +11,11 @@ ansible-core = ">=2.12.5,<2.13.0"
 
 [[package]]
 name = "ansible-compat"
-version = "1.0.0"
+version = "2.0.2"
 description = "Ansible compatibility goodies"
 category = "dev"
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.8"
 
 [package.dependencies]
 PyYAML = "*"
@@ -41,26 +41,25 @@ resolvelib = ">=0.5.3,<0.6.0"
 
 [[package]]
 name = "ansible-lint"
-version = "5.4.0"
-description = "Checks playbooks for practices and behaviour that could potentially be improved"
+version = "6.0.2"
+description = "Checks playbooks for practices and behavior that could potentially be improved"
 category = "dev"
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.8"
 
 [package.dependencies]
+ansible-compat = ">=2.0.2"
+ansible-core = ">=2.12.0"
 enrich = ">=1.2.6"
 packaging = "*"
 pyyaml = "*"
 rich = ">=9.5.1"
-"ruamel.yaml" = {version = ">=0.15.37,<1", markers = "python_version >= \"3.7\""}
-tenacity = "*"
+"ruamel.yaml" = ">=0.15.34,<0.18"
 wcmatch = ">=7.0"
+yamllint = ">=1.25.0"
 
 [package.extras]
-community = ["ansible (>=2.10)"]
-core = ["ansible-core (>=2.11.4)"]
-test = ["coverage (>=6.2,<6.3)", "tomli (>=1.2.3,<2.0.0)", "flaky (>=3.7.0)", "pytest (>=6.0.1)", "pytest-cov (>=2.10.1)", "pytest-xdist (>=2.1.0)", "psutil"]
-yamllint = ["yamllint (>=1.25.0)"]
+test = ["coverage (>=6.2,<6.3)", "tomli (>=1.2.3,<2.0.0)", "flaky (>=3.7.0)", "pytest (>=6.0.1)", "pytest-cov (>=2.10.1)", "pytest-plus (>=0.2)", "pytest-xdist (>=2.1.0)", "psutil", "black", "mypy", "pylint", "flake8"]
 
 [[package]]
 name = "arrow"
@@ -1065,17 +1064,6 @@ python-versions = ">=3.6"
 test = ["enrich (>=1.2.6)", "mock (>=4.0.3)", "molecule (>=3.4.0)", "pytest-cov (>=2.12.1)", "pytest-plus (>=0.2)", "pytest-xdist (>=2.3.0)", "pytest (>=6.2.5)"]
 
 [[package]]
-name = "tenacity"
-version = "8.0.1"
-description = "Retry code until it succeeds"
-category = "dev"
-optional = false
-python-versions = ">=3.6"
-
-[package.extras]
-doc = ["reno", "sphinx", "tornado (>=4.5)"]
-
-[[package]]
 name = "text-unidecode"
 version = "1.3"
 description = "The most basic Text::Unidecode port"
@@ -1177,22 +1165,22 @@ pyyaml = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "<3.11,>=3.10"
-content-hash = "ae25cfd3e6921d869a758d377ae45711deb0e58b663348a75daa8da47d8df822"
+content-hash = "69757ffffb6633dd59d34c69824f01a98526128dfb209c9b9f415e81ce3aa2aa"
 
 [metadata.files]
 ansible = [
     {file = "ansible-5.7.0.tar.gz", hash = "sha256:e80c0e74de1774adae7c0233b247ff72b8fbd8b5f107077db5d0b7f0370d6b86"},
 ]
 ansible-compat = [
-    {file = "ansible-compat-1.0.0.tar.gz", hash = "sha256:2ade2acbd1d7868eeb602c682afe92bc8c05480333205c328b4c2a1b09f970a4"},
-    {file = "ansible_compat-1.0.0-py3-none-any.whl", hash = "sha256:8b9c9678e82c328df9574cd7eb3777e7f25cf1530bc48e612597213bc6e4bd0d"},
+    {file = "ansible-compat-2.0.2.tar.gz", hash = "sha256:c651995dc323ef145bab857fee6540febc881fb71b7feafe8163d49e273163a5"},
+    {file = "ansible_compat-2.0.2-py3-none-any.whl", hash = "sha256:456acfa7af04cafb1b80c96f143658b353a6164d5ec1442c7961a4eb052be136"},
 ]
 ansible-core = [
     {file = "ansible-core-2.12.5.tar.gz", hash = "sha256:1ccc9944f101331adad1ed40d5ac66a8149133052ae34db0267a74aa73beebb3"},
 ]
 ansible-lint = [
-    {file = "ansible-lint-5.4.0.tar.gz", hash = "sha256:2160a60b4ab034c04006d701a1779340ffb0f6e28f030ff8de958e1062a88962"},
-    {file = "ansible_lint-5.4.0-py3-none-any.whl", hash = "sha256:fb57755825b50da88c226052772bd843d37714155b504175912daac0e186e8c0"},
+    {file = "ansible-lint-6.0.2.tar.gz", hash = "sha256:b539bc22d13e6de0cc2e25758e1d28b2bc01561a414ae37ceda3708b5a2a79ed"},
+    {file = "ansible_lint-6.0.2-py3-none-any.whl", hash = "sha256:94b981384b222b436533283dbaa2c13ccf1e81558d89955951ff9921c352a770"},
 ]
 arrow = [
     {file = "arrow-1.2.2-py3-none-any.whl", hash = "sha256:d622c46ca681b5b3e3574fcb60a04e5cc81b9625112d5fb2b44220c36c892177"},
@@ -1781,10 +1769,6 @@ stevedore = [
 subprocess-tee = [
     {file = "subprocess-tee-0.3.5.tar.gz", hash = "sha256:ff5cced589a4b8ac973276ca1ba21bb6e3de600cde11a69947ff51f696efd577"},
     {file = "subprocess_tee-0.3.5-py3-none-any.whl", hash = "sha256:d34186c639aa7f8013b5dfba80e17f52589539137c9d9205f2ae1c1bd03549e1"},
-]
-tenacity = [
-    {file = "tenacity-8.0.1-py3-none-any.whl", hash = "sha256:f78f4ea81b0fabc06728c11dc2a8c01277bfc5181b321a4770471902e3eb844a"},
-    {file = "tenacity-8.0.1.tar.gz", hash = "sha256:43242a20e3e73291a28bcbcacfd6e000b02d3857a9a9fff56b297a27afdc932f"},
 ]
 text-unidecode = [
     {file = "text-unidecode-1.3.tar.gz", hash = "sha256:bad6603bb14d279193107714b288be206cac565dfa49aa5b105294dd5c4aab93"},
