@@ -34,7 +34,7 @@ safety = "^1.10.3"
 mypy = "^0.950"
 bump2version = "^1.0.1"
 yamllint = "^1.26.3"
-ansible-lint = "^5.4.0"
+ansible-lint = "^6.2.1"
 molecule = {extras = ["docker"], version = "^3.6.1"}
 
 [tool.flakehell]
