@@ -135,7 +135,7 @@ chardet = ">=3.0.2"
 
 [[package]]
 name = "black"
-version = "22.3.0"
+version = "22.6.0"
 description = "The uncompromising code formatter."
 category = "dev"
 optional = false
@@ -146,7 +146,7 @@ click = ">=8.0.0"
 mypy-extensions = ">=0.4.3"
 pathspec = ">=0.9.0"
 platformdirs = ">=2"
-tomli = {version = ">=1.1.0", markers = "python_version < \"3.11\""}
+tomli = {version = ">=1.1.0", markers = "python_full_version < \"3.11.0a7\""}
 
 [package.extras]
 colorama = ["colorama (>=0.4.3)"]
@@ -1169,7 +1169,7 @@ pyyaml = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "<3.11,>=3.10"
-content-hash = "b5fc1574af29b8a998cde997eed37a601ea40579a578608440f30521274a1315"
+content-hash = "c34f9e54bb47cb6cfb98e774bd06e9ac4f5ddb2939c0d7f00c02016cd2552f46"
 
 [metadata.files]
 ansible = []
