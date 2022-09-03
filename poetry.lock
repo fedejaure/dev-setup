@@ -472,11 +472,15 @@ pydocstyle = ">=2.1"
 
 [[package]]
 name = "flake8-logging-format"
-version = "0.6.0"
-description = "Flake8 extension to validate (lack of) logging format strings"
+version = "0.7.5"
+description = ""
 category = "dev"
 optional = false
 python-versions = "*"
+
+[package.extras]
+lint = ["flake8"]
+test = ["PyHamcrest", "pytest", "pytest-cov"]
 
 [[package]]
 name = "flakehell"
@@ -1148,7 +1152,7 @@ setuptools = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "<3.11,>=3.10"
-content-hash = "23521eeee29982c184b4cf84541ee855a84a5d1778d5a5898cd8234fdd679c3b"
+content-hash = "0846e23e04672bf0e25b1f5b7401caa1f56c6467393ccff0d255052584e1b057"
 
 [metadata.files]
 ansible = [
@@ -1389,7 +1393,7 @@ flake8-docstrings = [
     {file = "flake8_docstrings-1.6.0-py2.py3-none-any.whl", hash = "sha256:99cac583d6c7e32dd28bbfbef120a7c0d1b6dde4adb5a9fd441c4227a6534bde"},
 ]
 flake8-logging-format = [
-    {file = "flake8-logging-format-0.6.0.tar.gz", hash = "sha256:ca5f2b7fc31c3474a0aa77d227e022890f641a025f0ba664418797d979a779f8"},
+    {file = "flake8-logging-format-0.7.5.tar.gz", hash = "sha256:54f7e349c934ce5c594f251885bc2240e99f6b48752a672a8fc7e3d1388352bb"},
 ]
 flakehell = [
     {file = "flakehell-0.9.0-py3-none-any.whl", hash = "sha256:48a3a9b46136240e52b3b32a78a0826c45f6dcf7d980c30f758c1db5b1439c0b"},
