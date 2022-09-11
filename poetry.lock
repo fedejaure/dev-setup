@@ -43,26 +43,29 @@ resolvelib = ">=0.5.3,<0.9.0"
 
 [[package]]
 name = "ansible-lint"
-version = "5.4.0"
-description = "Checks playbooks for practices and behaviour that could potentially be improved"
+version = "6.5.2"
+description = "Checks playbooks for practices and behavior that could potentially be improved"
 category = "dev"
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.8"
 
 [package.dependencies]
+ansible-compat = ">=2.2.0"
+ansible-core = ">=2.12.0"
+black = ">=22.1.0"
 enrich = ">=1.2.6"
+filelock = "*"
+jsonschema = ">=4.9.0"
 packaging = "*"
 pyyaml = "*"
 rich = ">=9.5.1"
-"ruamel.yaml" = {version = ">=0.15.37,<1", markers = "python_version >= \"3.7\""}
-tenacity = "*"
+"ruamel.yaml" = ">=0.15.34,<0.18"
 wcmatch = ">=7.0"
+yamllint = ">=1.25.0"
 
 [package.extras]
-community = ["ansible (>=2.10)"]
-core = ["ansible-core (>=2.11.4)"]
-test = ["coverage (>=6.2,<6.3)", "flaky (>=3.7.0)", "psutil", "pytest (>=6.0.1)", "pytest-cov (>=2.10.1)", "pytest-xdist (>=2.1.0)", "tomli (>=1.2.3,<2.0.0)"]
-yamllint = ["yamllint (>=1.25.0)"]
+docs = ["myst-parser (>=0.16.1)", "pipdeptree (>=2.2.1)", "sphinx (>=4.4.0)", "sphinx-ansible-theme (>=0.9.1)", "sphinx-rtd-theme (>=0.5.2,<1.0.0)", "sphinxcontrib-apidoc (>=0.3.0)", "sphinxcontrib-programoutput2 (>=2.0a1)", "yamllint (>=1.26.3)"]
+test = ["black", "coverage-enable-subprocess", "coverage[toml] (>=6.4.4)", "flake8", "flake8-future-annotations", "flaky (>=3.7.0)", "mypy", "psutil", "pylint", "pytest (>=6.0.1)", "pytest-plus (>=0.2)", "pytest-xdist (>=2.1.0)"]
 
 [[package]]
 name = "arrow"
@@ -593,7 +596,7 @@ jinja2 = "*"
 
 [[package]]
 name = "jsonschema"
-version = "4.7.2"
+version = "4.16.0"
 description = "An implementation of JSON Schema validation for Python"
 category = "dev"
 optional = false
@@ -1039,17 +1042,6 @@ python-versions = ">=3.6"
 test = ["enrich (>=1.2.6)", "mock (>=4.0.3)", "molecule (>=3.4.0)", "pytest (>=6.2.5)", "pytest-cov (>=2.12.1)", "pytest-plus (>=0.2)", "pytest-xdist (>=2.3.0)"]
 
 [[package]]
-name = "tenacity"
-version = "8.0.1"
-description = "Retry code until it succeeds"
-category = "dev"
-optional = false
-python-versions = ">=3.6"
-
-[package.extras]
-doc = ["reno", "sphinx", "tornado (>=4.5)"]
-
-[[package]]
 name = "text-unidecode"
 version = "1.3"
 description = "The most basic Text::Unidecode port"
@@ -1152,7 +1144,7 @@ setuptools = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "<3.11,>=3.10"
-content-hash = "0846e23e04672bf0e25b1f5b7401caa1f56c6467393ccff0d255052584e1b057"
+content-hash = "357583c0e091fe5d47961ab841cca6b2b9f201d72584f68ba981ec17f25caeab"
 
 [metadata.files]
 ansible = [
@@ -1168,8 +1160,8 @@ ansible-core = [
     {file = "ansible_core-2.13.3-py3-none-any.whl", hash = "sha256:449dbcfbfe18e4f23dec0c29b9aa60d76d205657a8e136484f4edea49faf7614"},
 ]
 ansible-lint = [
-    {file = "ansible-lint-5.4.0.tar.gz", hash = "sha256:2160a60b4ab034c04006d701a1779340ffb0f6e28f030ff8de958e1062a88962"},
-    {file = "ansible_lint-5.4.0-py3-none-any.whl", hash = "sha256:fb57755825b50da88c226052772bd843d37714155b504175912daac0e186e8c0"},
+    {file = "ansible-lint-6.5.2.tar.gz", hash = "sha256:f4432c74c0f28b2870a188b4999592f6338042f30d0c6f4ee11b32440ca9ffe4"},
+    {file = "ansible_lint-6.5.2-py3-none-any.whl", hash = "sha256:ac8241d3ce1b161f0e052b44f0d226fbda7d8f318d4f24269de7f2b87e32ff6f"},
 ]
 arrow = [
     {file = "arrow-1.2.2-py3-none-any.whl", hash = "sha256:d622c46ca681b5b3e3574fcb60a04e5cc81b9625112d5fb2b44220c36c892177"},
@@ -1432,8 +1424,8 @@ jinja2-time = [
     {file = "jinja2_time-0.2.0-py2.py3-none-any.whl", hash = "sha256:d3eab6605e3ec8b7a0863df09cc1d23714908fa61aa6986a845c20ba488b4efa"},
 ]
 jsonschema = [
-    {file = "jsonschema-4.7.2-py3-none-any.whl", hash = "sha256:c7448a421b25e424fccfceea86b4e3a8672b4436e1988ccbde92c80828d4f085"},
-    {file = "jsonschema-4.7.2.tar.gz", hash = "sha256:73764f461d61eb97a057c929368610a134d1d1fffd858acfe88864ee94f1f1d3"},
+    {file = "jsonschema-4.16.0-py3-none-any.whl", hash = "sha256:9e74b8f9738d6a946d70705dc692b74b5429cd0960d58e79ffecfc43b2221eb9"},
+    {file = "jsonschema-4.16.0.tar.gz", hash = "sha256:165059f076eff6971bae5b742fc029a7b4ef3f9bcf04c14e4776a7605de14b23"},
 ]
 markupsafe = [
     {file = "MarkupSafe-2.0.1-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:d8446c54dc28c01e5a2dbac5a25f071f6653e6e40f3a8818e8b45d790fe6ef53"},
@@ -1758,10 +1750,6 @@ stevedore = [
 subprocess-tee = [
     {file = "subprocess-tee-0.3.5.tar.gz", hash = "sha256:ff5cced589a4b8ac973276ca1ba21bb6e3de600cde11a69947ff51f696efd577"},
     {file = "subprocess_tee-0.3.5-py3-none-any.whl", hash = "sha256:d34186c639aa7f8013b5dfba80e17f52589539137c9d9205f2ae1c1bd03549e1"},
-]
-tenacity = [
-    {file = "tenacity-8.0.1-py3-none-any.whl", hash = "sha256:f78f4ea81b0fabc06728c11dc2a8c01277bfc5181b321a4770471902e3eb844a"},
-    {file = "tenacity-8.0.1.tar.gz", hash = "sha256:43242a20e3e73291a28bcbcacfd6e000b02d3857a9a9fff56b297a27afdc932f"},
 ]
 text-unidecode = [
     {file = "text-unidecode-1.3.tar.gz", hash = "sha256:bad6603bb14d279193107714b288be206cac565dfa49aa5b105294dd5c4aab93"},
