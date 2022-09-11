@@ -18,40 +18,42 @@ ansible = "^6.3.0"
 [tool.poetry.dev-dependencies]
 pre-commit = "^2.20.0"
 invoke = "^1.7.1"
-flake8 = "^5.0.4"
-flakehell = "^0.9.0"
+flake8 = "^4.0.1"
+flakeheaven = "^3.0.0"
 flake8-builtins = "^1.5.3"
 flake8-blind-except = "^0.2.1"
 flake8-logging-format = "^0.7.5"
 flake8-bugbear = "^22.7.1"
 flake8-annotations = "^2.9.1"
 flake8-docstrings = "^1.6.0"
-flake8-bandit = "^4.1.1"
+flake8-bandit = "^3.0.0"
 darglint = "^1.8.0"
+pylint = "^2.14.5"
 isort = "^5.9.3"
 black = "^22.8"
 safety = "^2.1.1"
 mypy = "^0.971"
 bump2version = "^1.0.1"
 yamllint = "^1.27.1"
-ansible-lint = "^5.4.0"
+ansible-lint = "^6.5.2"
 molecule = {extras = ["docker"], version = "^4.0.1"}
 
-[tool.flakehell]
+[tool.flakeheaven]
 format = "grouped"
 max_line_length = 99
 show_source = true
 docstring-convention = "google"
 extended_default_ignore = []
 
-[tool.flakehell.plugins]
+[tool.flakeheaven.plugins]
 pyflakes = ["+*"]
 pycodestyle = ["+*"]
 mccabe = ["+*"]
 "flake8-*" = ["+*"]
+pylint = ["-C????", "-E????", "+F????", "+I????", "-R????", "-W????"]
 darglint = ["+*"]
 
-[tool.flakehell.exceptions."tests/"]
+[tool.flakeheaven.exceptions."tests/"]
 flake8-bandit = ["-S101"]
 
 [tool.isort]
