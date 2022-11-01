@@ -101,7 +101,7 @@ python-versions = ">=3.5"
 dev = ["cloudpickle", "coverage[toml] (>=5.0.2)", "furo", "hypothesis", "mypy (>=0.900,!=0.940)", "pre-commit", "pympler", "pytest (>=4.3.0)", "pytest-mypy-plugins", "sphinx", "sphinx-notfound-page", "zope.interface"]
 docs = ["furo", "sphinx", "sphinx-notfound-page", "zope.interface"]
 tests = ["cloudpickle", "coverage[toml] (>=5.0.2)", "hypothesis", "mypy (>=0.900,!=0.940)", "pympler", "pytest (>=4.3.0)", "pytest-mypy-plugins", "zope.interface"]
-tests_no_zope = ["cloudpickle", "coverage[toml] (>=5.0.2)", "hypothesis", "mypy (>=0.900,!=0.940)", "pympler", "pytest (>=4.3.0)", "pytest-mypy-plugins"]
+tests-no-zope = ["cloudpickle", "coverage[toml] (>=5.0.2)", "hypothesis", "mypy (>=0.900,!=0.940)", "pympler", "pytest (>=4.3.0)", "pytest-mypy-plugins"]
 
 [[package]]
 name = "bandit"
@@ -225,7 +225,7 @@ optional = false
 python-versions = ">=3.6.0"
 
 [package.extras]
-unicode_backport = ["unicodedata2"]
+unicode-backport = ["unicodedata2"]
 
 [[package]]
 name = "click"
@@ -523,7 +523,7 @@ flake8 = "*"
 
 [[package]]
 name = "flakeheaven"
-version = "3.0.0"
+version = "3.2.0"
 description = "FlakeHeaven is a [Flake8](https://gitlab.com/pycqa/flake8) wrapper to make it cool."
 category = "dev"
 optional = false
@@ -599,9 +599,9 @@ python-versions = ">=3.6.1,<4.0"
 
 [package.extras]
 colors = ["colorama (>=0.4.3,<0.5.0)"]
-pipfile_deprecated_finder = ["pipreqs", "requirementslib"]
+pipfile-deprecated-finder = ["pipreqs", "requirementslib"]
 plugins = ["setuptools"]
-requirements_deprecated_finder = ["pip-api", "pipreqs"]
+requirements-deprecated-finder = ["pip-api", "pipreqs"]
 
 [[package]]
 name = "Jinja2"
@@ -711,7 +711,7 @@ python-versions = ">=3.8"
 docker = ">=4.3.1"
 molecule = ">=4.0.0"
 requests = "*"
-selinux = {version = "*", markers = "sys_platform == \"linux2\" or sys_platform == \"linux\""}
+selinux = {version = "*", markers = "sys_platform == \"linux\" or sys_platform == \"linux2\""}
 
 [package.extras]
 docs = ["Sphinx", "simplejson", "sphinx-ansible-theme (>=0.2.2)"]
@@ -969,7 +969,7 @@ urllib3 = ">=1.21.1,<1.27"
 
 [package.extras]
 socks = ["PySocks (>=1.5.6,!=1.5.7)"]
-use_chardet_on_py3 = ["chardet (>=3.0.2,<6)"]
+use-chardet-on-py3 = ["chardet (>=3.0.2,<6)"]
 
 [[package]]
 name = "resolvelib"
@@ -1232,7 +1232,7 @@ setuptools = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "<3.11,>=3.10"
-content-hash = "487fcb5e4aba1efc80bd37f6a2631f17dbab027b500034a720af8b07ccfb24a2"
+content-hash = "9c0de90ce56b0efd7130d3f838789511d9c7d4bf4b39a390dceacf57a93c3f1b"
 
 [metadata.files]
 ansible = [
@@ -1508,8 +1508,8 @@ flake8-polyfill = [
     {file = "flake8_polyfill-1.0.2-py2.py3-none-any.whl", hash = "sha256:12be6a34ee3ab795b19ca73505e7b55826d5f6ad7230d31b18e106400169b9e9"},
 ]
 flakeheaven = [
-    {file = "flakeheaven-3.0.0-py3-none-any.whl", hash = "sha256:c3e8acbbb3ca29402132cc160857c4f9ed6051a37f9d4d4f424ea6d14616ea33"},
-    {file = "flakeheaven-3.0.0.tar.gz", hash = "sha256:81771740b2de3151d9cf6a38b63bc0f30b1070a15ddd2acf1c1706271d9dc0dd"},
+    {file = "flakeheaven-3.2.0-py3-none-any.whl", hash = "sha256:ec5a508c3db64d73128b65cb2a5a2c0a2d9f2e4b435e9fa2bcc03bf0df86da79"},
+    {file = "flakeheaven-3.2.0.tar.gz", hash = "sha256:225333d7bf309079f19a2c5f02d427fc7558a0d0c065944de88041ca94f5525c"},
 ]
 gitdb = [
     {file = "gitdb-4.0.9-py3-none-any.whl", hash = "sha256:8033ad4e853066ba6ca92050b9df2f89301b8fc8bf7e9324d412a63f8bf1a8fd"},
@@ -1998,5 +1998,6 @@ wrapt = [
     {file = "wrapt-1.14.1.tar.gz", hash = "sha256:380a85cf89e0e69b7cfbe2ea9f765f004ff419f34194018a6827ac0e3edfed4d"},
 ]
 yamllint = [
+    {file = "yamllint-1.28.0-py2.py3-none-any.whl", hash = "sha256:89bb5b5ac33b1ade059743cf227de73daa34d5e5a474b06a5e17fc16583b0cf2"},
     {file = "yamllint-1.28.0.tar.gz", hash = "sha256:9e3d8ddd16d0583214c5fdffe806c9344086721f107435f68bad990e5a88826b"},
 ]
