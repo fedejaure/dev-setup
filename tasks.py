@@ -150,7 +150,7 @@ def tests(c):
 def playbook(c, tag, skip_tag, list_tags=False, target="main"):
     # type: (Context, List[str], List[str], bool, str) -> None
     """Run Ansible playbooks, executing the defined tasks on the targeted hosts."""
-    playbook_options = ["-i", "inventory"]
+    playbook_options = ["-i", "inventory", "--ask-pass", "--ask-become-pass"]
     if tag:
         playbook_options += ["--tags", f'"{ ",".join(tag) }"']
     if skip_tag:

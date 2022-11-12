@@ -1,0 +1,17 @@
+---
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
+
+homebrew_installed_packages:
+  - git
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - firefox
+  - google-chrome
+  - slack
+
+mas_installed_apps:
+  - id: 497799835
+    name: "Xcode"
