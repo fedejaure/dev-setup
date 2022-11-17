@@ -12,6 +12,9 @@ homebrew_cask_apps:
   - google-chrome
   - slack
 
+# it should be overridden in macos.config.yml
+mas_email: ""
+
 mas_installed_apps:
   - id: 497799835
     name: "Xcode"

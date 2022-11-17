@@ -10,13 +10,16 @@
       ansible.builtin.include_vars: "{{ item }}"
       with_fileglob:
         - ../macos.config.yml
-      tags: [always]
+      tags: ['always']
 
   roles:
     - role: elliotweiser.osx-command-line-tools
     - role: geerlingguy.mac.homebrew
       tags: ['homebrew']
     - role: geerlingguy.mac.mas
+      environment:
+        # Fix first run path
+        PATH: "{{ (ansible_machine == 'arm64') | ternary('/opt/homebrew', '/usr/local') }}:{{ ansible_env.PATH }}"
       when: mas_installed_apps or mas_installed_app_ids
       tags: ['mas']
   
