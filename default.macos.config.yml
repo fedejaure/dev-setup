@@ -1,4 +1,9 @@
 ---
+# homebrew
+homebrew_prefix: "{{ (ansible_machine == 'arm64') | ternary('/opt/homebrew', '/usr/local') }}"
+homebrew_install_path: "{{ homebrew_prefix }}/Homebrew"
+homebrew_brew_bin_path: "{{ homebrew_prefix }}/bin"
+
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
@@ -13,7 +18,8 @@ homebrew_cask_apps:
   - docker
   - openvpn-connect
 
-# it should be overridden in macos.config.yml
+# mas-cli (Mac App Store command line interface)
+## it should be overridden in macos.config.yml
 mas_email: ""
 
 mas_installed_apps:
