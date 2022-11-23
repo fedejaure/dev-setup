@@ -10,7 +10,8 @@ homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - firefox
   - google-chrome
-  - slack
+  - docker
+  - openvpn-connect
 
 # it should be overridden in macos.config.yml
 mas_email: ""
@@ -18,3 +19,9 @@ mas_email: ""
 mas_installed_apps:
   - id: 497799835
     name: "Xcode"
+  - id: 803453959
+    name: "Slack"
+  - id: 1147396723
+    name: "WhatsApp"
+  - id: 747648890
+    name: "Telegram"
