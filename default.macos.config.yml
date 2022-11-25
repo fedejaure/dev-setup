@@ -19,6 +19,9 @@ homebrew_cask_apps:
   - openvpn-connect
   - hpedrorodrigues/tools/dockutil
   - visual-studio-code
+  - zoom
+  - keybase
+  - tad
 
 # mas-cli (Mac App Store command line interface)
 ## it should be overridden in macos.config.yml
