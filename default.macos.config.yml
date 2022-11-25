@@ -17,6 +17,8 @@ homebrew_cask_apps:
   - google-chrome
   - docker
   - openvpn-connect
+  - hpedrorodrigues/tools/dockutil
+  - visual-studio-code
 
 # mas-cli (Mac App Store command line interface)
 ## it should be overridden in macos.config.yml
@@ -31,3 +33,46 @@ mas_installed_apps:
     name: "WhatsApp"
   - id: 747648890
     name: "Telegram"
+
+# dock
+configure_dock: true
+dockutil_install: false
+
+dockitems_remove:
+  - Safari
+  - Messages
+  - Mail
+  - Photos
+  - FaceTime
+  - TV
+  - Music
+  - Podcasts
+  - Keynote
+  - Numbers
+  - Pages
+
+dockitems_persist:
+  - name: "Firefox"
+    path: "/Applications/Firefox.app/"
+    pos: 2
+  - name: "Google Chrome"
+    path: "/Applications/Google Chrome.app/"
+    pos: 3
+  - name: "Terminal"
+    path: "/Applications/Utilities/Terminal.app/"
+    pos: 4
+  - name: "Visual Studio Code"
+    path: "/Applications/Visual Studio Code.app/"
+    pos: 5
+  - name: "Slack"
+    path: "/Applications/Slack.app/"
+    pos: 11
+  - name: "Telegram"
+    path: "/Applications/Telegram.app/"
+    pos: 12
+  - name: "WhatsApp"
+    path: "/Applications/WhatsApp.app/"
+    pos: 13
+  - name: "OpenVPN Connect"
+    path: "/Applications/OpenVPN Connect.app/"
+    pos: 14

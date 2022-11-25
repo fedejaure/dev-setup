@@ -22,7 +22,13 @@
         PATH: "{{ homebrew_brew_bin_path }}:{{ ansible_env.PATH }}"
       when: mas_installed_apps or mas_installed_app_ids
       tags: ['mas']
-  
+    - role: geerlingguy.mac.dock
+      environment:
+        # Fix first run path
+        PATH: "/usr/local/bin:{{ ansible_env.PATH }}"
+      when: configure_dock
+      tags: ['dock']
+
   tasks:
     - name: Hello Mac OSX
       ansible.builtin.debug:
