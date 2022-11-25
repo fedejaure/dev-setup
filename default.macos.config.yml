@@ -78,5 +78,5 @@ dockitems_persist:
     path: "/Applications/WhatsApp.app/"
     pos: 13
   - name: "OpenVPN Connect"
-    path: "/Applications/OpenVPN Connect.app/"
+    path: "/Applications/OpenVPN Connect/OpenVPN Connect.app/"
     pos: 14
