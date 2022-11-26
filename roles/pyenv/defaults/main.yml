@@ -1,2 +1,2 @@
 ---
-# defaults file for pyenv
+pyenv_root: "{{ ansible_env.HOME }}/.pyenv"

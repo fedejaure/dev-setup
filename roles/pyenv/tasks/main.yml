@@ -1,2 +1,12 @@
 ---
-# tasks file for pyenv
+- name: Check if ~/.pyenv already exists
+  ansible.builtin.stat:
+    path: "{{ pyenv_root }}"
+  register: pyenv_st
+
+- name: Install pyenv
+  ansible.builtin.shell: |
+    set -o pipefail
+    
+    curl https://pyenv.run | bash
+  when: not pyenv_st.stat.isdir is defined

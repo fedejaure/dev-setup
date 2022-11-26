@@ -144,19 +144,27 @@ def tests(c):
         "tag": "Only run plays and tasks tagged with these values",
         "skip_tag": "Only run plays and tasks whose tags do not match these values",
         "list_tags": "List all available tags",
+        "ask_pass": "Ask for connection password",
+        "ask_become_pass": "Ask for privilege escalation password",
     },
     iterable=["tag", "skip_tag"],
 )
-def playbook(c, tag, skip_tag, list_tags=False, target="main"):
-    # type: (Context, List[str], List[str], bool, str) -> None
+def playbook(
+    c, tag, skip_tag, list_tags=False, target="main", ask_pass=False, ask_become_pass=False
+):
+    # type: (Context, List[str], List[str], bool, str, bool, bool) -> None
     """Run Ansible playbooks, executing the defined tasks on the targeted hosts."""
-    playbook_options = ["-i", "inventory", "--ask-pass", "--ask-become-pass"]
+    playbook_options = ["-i", "inventory"]
     if tag:
         playbook_options += ["--tags", f'"{ ",".join(tag) }"']
     if skip_tag:
         playbook_options += ["--skip-tags", f'"{ ",".join(skip_tag) }"']
     if list_tags:
         playbook_options.append("--list-tags")
+    if ask_pass:
+        playbook_options.append("--ask-pass")
+    if ask_become_pass:
+        playbook_options.append("--ask-become-pass")
     _run(c, f"poetry run ansible-playbook playbooks/{target}.yml {' '.join(playbook_options)}")
 
 
