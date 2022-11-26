@@ -22,6 +22,7 @@ homebrew_cask_apps:
   - visual-studio-code
   - zoom
   - tad
+  - keybase
 
 # mas-cli (Mac App Store command line interface)
 ## it should be overridden in macos.config.yml

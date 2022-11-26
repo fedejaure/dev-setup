@@ -12,6 +12,11 @@
         - ../macos.config.yml
       tags: ['always']
 
+    - name: Installs Rosetta 2
+      ansible.builtin.command: /usr/sbin/softwareupdate --install-rosetta --agree-to-license
+      changed_when: false
+      tags: ['always']
+
   collections:
     - fedejaure.dev_setup
 
