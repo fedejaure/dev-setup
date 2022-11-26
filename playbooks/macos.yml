@@ -12,6 +12,9 @@
         - ../macos.config.yml
       tags: ['always']
 
+  collections:
+    - fedejaure.dev_setup
+
   roles:
     - role: elliotweiser.osx-command-line-tools
     - role: geerlingguy.mac.homebrew
@@ -28,6 +31,8 @@
         PATH: "/usr/local/bin:{{ ansible_env.PATH }}"
       when: configure_dock
       tags: ['dock']
+    - role: pyenv
+      tags: ['pyenv']
 
   tasks:
     - name: Hello Mac OSX
