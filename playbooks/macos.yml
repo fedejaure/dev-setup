@@ -1,0 +1,46 @@
+---
+- name: Mac OSX Playbook
+  hosts: macos
+
+  vars_files:
+    - ../default.macos.config.yml
+
+  pre_tasks:
+    - name: Include config override file, if it exists
+      ansible.builtin.include_vars: "{{ item }}"
+      with_fileglob:
+        - ../macos.config.yml
+      tags: ['always']
+
+    - name: Installs Rosetta 2
+      ansible.builtin.command: /usr/sbin/softwareupdate --install-rosetta --agree-to-license
+      changed_when: false
+      tags: ['always']
+
+  collections:
+    - fedejaure.dev_setup
+
+  roles:
+    - role: elliotweiser.osx-command-line-tools
+    - role: geerlingguy.mac.homebrew
+      tags: ['homebrew']
+    - role: geerlingguy.mac.mas
+      environment:
+        # Fix first run path
+        PATH: "{{ homebrew_brew_bin_path }}:{{ ansible_env.PATH }}"
+      when: mas_installed_apps or mas_installed_app_ids
+      tags: ['mas']
+    - role: geerlingguy.mac.dock
+      environment:
+        # Fix first run path
+        PATH: "/usr/local/bin:{{ ansible_env.PATH }}"
+      when: configure_dock
+      tags: ['dock']
+    - role: pyenv
+      tags: ['pyenv']
+
+  tasks:
+    - name: Hello Mac OSX
+      ansible.builtin.debug:
+        msg: hello mac OSX
+      when: ansible_distribution == "MacOSX"
