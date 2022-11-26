@@ -4,6 +4,5 @@ roles:
 
 collections:
   - name: geerlingguy.mac
-  - name: fedejaure.dev_setup
-    source: ../dev-setup
+  - source: ../dev-setup
     type: dir
