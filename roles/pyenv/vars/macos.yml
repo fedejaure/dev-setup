@@ -1,0 +1,7 @@
+---
+__pyenv_homebrew_required_packages:
+  - openssl
+  - readline
+  - xz
+  - sqlite
+  - gcc

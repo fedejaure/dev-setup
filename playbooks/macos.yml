@@ -38,6 +38,9 @@
       when: configure_dock
       tags: ['dock']
     - role: pyenv
+      environment:
+        # Fix first run path
+        PATH: "{{ homebrew_brew_bin_path }}:/usr/local/bin:{{ ansible_env.PATH }}"
       tags: ['pyenv']
 
   tasks:

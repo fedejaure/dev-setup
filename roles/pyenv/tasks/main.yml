@@ -1,4 +1,8 @@
 ---
+- name: Setup on macOS
+  ansible.builtin.include_tasks: macos.yml
+  when: "ansible_os_family == 'Darwin'"
+
 - name: Check if ~/.pyenv already exists
   ansible.builtin.stat:
     path: "{{ pyenv_root }}"
@@ -10,3 +14,23 @@
     
     curl https://pyenv.run | bash
   when: not pyenv_st.stat.isdir is defined
+
+- name: Configure .pyenvrc
+  ansible.builtin.template:
+    src: .pyenvrc.j2
+    dest: "{{ pyenv_root }}/.pyenvrc"
+    mode: "0644"
+
+- name: Update Pyenv interpreter list
+  ansible.builtin.shell: . {{ pyenv_root }}/.pyenvrc && pyenv update
+  when: pyenv_update
+
+- name: Install Python versions
+  ansible.builtin.shell: ". {{ pyenv_root }}/.pyenvrc && pyenv install {{ item }}"
+  args:
+    creates: "{{ pyenv_root }}/versions/{{ item }}/bin/python"
+  with_items: "{{ pyenv_python_versions }}"
+
+- name: Set pyenv global
+  ansible.builtin.shell: ". {{ pyenv_root }}/.pyenvrc && pyenv global {{ pyenv_python_versions | join(' ') }} system && pyenv rehash"
+  changed_when: false
