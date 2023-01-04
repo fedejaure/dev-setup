@@ -36,7 +36,7 @@ mypy = "^0.991"
 bump2version = "^1.0.1"
 yamllint = "^1.28.0"
 ansible-lint = {version = "^6.10.2", markers = "platform_system != 'Windows'"}
-molecule = {extras = ["docker"], version = "^4.0.3"}
+molecule = {extras = ["docker"], version = "^4.0.4"}
 
 [tool.flakeheaven]
 format = "grouped"
