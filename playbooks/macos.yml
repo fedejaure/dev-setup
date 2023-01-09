@@ -15,6 +15,7 @@
     - name: Installs Rosetta 2
       ansible.builtin.command: /usr/sbin/softwareupdate --install-rosetta --agree-to-license
       changed_when: false
+      when: ansible_distribution == "MacOSX" and ansible_architecture == "arm64"
       tags: ['always']
 
   collections:
@@ -37,6 +38,9 @@
       when: configure_dock
       tags: ['dock']
     - role: pyenv
+      environment:
+        # Fix first run path
+        PATH: "{{ homebrew_brew_bin_path }}:/usr/local/bin:{{ ansible_env.PATH }}"
       tags: ['pyenv']
 
   tasks:
