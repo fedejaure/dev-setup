@@ -34,3 +34,9 @@
 - name: Set pyenv global
   ansible.builtin.shell: ". {{ pyenv_root }}/.pyenvrc && pyenv global {{ pyenv_python_versions | join(' ') }} system && pyenv rehash"
   changed_when: false
+
+- name: Configure shell environment run-command PATH
+  ansible.builtin.blockinfile:
+    block: "{{ lookup('ansible.builtin.template', '.pyenvrc.j2') }}"
+    path: "{{ __pyenv_rc_path }}"
+  when: configure_pyenv_rc_path

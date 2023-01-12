@@ -37,6 +37,11 @@
         PATH: "/usr/local/bin:{{ ansible_env.PATH }}"
       when: configure_dock
       tags: ['dock']
+    - role: oh_my_zsh
+      environment:
+        # Fix first run path
+        PATH: "{{ homebrew_brew_bin_path }}:/usr/local/bin:{{ ansible_env.PATH }}"
+      tags: ['oh-my-zsh']
     - role: pyenv
       environment:
         # Fix first run path
@@ -44,7 +49,9 @@
       tags: ['pyenv']
 
   tasks:
-    - name: Hello Mac OSX
-      ansible.builtin.debug:
-        msg: hello mac OSX
-      when: ansible_distribution == "MacOSX"
+    - name: Configure Homebrew bin rc PATH 
+      ansible.builtin.lineinfile:
+        path: "{{ ansible_env.HOME }}/.zshrc"
+        line: "export PATH={{ homebrew_brew_bin_path }}:$PATH"
+      tags: ['homebrew']
+      when: configure_homebrew_bin_rc_path
