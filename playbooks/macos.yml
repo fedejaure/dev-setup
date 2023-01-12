@@ -49,7 +49,9 @@
       tags: ['pyenv']
 
   tasks:
-    - name: Hello Mac OSX
-      ansible.builtin.debug:
-        msg: hello mac OSX
-      when: ansible_distribution == "MacOSX"
+    - name: Configure Homebrew bin rc PATH 
+      ansible.builtin.lineinfile:
+        path: "{{ ansible_env.HOME }}/.zshrc"
+        line: "export PATH={{ homebrew_brew_bin_path }}:$PATH"
+      tags: ['homebrew']
+      when: configure_homebrew_bin_rc_path

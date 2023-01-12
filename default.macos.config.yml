@@ -82,3 +82,5 @@ dockitems_persist:
     pos: 14
 
 configure_pyenv_rc_path: true
+
+configure_homebrew_bin_rc_path: true
