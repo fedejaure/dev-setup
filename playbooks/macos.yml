@@ -37,6 +37,11 @@
         PATH: "/usr/local/bin:{{ ansible_env.PATH }}"
       when: configure_dock
       tags: ['dock']
+    - role: oh_my_zsh
+      environment:
+        # Fix first run path
+        PATH: "{{ homebrew_brew_bin_path }}:/usr/local/bin:{{ ansible_env.PATH }}"
+      tags: ['oh-my-zsh']
     - role: pyenv
       environment:
         # Fix first run path
