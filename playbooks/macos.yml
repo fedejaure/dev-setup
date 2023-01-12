@@ -52,6 +52,21 @@
     - name: Configure Homebrew bin rc PATH 
       ansible.builtin.lineinfile:
         path: "{{ ansible_env.HOME }}/.zshrc"
-        line: "export PATH={{ homebrew_brew_bin_path }}:$PATH"
+        line: 'export PATH="{{ homebrew_brew_bin_path }}:$PATH"'
       tags: ['homebrew']
       when: configure_homebrew_bin_rc_path
+
+    - name: Configure pipx bin rc PATH 
+      ansible.builtin.lineinfile:
+        path: "{{ ansible_env.HOME }}/.zshrc"
+        line: 'export PATH="$PATH:{{ ansible_env.HOME }}/.local/bin"'
+      tags: ['pipx']
+      when: configure_pipx_bin_rc_path
+
+    - name: Install pipx packages
+      community.general.pipx:
+        executable: "{{ homebrew_brew_bin_path }}/pipx"
+        name: "{{ item.name | default(item) }}"
+      tags: ['pipx']
+      loop: "{{ pipx_installed_packages }}"
+ 
