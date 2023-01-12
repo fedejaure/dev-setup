@@ -80,3 +80,5 @@ dockitems_persist:
   - name: "OpenVPN Connect"
     path: "/Applications/OpenVPN Connect/OpenVPN Connect.app/"
     pos: 14
+
+configure_pyenv_rc_path: true

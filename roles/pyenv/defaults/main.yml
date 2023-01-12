@@ -7,4 +7,6 @@ pyenv_python_versions:
   - 3.9.15
   - 3.10.8
 
-pyenv_update: no
+pyenv_update: false
+
+configure_pyenv_rc_path: false

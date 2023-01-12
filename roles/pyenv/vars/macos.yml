@@ -5,3 +5,5 @@ __pyenv_homebrew_required_packages:
   - xz
   - sqlite
   - gcc
+
+__pyenv_rc_path: "{{ ansible_env.HOME }}/.zshrc"
