@@ -84,3 +84,7 @@ dockitems_persist:
 configure_pyenv_rc_path: true
 
 configure_homebrew_bin_rc_path: true
+
+configure_pipx_bin_rc_path: true
+pipx_installed_packages:
+  - pipenv
