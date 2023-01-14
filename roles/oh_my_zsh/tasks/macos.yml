@@ -3,7 +3,7 @@
   ansible.builtin.include_vars: "{{ item }}"
   with_first_found:
     - files:
-        - macos.yml
+      - macos.yml
   when: ansible_distribution == "MacOSX"
 
 - name: Ensure Oh My Zsh required homebrew packages are installed.
