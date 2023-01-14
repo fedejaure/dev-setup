@@ -11,6 +11,7 @@ homebrew_taps:
 homebrew_installed_packages:
   - git
   - pipx
+  - jesseduffield/lazydocker/lazydocker
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
