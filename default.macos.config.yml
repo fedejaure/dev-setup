@@ -24,6 +24,7 @@ homebrew_cask_apps:
   - zoom
   - tad
   - keybase
+  - obsidian
 
 # mas-cli (Mac App Store command line interface)
 ## it should be overridden in macos.config.yml
