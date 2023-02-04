@@ -12,6 +12,7 @@ homebrew_installed_packages:
   - git
   - pipx
   - jesseduffield/lazydocker/lazydocker
+  - esolitos/ipa/sshpass
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
