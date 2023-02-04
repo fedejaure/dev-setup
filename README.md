@@ -30,7 +30,7 @@ My own Ansible collection for development setup (use by your own risk).
 
 3. Install requirements:
 
-    Create a temporary virtualenv, Active the virtualenv and install ansible: 
+    Create a temporary virtualenv, activate the virtualenv and install ansible: 
     
     ```shell session
     $ /usr/bin/python3 -m venv .venv
