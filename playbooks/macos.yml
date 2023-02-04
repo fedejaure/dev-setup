@@ -18,9 +18,6 @@
       when: ansible_distribution == "MacOSX" and ansible_architecture == "arm64"
       tags: ['always']
 
-  collections:
-    - fedejaure.dev_setup
-
   roles:
     - role: elliotweiser.osx-command-line-tools
     - role: geerlingguy.mac.homebrew
@@ -37,12 +34,12 @@
         PATH: "/usr/local/bin:{{ ansible_env.PATH }}"
       when: configure_dock
       tags: ['dock']
-    - role: oh_my_zsh
+    - role: fedejaure.dev_setup.oh_my_zsh
       environment:
         # Fix first run path
         PATH: "{{ homebrew_brew_bin_path }}:/usr/local/bin:{{ ansible_env.PATH }}"
       tags: ['oh-my-zsh']
-    - role: pyenv
+    - role: fedejaure.dev_setup.pyenv
       environment:
         # Fix first run path
         PATH: "{{ homebrew_brew_bin_path }}:/usr/local/bin:{{ ansible_env.PATH }}"
