@@ -10,9 +10,15 @@ homebrew_taps:
 
 homebrew_installed_packages:
   - git
+  - openssl
+  - readline
+  - xz
+  - sqlite
+  - gcc
   - pipx
   - jesseduffield/lazydocker/lazydocker
   - esolitos/ipa/sshpass
+  - htop
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
