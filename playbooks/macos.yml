@@ -50,6 +50,7 @@
       ansible.builtin.lineinfile:
         path: "{{ ansible_env.HOME }}/.zshrc"
         line: 'export PATH="{{ homebrew_brew_bin_path }}:$PATH"'
+        insertbefore: "^# BEGIN PYENV"
       tags: ['homebrew']
       when: configure_homebrew_bin_rc_path
 
@@ -57,6 +58,7 @@
       ansible.builtin.lineinfile:
         path: "{{ ansible_env.HOME }}/.zshrc"
         line: 'export PATH="$PATH:{{ ansible_env.HOME }}/.local/bin"'
+        insertbefore: "^# BEGIN PYENV"
       tags: ['pipx']
       when: configure_pipx_bin_rc_path
 
