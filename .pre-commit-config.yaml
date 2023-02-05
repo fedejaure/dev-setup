@@ -39,7 +39,7 @@ repos:
           'flake8-docstrings~=1.7.0',
           'flake8-bandit~=3.0.0',
           'darglint~=1.8.0',
-          'pylint~=2.15.9',
+          'pylint~=2.16.1',
         ]
   - repo: https://github.com/adrienverge/yamllint.git
     rev: v1.29.0
