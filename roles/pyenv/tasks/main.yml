@@ -39,4 +39,5 @@
   ansible.builtin.blockinfile:
     block: "{{ lookup('ansible.builtin.template', '.pyenvrc.j2') }}"
     path: "{{ __pyenv_rc_path }}"
+    marker_begin: "BEGIN PYENV"
   when: configure_pyenv_rc_path
