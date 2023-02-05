@@ -1,0 +1,16 @@
+---
+- name: Setup on macOS
+  ansible.builtin.include_tasks: macos.yml
+  when: "ansible_os_family == 'Darwin'"
+
+- name: Check if ~/.oh-my-zsh already exists
+  ansible.builtin.stat:
+    path: "{{ oh_my_zsh_root }}"
+  register: oh_my_zsh_st
+
+- name: Install pyenv
+  ansible.builtin.shell: |
+    set -o pipefail
+    
+    curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash
+  when: not oh_my_zsh_st.stat.isdir is defined

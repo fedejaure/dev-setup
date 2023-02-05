@@ -1,0 +1,72 @@
+[tool.poetry]
+name = "dev-setup"
+version = "1.0.0"
+description = "My own Ansible collection for development setup."
+authors = ["Federico Jaureguialzo <fedejaure@gmail.com>"]
+readme = "README.md"
+homepage = "https://github.com/fedejaure/dev-setup"
+repository = "https://github.com/fedejaure/dev-setup"
+documentation = "https://dev-setup.readthedocs.io"
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/fedejaure/dev-setup/issues"
+
+[tool.poetry.dependencies]
+python = "<3.11,>=3.10"
+ansible = "^7.2.0"
+
+[tool.poetry.dev-dependencies]
+pre-commit = "^3.0.4"
+invoke = "^2.0.0"
+flake8 = "^4.0.1"
+flakeheaven = "^3.2.1"
+flake8-builtins = "^2.1.0"
+flake8-blind-except = "^0.2.1"
+flake8-logging-format = "^0.9.0"
+flake8-bugbear = "^23.1.20"
+flake8-annotations = "^2.9.1"
+flake8-docstrings = "^1.7.0"
+flake8-bandit = "^3.0.0"
+darglint = "^1.8.0"
+pylint = "^2.16.1"
+isort = "^5.12.0"
+black = "^22.12"
+safety = "^2.3.5"
+mypy = "^0.991"
+bump2version = "^1.0.1"
+yamllint = "^1.29.0"
+ansible-lint = {version = "^6.12.1", markers = "platform_system != 'Windows'"}
+molecule = {extras = ["docker"], version = "^4.0.4"}
+
+[tool.flakeheaven]
+format = "grouped"
+max_line_length = 99
+show_source = true
+docstring-convention = "google"
+extended_default_ignore = []
+
+[tool.flakeheaven.plugins]
+pyflakes = ["+*"]
+pycodestyle = ["+*"]
+mccabe = ["+*"]
+"flake8-*" = ["+*"]
+pylint = ["-C????", "-E????", "+F????", "+I????", "-R????", "-W????"]
+
+[tool.flakeheaven.exceptions."tests/"]
+flake8-bandit = ["-S101"]
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+line_length = 99
+known_third_party = ["invoke", "nox"]
+
+[tool.black]
+line-length = 99
+target-version = ["py37"]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

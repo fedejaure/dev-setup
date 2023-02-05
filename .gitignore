@@ -125,5 +125,14 @@ venv.bak/
 .dmypy.json
 dmypy.json
 
+# pytype
+.pytype/
+
 # Pyre type checker
 .pyre/
+
+# Ansible
+inventory
+.roles/**
+.collections/**
+/macos.config.yml

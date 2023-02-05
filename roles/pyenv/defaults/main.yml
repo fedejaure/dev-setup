@@ -1,0 +1,12 @@
+---
+pyenv_root: "{{ ansible_env.HOME }}/.pyenv"
+
+pyenv_python_versions:
+  - 3.8.15
+  - 3.9.15
+  - 3.10.8
+  - 3.11.0
+
+pyenv_update: false
+
+configure_pyenv_rc_path: false

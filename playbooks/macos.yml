@@ -1,0 +1,70 @@
+---
+- name: Mac OSX Playbook
+  hosts: macos
+
+  vars_files:
+    - ../default.macos.config.yml
+
+  pre_tasks:
+    - name: Include config override file, if it exists
+      ansible.builtin.include_vars: "{{ item }}"
+      with_fileglob:
+        - ../macos.config.yml
+      tags: ['always']
+
+    - name: Installs Rosetta 2
+      ansible.builtin.command: /usr/sbin/softwareupdate --install-rosetta --agree-to-license
+      changed_when: false
+      when: ansible_distribution == "MacOSX" and ansible_architecture == "arm64"
+      tags: ['always']
+
+  roles:
+    - role: elliotweiser.osx-command-line-tools
+    - role: geerlingguy.mac.homebrew
+      tags: ['homebrew']
+    - role: geerlingguy.mac.mas
+      environment:
+        # Fix first run path
+        PATH: "{{ homebrew_brew_bin_path }}:{{ ansible_env.PATH }}"
+      when: mas_installed_apps or mas_installed_app_ids
+      tags: ['mas']
+    - role: geerlingguy.mac.dock
+      environment:
+        # Fix first run path
+        PATH: "/usr/local/bin:{{ ansible_env.PATH }}"
+      when: configure_dock
+      tags: ['dock']
+    - role: fedejaure.dev_setup.oh_my_zsh
+      environment:
+        # Fix first run path
+        PATH: "{{ homebrew_brew_bin_path }}:/usr/local/bin:{{ ansible_env.PATH }}"
+      tags: ['oh-my-zsh']
+    - role: fedejaure.dev_setup.pyenv
+      environment:
+        # Fix first run path
+        PATH: "{{ homebrew_brew_bin_path }}:/usr/local/bin:{{ ansible_env.PATH }}"
+      tags: ['pyenv']
+
+  tasks:
+    - name: Configure Homebrew bin rc PATH 
+      ansible.builtin.lineinfile:
+        path: "{{ ansible_env.HOME }}/.zshrc"
+        line: 'export PATH="{{ homebrew_brew_bin_path }}:$PATH"'
+        insertbefore: "^# BEGIN PYENV"
+      tags: ['homebrew']
+      when: configure_homebrew_bin_rc_path
+
+    - name: Configure pipx bin rc PATH
+      ansible.builtin.lineinfile:
+        path: "{{ ansible_env.HOME }}/.zshrc"
+        line: 'export PATH="$PATH:{{ ansible_env.HOME }}/.local/bin"'
+        insertbefore: "^# BEGIN PYENV"
+      tags: ['pipx']
+      when: configure_pipx_bin_rc_path
+
+    - name: Install pipx packages
+      community.general.pipx:
+        executable: "{{ homebrew_brew_bin_path }}/pipx"
+        name: "{{ item.name | default(item) }}"
+      tags: ['pipx']
+      loop: "{{ pipx_installed_packages }}"

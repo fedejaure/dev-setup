@@ -1,0 +1,24 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: "monthly"
+      time: "08:00"
+      timezone: "Europe/Berlin"
+    labels:
+      - "dependencies"
+      - "github_actions"
+    open-pull-requests-limit: 99
+    target-branch: "develop"
+  - package-ecosystem: pip
+    directory: "/"
+    schedule:
+      interval: "monthly"
+      time: "08:00"
+      timezone: "Europe/Berlin"
+    labels:
+      - "dependencies"
+      - "python"
+    open-pull-requests-limit: 99
+    target-branch: "develop"

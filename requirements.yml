@@ -1,0 +1,8 @@
+---
+roles:
+  - name: elliotweiser.osx-command-line-tools
+
+collections:
+  - name: geerlingguy.mac
+  - source: ../dev-setup
+    type: dir

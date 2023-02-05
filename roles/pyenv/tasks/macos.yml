@@ -1,0 +1,14 @@
+---
+- name: Include distribution-specific vars.
+  ansible.builtin.include_vars: "{{ item }}"
+  with_first_found:
+    - files:
+      - macos.yml
+  when: ansible_distribution == "MacOSX"
+
+- name: Ensure pyenv required homebrew packages are installed.
+  community.general.homebrew:
+    name: "{{ item.name | default(item) }}"
+    install_options: "{{ item.install_options | default(omit) }}"
+  loop: "{{ __pyenv_homebrew_required_packages }}"
+  when: ansible_distribution == "MacOSX"

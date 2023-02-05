@@ -1,0 +1,34 @@
+---
+- name: Converge
+  hosts: all
+  become: yes
+
+  vars:
+    # Added to prevent test failures in CI.
+    firewall_enable_ipv6: false
+
+  tasks:
+    - name: Update apt cache (on Debian).
+      ansible.builtin.apt:
+        update_cache: true
+        cache_valid_time: 3600
+      when: ansible_os_family == 'Debian'
+
+    - name: Ensure build dependencies are installed (Debian).
+      ansible.builtin.package:
+        name:
+          - openssh-server
+          - openssh-client
+        state: present
+      when: ansible_os_family == 'Debian'
+
+    - name: Ensure auth.log file is present.
+      ansible.builtin.copy:
+        dest: /var/log/auth.log
+        content: ""
+        force: false
+        mode: 0644
+      when: ansible_distribution == 'Debian'
+
+- name: Import main Playbook
+  ansible.builtin.import_playbook: ../../playbooks/main.yml

@@ -1,0 +1,52 @@
+---
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: check-toml
+      - id: check-yaml
+      - id: debug-statements
+      - id: check-merge-conflict
+      - id: check-json
+      - id: end-of-file-fixer
+      - id: check-added-large-files
+  - repo: https://github.com/timothycrosley/isort
+    rev: 5.12.0
+    hooks:
+      - id: isort
+  - repo: https://github.com/psf/black
+    rev: 23.1.0
+    hooks:
+      - id: black
+  - repo: local
+    hooks:
+      - id: flakeheaven
+        name: flakeheaven
+        description: "`FlakeHeaven` it's a Flake8 wrapper to make it cools."
+        entry: flakeheaven
+        args: [lint]
+        language: python
+        types: [python]
+        require_serial: true
+        additional_dependencies: [
+          'flake8~=4.0.1',
+          'flakeheaven~=3.2.1',
+          'flake8-builtins~=2.1.0',
+          'flake8-blind-except~=0.2.1',
+          'flake8-logging-format~=0.9.0',
+          'flake8-bugbear~=23.1.20',
+          'flake8-annotations~=2.9.1',
+          'flake8-docstrings~=1.7.0',
+          'flake8-bandit~=3.0.0',
+          'darglint~=1.8.0',
+          'pylint~=2.16.1',
+        ]
+  - repo: https://github.com/adrienverge/yamllint.git
+    rev: v1.29.0
+    hooks:
+      - id: yamllint
+  - repo: https://github.com/ansible-community/ansible-lint.git
+    rev: v6.12.1
+    hooks:
+      - id: ansible-lint
+        files: \.(yaml|yml)$

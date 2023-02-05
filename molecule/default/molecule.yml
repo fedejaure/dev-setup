@@ -1,0 +1,24 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: docker
+platforms:
+  - name: otacon
+    image: geerlingguy/docker-${MOLECULE_DISTRO:-debian10}-ansible:latest
+    command: ${MOLECULE_DOCKER_COMMAND:-""}
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:rw
+    privileged: true
+    pre_build_image: true
+    cgroupns_mode: host
+provisioner:
+  name: ansible
+  inventory:
+    host_vars:
+      otacon:
+        ansible_user: root
+  playbooks:
+    prepare: ../prepare-docker-in-docker.yml
+verifier:
+  name: ansible
