@@ -28,14 +28,14 @@ flake8-annotations = "^2.9.1"
 flake8-docstrings = "^1.7.0"
 flake8-bandit = "^3.0.0"
 darglint = "^1.8.0"
-pylint = "^2.15.9"
+pylint = "^2.16.1"
 isort = "^5.12.0"
 black = "^22.12"
 safety = "^2.3.5"
 mypy = "^0.991"
 bump2version = "^1.0.1"
 yamllint = "^1.29.0"
-ansible-lint = {version = "^6.11.0", markers = "platform_system != 'Windows'"}
+ansible-lint = {version = "^6.12.1", markers = "platform_system != 'Windows'"}
 molecule = {extras = ["docker"], version = "^4.0.4"}
 
 [tool.flakeheaven]
