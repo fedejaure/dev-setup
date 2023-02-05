@@ -18,7 +18,54 @@ My own Ansible collection for development setup (use by your own risk).
 
 ## Features
 
-* TODO
+### Mac OS
+
+#### Applications instaled with Mac App Store
+
+* [Xcode](https://apps.apple.com/us/app/id497799835)
+* [Slack](https://apps.apple.com/us/app/id803453959)
+* [WhatsApp](https://apps.apple.com/us/app/id1147396723)
+* [Telegram](https://apps.apple.com/us/app/id747648890)
+
+#### Applications installed with Homebrew Cask
+
+* [Firefox](https://www.mozilla.org/en-US/firefox/new/)
+* [Google Chrome](https://www.google.com/chrome/)
+* [Docker](https://www.docker.com/)
+* [Openvpn Client](https://openvpn.net/vpn-client/)
+* [dockutil](https://github.com/kcrawford/dockutil)
+* [Visual Studio Code](https://code.visualstudio.com/)
+* [Zoom](https://zoom.us/)
+* [Tad](https://www.tadviewer.com/)
+* [Keybase](https://keybase.io/)
+* [Obsidian](https://obsidian.md/)
+  
+#### Tools/Package installed with Homebrew
+
+* [git](https://git-scm.com/)
+* [openssl](https://www.openssl.org/)
+* [readline](https://tiswww.case.edu/php/chet/readline/rltop.html)
+* [xz](https://tukaani.org/xz/)
+* [sqlite](https://sqlite.org/index.html)
+* [gcc](https://gcc.gnu.org/)
+* [zlib](https://www.zlib.net/)
+* [tcl-tk](https://www.tcl.tk/)
+* [pipx](https://pypa.github.io/pipx/)
+* [lazydocker](https://github.com/jesseduffield/lazydocker)
+* [sshpass](https://sourceforge.net/projects/sshpass/)
+* [htop](https://htop.dev/)
+* [dust](https://github.com/bootandy/dust)
+* [duf](https://github.com/muesli/duf)
+
+#### Tools installed with pipx
+
+* [pipenv](https://pipenv.pypa.io/en/latest/)
+* [poetry](https://python-poetry.org/)
+
+#### Other installed Tools
+
+* [oh-my-zsh](https://ohmyz.sh/)
+* [pyenv](https://github.com/pyenv/pyenv)
 
 ## Quickstart
 
@@ -45,6 +92,10 @@ My own Ansible collection for development setup (use by your own risk).
 6. Run `ansible-playbook playbooks/main.yml --ask-become-pass -i inventory`.
 
 > Note: You need to agree to Xcode's license.
+> 
+> ```shell session
+> $ sudo xcodebuild -license
+> ```
 
 ### Configuring a remote Mac
 
@@ -111,6 +162,10 @@ My own Ansible collection for development setup (use by your own risk).
         >   > ```
         >
         >   > Note: You need to agree to Xcode's license.
+        >   > 
+        >   > ```shell session
+        >   > $ sudo xcodebuild -license
+        >   > ```
 
 6. Run the playbook:
 
