@@ -19,6 +19,8 @@ homebrew_installed_packages:
   - jesseduffield/lazydocker/lazydocker
   - esolitos/ipa/sshpass
   - htop
+  - dust
+  - duf
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
