@@ -59,18 +59,17 @@ resolvelib = ">=0.5.3,<0.9.0"
 
 [[package]]
 name = "ansible-lint"
-version = "6.12.1"
+version = "6.13.1"
 description = "Checks playbooks for practices and behavior that could potentially be improved"
 category = "dev"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "ansible-lint-6.12.1.tar.gz", hash = "sha256:bbb1953aa563baa2587edb6efa94bf4805846ab01fb596e718c48f9a79a99a89"},
-    {file = "ansible_lint-6.12.1-py3-none-any.whl", hash = "sha256:9b7b3607234ce3bfc288cdd52e4316a11343a08ee2bfbd7328b9bbe5a5795c09"},
+    {file = "ansible-lint-6.13.1.tar.gz", hash = "sha256:435c12b4fd88da815af6821f3bf8b04ebb651811da89a11c9d190baff21badaa"},
+    {file = "ansible_lint-6.13.1-py3-none-any.whl", hash = "sha256:419b1a2c8523fbe0c0e8a6c51a5c41a692badb5a530e880a9050ac3a69c3fde3"},
 ]
 
 [package.dependencies]
-ansible-compat = ">=3.0.1"
 ansible-core = {version = ">=2.12.0", markers = "python_version >= \"3.9\""}
 black = ">=22.8.0"
 filelock = ">=3.3.0"
@@ -79,13 +78,14 @@ packaging = ">=21.3"
 pyyaml = ">=5.4.1"
 rich = ">=12.0.0"
 "ruamel.yaml" = ">=0.17.21,<0.18"
+subprocess-tee = ">=0.4.1"
 wcmatch = ">=8.1.2"
 yamllint = ">=1.26.3"
 
 [package.extras]
-docs = ["cairosvg", "markdown-exec (>=1.0.0)", "mkdocs (>=1.4.2)", "mkdocs-gen-files (>=0.4.0)", "mkdocs-material (>=9.0.6)", "mkdocs-material-extensions (>=1.1.1)", "mkdocstrings (>=0.20.0)", "mkdocstrings-python (>=0.8.3)", "pillow", "pipdeptree (>=2.3.3)", "pymdown-extensions (>=9.9.2)"]
-lock = ["ansible-compat (==3.0.1)", "ansible-core (==2.14.1)", "attrs (==22.2.0)", "black (==22.12.0)", "bracex (==2.3.post1)", "cffi (==1.15.1)", "click (==8.1.3)", "cryptography (==38.0.4)", "filelock (==3.9.0)", "jinja2 (==3.1.2)", "jsonschema (==4.17.3)", "markdown-it-py (==2.1.0)", "markupsafe (==2.1.1)", "mdurl (==0.1.2)", "mypy-extensions (==0.4.3)", "packaging (==22.0)", "pathspec (==0.10.3)", "platformdirs (==2.6.2)", "pycparser (==2.21)", "pygments (==2.13.0)", "pyrsistent (==0.19.3)", "pyyaml (==6.0)", "resolvelib (==0.8.1)", "rich (==13.2.0)", "ruamel-yaml (==0.17.21)", "setuptools (==65.6.3)", "subprocess-tee (==0.4.1)", "tomli (==2.0.1)", "typing-extensions (==4.4.0)", "wcmatch (==8.4.1)", "yamllint (==1.28.0)"]
-test = ["black", "coverage-enable-subprocess", "coverage[toml] (>=6.4.4)", "flake8", "flake8-future-annotations", "mypy", "psutil", "pylint", "pytest (>=7.2.0)", "pytest-mock", "pytest-plus (>=0.2)", "pytest-xdist (>=2.1.0)"]
+docs = ["cairosvg", "markdown-exec (>=1.0.0)", "mkdocs (>=1.4.2)", "mkdocs-gen-files (>=0.4.0)", "mkdocs-htmlproofer-plugin", "mkdocs-material (>=9.0.6)", "mkdocs-material-extensions (>=1.1.1)", "mkdocstrings (>=0.20.0)", "mkdocstrings-python (>=0.8.3)", "pillow", "pipdeptree (>=2.3.3)", "pymdown-extensions (>=9.9.2)"]
+lock = ["ansible-core (==2.14.2)", "attrs (==22.2.0)", "black (==22.12.0)", "bracex (==2.3.post1)", "cffi (==1.15.1)", "click (==8.1.3)", "cryptography (==39.0.1)", "filelock (==3.9.0)", "jinja2 (==3.1.2)", "jsonschema (==4.17.3)", "markdown-it-py (==2.1.0)", "markupsafe (==2.1.1)", "mdurl (==0.1.2)", "mypy-extensions (==0.4.3)", "packaging (==22.0)", "pathspec (==0.10.3)", "platformdirs (==2.6.2)", "pycparser (==2.21)", "pygments (==2.13.0)", "pyrsistent (==0.19.3)", "pyyaml (==6.0)", "resolvelib (==0.8.1)", "rich (==13.2.0)", "ruamel-yaml (==0.17.21)", "setuptools (==65.6.3)", "subprocess-tee (==0.4.1)", "tomli (==2.0.1)", "typing-extensions (==4.4.0)", "wcmatch (==8.4.1)", "yamllint (==1.28.0)"]
+test = ["black", "coverage-enable-subprocess", "coverage[toml] (>=6.4.4)", "flake8", "flake8-future-annotations", "mypy", "psutil", "pylint", "pytest (>=7.2.0)", "pytest-mock", "pytest-plus (>=0.2)", "pytest-xdist (>=2.1.0)", "types-pyyaml"]
 
 [[package]]
 name = "arrow"
@@ -1733,6 +1733,8 @@ files = [
     {file = "ruamel.yaml.clib-0.2.7-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:045e0626baf1c52e5527bd5db361bc83180faaba2ff586e763d3d5982a876a9e"},
     {file = "ruamel.yaml.clib-0.2.7-cp311-cp311-macosx_12_6_arm64.whl", hash = "sha256:721bc4ba4525f53f6a611ec0967bdcee61b31df5a56801281027a3a6d1c2daf5"},
     {file = "ruamel.yaml.clib-0.2.7-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl", hash = "sha256:41d0f1fa4c6830176eef5b276af04c89320ea616655d01327d5ce65e50575c94"},
+    {file = "ruamel.yaml.clib-0.2.7-cp311-cp311-win32.whl", hash = "sha256:f6d3d39611ac2e4f62c3128a9eed45f19a6608670c5a2f4f07f24e8de3441d38"},
+    {file = "ruamel.yaml.clib-0.2.7-cp311-cp311-win_amd64.whl", hash = "sha256:da538167284de58a52109a9b89b8f6a53ff8437dd6dc26d33b57bf6699153122"},
     {file = "ruamel.yaml.clib-0.2.7-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:4b3a93bb9bc662fc1f99c5c3ea8e623d8b23ad22f861eb6fce9377ac07ad6072"},
     {file = "ruamel.yaml.clib-0.2.7-cp36-cp36m-macosx_12_0_arm64.whl", hash = "sha256:a234a20ae07e8469da311e182e70ef6b199d0fbeb6c6cc2901204dd87fb867e8"},
     {file = "ruamel.yaml.clib-0.2.7-cp36-cp36m-manylinux2014_aarch64.whl", hash = "sha256:15910ef4f3e537eea7fe45f8a5d19997479940d9196f357152a09031c5be59f3"},
@@ -2106,4 +2108,4 @@ setuptools = "*"
 [metadata]
 lock-version = "2.0"
 python-versions = "<3.11,>=3.10"
-content-hash = "57a888fa71b2448dc37e01df96472ca5806683c9d72b4baea9bf05a4c4a20757"
+content-hash = "70ce5db23e103e099eb25d188f930996f249d58440015ed204238dafaf217a71"
