@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+### Added
+- MacOS Ultimaker Cura.
+- Nox with nox-poetry.
 
 ## [1.0.0] - 2023-02-05
 ### Added
