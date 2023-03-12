@@ -39,6 +39,7 @@ My own Ansible collection for development setup (use by your own risk).
 * [Tad](https://www.tadviewer.com/)
 * [Keybase](https://keybase.io/)
 * [Obsidian](https://obsidian.md/)
+* [Ultimaker Cura](https://ultimaker.com/software/ultimaker-cura)
   
 #### Tools/Package installed with Homebrew
 
@@ -214,6 +215,7 @@ homebrew_cask_apps:
   - keybase
   - obsidian
   - google-cloud-sdk
+  - ultimaker-cura
 
 pyenv_python_versions:
   - 3.7.15
