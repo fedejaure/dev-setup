@@ -39,6 +39,8 @@ My own Ansible collection for development setup (use by your own risk).
 * [Tad](https://www.tadviewer.com/)
 * [Keybase](https://keybase.io/)
 * [Obsidian](https://obsidian.md/)
+* [Ultimaker Cura](https://ultimaker.com/software/ultimaker-cura)
+* [Elgato Stream Deck](https://www.elgato.com/en/stream-deck-mk2)
   
 #### Tools/Package installed with Homebrew
 
@@ -66,6 +68,8 @@ My own Ansible collection for development setup (use by your own risk).
 
 * [oh-my-zsh](https://ohmyz.sh/)
 * [pyenv](https://github.com/pyenv/pyenv)
+* [nox](https://nox.thea.codes/en/stable/) with:
+  * [nox-poetry](https://nox-poetry.readthedocs.io/en/stable/)
 
 ## Quickstart
 
@@ -214,6 +218,7 @@ homebrew_cask_apps:
   - keybase
   - obsidian
   - google-cloud-sdk
+  - ultimaker-cura
 
 pyenv_python_versions:
   - 3.7.15
