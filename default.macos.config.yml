@@ -7,6 +7,7 @@ homebrew_brew_bin_path: "{{ homebrew_prefix }}/bin"
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
+  - homebrew/cask-drivers
 
 homebrew_installed_packages:
   - git
@@ -37,6 +38,7 @@ homebrew_cask_apps:
   - keybase
   - obsidian
   - ultimaker-cura
+  - elgato-stream-deck
 
 # mas-cli (Mac App Store command line interface)
 ## it should be overridden in macos.config.yml

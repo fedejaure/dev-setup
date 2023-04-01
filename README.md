@@ -40,6 +40,7 @@ My own Ansible collection for development setup (use by your own risk).
 * [Keybase](https://keybase.io/)
 * [Obsidian](https://obsidian.md/)
 * [Ultimaker Cura](https://ultimaker.com/software/ultimaker-cura)
+* [Elgato Stream Deck](https://www.elgato.com/en/stream-deck-mk2)
   
 #### Tools/Package installed with Homebrew
 
