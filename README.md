@@ -41,6 +41,7 @@ My own Ansible collection for development setup (use by your own risk).
 * [Obsidian](https://obsidian.md/)
 * [Ultimaker Cura](https://ultimaker.com/software/ultimaker-cura)
 * [Elgato Stream Deck](https://www.elgato.com/en/stream-deck-mk2)
+* [Spotify](https://www.spotify.com/us/download/)
   
 #### Tools/Package installed with Homebrew
 
@@ -217,8 +218,10 @@ homebrew_cask_apps:
   - tad
   - keybase
   - obsidian
-  - google-cloud-sdk
   - ultimaker-cura
+  - elgato-stream-deck
+  - spotify
+  - google-cloud-sdk
 
 pyenv_python_versions:
   - 3.7.15

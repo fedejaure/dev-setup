@@ -39,6 +39,7 @@ homebrew_cask_apps:
   - obsidian
   - ultimaker-cura
   - elgato-stream-deck
+  - spotify
 
 # mas-cli (Mac App Store command line interface)
 ## it should be overridden in macos.config.yml
