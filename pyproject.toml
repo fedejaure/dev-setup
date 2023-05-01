@@ -17,7 +17,7 @@ ansible = "^7.4.0"
 
 [tool.poetry.dev-dependencies]
 pre-commit = "^3.2.1"
-invoke = "^2.0.0"
+invoke = "^2.1.0"
 flake8 = "^4.0.1"
 flakeheaven = "^3.2.1"
 flake8-builtins = "^2.1.0"
