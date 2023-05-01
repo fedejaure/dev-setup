@@ -16,7 +16,7 @@ python = "<3.11,>=3.10"
 ansible = "^7.4.0"
 
 [tool.poetry.dev-dependencies]
-pre-commit = "^3.2.1"
+pre-commit = "^3.2.2"
 invoke = "^2.0.0"
 flake8 = "^4.0.1"
 flakeheaven = "^3.2.1"
