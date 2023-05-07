@@ -28,6 +28,10 @@ jobs:
           poetry config virtualenvs.in-project true
           poetry install --no-root --only dev --sync
 
+      - name: Install playbooks requirements
+        shell: bash
+        run: poetry run inv galaxy-install
+
       - name: Linting
         shell: bash
         run: poetry run inv hooks
