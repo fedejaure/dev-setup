@@ -19,14 +19,23 @@ jobs:
         with:
           python-version: "3.10"
 
-      - name: Install pre-commit
-        run: pip install pre-commit
+      - name: Install system deps
+        shell: bash
+        run: |
+          pip install poetry
+          poetry config virtualenvs.in-project true
+          poetry install --no-root --only dev --sync
+
+      - name: Install galaxy deps
+        shell: bash
+        run: |
+          poetry run ansible-galaxy install -r requirements.yml
 
       - name: Run autoupdate
-        run: pre-commit autoupdate
+        run: poetry run pre-commit autoupdate
 
       - name: Run pre-commit
-        run: pre-commit run --all-files
+        run: poetry run pre-commit run --all-files
 
       - uses: peter-evans/create-pull-request@v5.0.1
         with:
