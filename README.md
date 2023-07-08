@@ -202,10 +202,22 @@ mas_email: "example@example.com"
 
 homebrew_installed_packages:
   - git
+  - openssl
+  - readline
+  - xz
+  - sqlite
+  - gcc
+  - zlib
+  - tcl-tk
   - pipx
   - jesseduffield/lazydocker/lazydocker
+  - esolitos/ipa/sshpass
+  - htop
+  - dust
+  - duf
   - awscli
   - tfenv
+  - ffmpeg
 
 homebrew_cask_apps:
   - firefox
@@ -218,10 +230,10 @@ homebrew_cask_apps:
   - tad
   - keybase
   - obsidian
+  - google-cloud-sdk
   - ultimaker-cura
   - elgato-stream-deck
   - spotify
-  - google-cloud-sdk
 
 pyenv_python_versions:
   - 3.7.15
