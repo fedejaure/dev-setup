@@ -16,13 +16,13 @@ ansible-core = ">=2.15.1,<2.16.0"
 
 [[package]]
 name = "ansible-compat"
-version = "3.0.1"
+version = "4.1.2"
 description = "Ansible compatibility goodies"
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.9"
 files = [
-    {file = "ansible-compat-3.0.1.tar.gz", hash = "sha256:d7dc5e4b7fade9b7375c568a24475b7be81024cac2a20caef3260ef0b51287b4"},
-    {file = "ansible_compat-3.0.1-py3-none-any.whl", hash = "sha256:a2a53975e6ea72221d33f82b75332a6416d00a381cb8a84db92fc29935f74bcb"},
+    {file = "ansible-compat-4.1.2.tar.gz", hash = "sha256:696162dbc1223c0b474136a61662b3fe44115d490de8da606b149cee572b01ed"},
+    {file = "ansible_compat-4.1.2-py3-none-any.whl", hash = "sha256:67f84619b63239383e56eb6725f4617c10569da120b8e78e61ccf779c63afea5"},
 ]
 
 [package.dependencies]
@@ -33,7 +33,7 @@ PyYAML = "*"
 subprocess-tee = ">=0.4.1"
 
 [package.extras]
-docs = ["argparse-manpage", "black", "cairosvg", "markdown-include", "mkdocs", "mkdocs-exclude", "mkdocs-material", "mkdocs-material-extensions", "mkdocstrings", "mkdocstrings-python", "pillow", "pymdown-extensions", "slugify"]
+docs = ["argparse-manpage", "black", "mkdocs-ansible[lock] (>=0.1.2)"]
 test = ["coverage", "pip-tools", "pytest (>=7.2.0)", "pytest-mock", "pytest-plus"]
 
 [[package]]
@@ -1138,17 +1138,17 @@ files = [
 
 [[package]]
 name = "molecule"
-version = "5.0.1"
+version = "5.1.0"
 description = "Molecule aids in the development and testing of Ansible roles"
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "molecule-5.0.1-py3-none-any.whl", hash = "sha256:d02384a95188120ddfb4beb15ee0d9ea8b261825e37b36ef7d3fbdd63bd15806"},
-    {file = "molecule-5.0.1.tar.gz", hash = "sha256:15a4c89e82ec1319bb1b36430061a103b91f1eb6d000b54330a161f4c8ee62d7"},
+    {file = "molecule-5.1.0-py3-none-any.whl", hash = "sha256:09f9f33d172b405abd762e2de9557c61160d14691a5bb82e36adbdbe47ba0133"},
+    {file = "molecule-5.1.0.tar.gz", hash = "sha256:fa7af89fdf9317539c3eca99cb1e5e7522d7a57e0b67f5b698e44276f98d9d82"},
 ]
 
 [package.dependencies]
-ansible-compat = ">=2.2.0,<4.0.0"
+ansible-compat = ">=4.1.2"
 ansible-core = ">=2.12.10"
 click = ">=8.0,<9"
 click-help-colors = ">=0.9"
@@ -1162,8 +1162,8 @@ PyYAML = ">=5.1"
 rich = ">=9.5.1"
 
 [package.extras]
-docs = ["mkdocs-ansible[lock] (>=0.1.4)", "pipdeptree (>=2.4.0)"]
-lock = ["ansible-compat (==3.0.2)", "ansible-core (==2.14.4)", "arrow (==1.2.3)", "attrs (==23.1.0)", "binaryornot (==0.4.4)", "certifi (==2022.12.7)", "cffi (==1.15.1)", "chardet (==5.1.0)", "charset-normalizer (==3.1.0)", "click (==8.1.3)", "click-help-colors (==0.9.1)", "cookiecutter (==2.1.1)", "cryptography (==40.0.2)", "enrich (==1.2.7)", "idna (==3.4)", "jinja2 (==3.1.2)", "jinja2-time (==0.2.0)", "jsonschema (==4.17.3)", "markdown-it-py (==2.2.0)", "markupsafe (==2.1.2)", "mdurl (==0.1.2)", "packaging (==23.1)", "pluggy (==1.0.0)", "pycparser (==2.21)", "pygments (==2.15.1)", "pyrsistent (==0.19.3)", "python-dateutil (==2.8.2)", "python-slugify (==8.0.1)", "pyyaml (==6.0)", "requests (==2.28.2)", "resolvelib (==0.8.1)", "rich (==13.3.4)", "six (==1.16.0)", "subprocess-tee (==0.4.1)", "text-unidecode (==1.3)", "urllib3 (==1.26.15)"]
+docs = ["linkchecker", "mkdocs-ansible[lock] (>=0.1.4)", "pipdeptree (>=2.4.0)"]
+lock = ["ansible-compat (==4.1.2)", "ansible-core (==2.14.4)", "arrow (==1.2.3)", "attrs (==23.1.0)", "binaryornot (==0.4.4)", "certifi (==2022.12.7)", "cffi (==1.15.1)", "chardet (==5.1.0)", "charset-normalizer (==3.1.0)", "click (==8.1.3)", "click-help-colors (==0.9.1)", "cookiecutter (==2.1.1)", "cryptography (==41.0.0)", "enrich (==1.2.7)", "idna (==3.4)", "jinja2 (==3.1.2)", "jinja2-time (==0.2.0)", "jsonschema (==4.17.3)", "markdown-it-py (==2.2.0)", "markupsafe (==2.1.2)", "mdurl (==0.1.2)", "packaging (==23.1)", "pluggy (==1.0.0)", "pycparser (==2.21)", "pygments (==2.15.1)", "pyrsistent (==0.19.3)", "python-dateutil (==2.8.2)", "python-slugify (==8.0.1)", "pyyaml (==6.0)", "requests (==2.31.0)", "resolvelib (==0.8.1)", "rich (==13.3.4)", "six (==1.16.0)", "subprocess-tee (==0.4.1)", "text-unidecode (==1.3)", "urllib3 (==1.26.15)"]
 test = ["ansi2html (>=1.8.0)", "ansible-lint (>=6.12.1)", "check-jsonschema", "coverage (>=7.0.3)", "filelock (>=3.9.0)", "pexpect (>=4.8.0,<5)", "pytest (>=7.2.0)", "pytest-mock (>=3.10.0)", "pytest-plus (>=0.4.0)", "pytest-testinfra (>=7.0.0)", "pytest-xdist (>=3.1.0)"]
 
 [[package]]
@@ -2021,4 +2021,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "sphinx"]
 [metadata]
 lock-version = "2.0"
 python-versions = "<3.11,>=3.10"
-content-hash = "cb15e977054f34d2dbd09318193401c0cc1d58a6391fe14c15bcca0f77ca388d"
+content-hash = "bb9e6756de4e20bc74b3a92f75d59d811d9920ebf3085c0f031560eadae9b115"
