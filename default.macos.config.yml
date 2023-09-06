@@ -19,6 +19,9 @@ homebrew_installed_packages:
   - zlib
   - tcl-tk
   - pipx
+  - neovim
+  - tmux
+  - chezmoi
   - jesseduffield/lazydocker/lazydocker
   - esolitos/ipa/sshpass
   - htop
