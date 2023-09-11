@@ -8,6 +8,7 @@ homebrew_taps:
   - homebrew/core
   - homebrew/cask
   - homebrew/cask-drivers
+  - homebrew/cask-fonts
 
 homebrew_installed_packages:
   - git
@@ -36,6 +37,7 @@ homebrew_cask_apps:
   - openvpn-connect
   - hpedrorodrigues/tools/dockutil
   - visual-studio-code
+  - font-terminess-ttf-nerd-font
   - zoom
   - tad
   - keybase

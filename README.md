@@ -228,6 +228,7 @@ homebrew_cask_apps:
   - docker
   - openvpn-connect
   - hpedrorodrigues/tools/dockutil
+  - font-terminess-ttf-nerd-font
   - visual-studio-code
   - zoom
   - tad
