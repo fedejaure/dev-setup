@@ -207,9 +207,11 @@ homebrew_installed_packages:
   - xz
   - sqlite
   - gcc
+  - cmake
   - zlib
   - tcl-tk
   - pipx
+  - luarocks
   - neovim
   - tmux
   - chezmoi

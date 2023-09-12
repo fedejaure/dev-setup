@@ -20,6 +20,7 @@ homebrew_installed_packages:
   - zlib
   - tcl-tk
   - pipx
+  - luarocks
   - neovim
   - tmux
   - chezmoi
