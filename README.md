@@ -35,6 +35,7 @@ My own Ansible collection for development setup (use by your own risk).
 * [Openvpn Client](https://openvpn.net/vpn-client/)
 * [dockutil](https://github.com/kcrawford/dockutil)
 * [Visual Studio Code](https://code.visualstudio.com/)
+* [Terminess Nerd Font](https://www.nerdfonts.com/)
 * [Zoom](https://zoom.us/)
 * [Tad](https://www.tadviewer.com/)
 * [Keybase](https://keybase.io/)
@@ -42,7 +43,7 @@ My own Ansible collection for development setup (use by your own risk).
 * [Ultimaker Cura](https://ultimaker.com/software/ultimaker-cura)
 * [Elgato Stream Deck](https://www.elgato.com/en/stream-deck-mk2)
 * [Spotify](https://www.spotify.com/us/download/)
-  
+
 #### Tools/Package installed with Homebrew
 
 * [git](https://git-scm.com/)
@@ -51,9 +52,14 @@ My own Ansible collection for development setup (use by your own risk).
 * [xz](https://tukaani.org/xz/)
 * [sqlite](https://sqlite.org/index.html)
 * [gcc](https://gcc.gnu.org/)
+* [cmake](https://cmake.org/)
 * [zlib](https://www.zlib.net/)
 * [tcl-tk](https://www.tcl.tk/)
 * [pipx](https://pypa.github.io/pipx/)
+* [luarocks](https://luarocks.org/)
+* [neovim](https://neovim.io/)
+* [tmux](https://github.com/tmux/tmux/wiki)
+* [chezmoi](https://www.chezmoi.io/)
 * [lazydocker](https://github.com/jesseduffield/lazydocker)
 * [sshpass](https://sourceforge.net/projects/sshpass/)
 * [htop](https://htop.dev/)
@@ -254,7 +260,7 @@ Development
 To display available tasks run:
 
 ```shell session
-(dev-setu)$ inv --list
+(dev-setup)$ inv --list
 Available tasks:
 
   ansible-lint     Run ansible linter.
