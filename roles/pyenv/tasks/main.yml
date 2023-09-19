@@ -11,7 +11,7 @@
 - name: Install pyenv
   ansible.builtin.shell: |
     set -o pipefail
-    
+
     curl https://pyenv.run | bash
   when: not pyenv_st.stat.isdir is defined
   changed_when: not pyenv_st.stat.isdir is defined

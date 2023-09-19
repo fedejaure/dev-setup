@@ -91,8 +91,8 @@ My own Ansible collection for development setup (use by your own risk).
 
 3. Install requirements:
 
-    Create a temporary virtualenv, activate the virtualenv and install ansible: 
-    
+    Create a temporary virtualenv, activate the virtualenv and install ansible:
+
     ```shell session
     $ /usr/bin/python3 -m venv .venv
     $ . .venv/bin/activate
@@ -106,7 +106,7 @@ My own Ansible collection for development setup (use by your own risk).
 6. Run `ansible-playbook playbooks/main.yml --ask-become-pass -i inventory`.
 
 > Note: You need to agree to Xcode's license.
-> 
+>
 > ```shell session
 > $ sudo xcodebuild -license
 > ```
@@ -148,12 +148,12 @@ My own Ansible collection for development setup (use by your own risk).
 5. Configure the `inventory` file:
 
     * Local target:
-    
+
         >  Copy `inventory.example` into `inventory`.
 
 
     * Remote target:
-    
+
         >    Configure the `inventory` file as:
         >
         >    ```ini
@@ -162,7 +162,7 @@ My own Ansible collection for development setup (use by your own risk).
         >    ```
         >
         > #### On the target Mac:
-        >    
+        >
         > 1. Ensure Apple's command line tools are installed (xcode-select --install to launch the installer).
         >
         > 2. Go to System Preferences > Sharing.
@@ -170,13 +170,13 @@ My own Ansible collection for development setup (use by your own risk).
         > 3. Enable 'Remote Login'.
         >
         >   > You can also enable remote login on the command line:
-        >   > 
+        >   >
         >   > ```shell session
         >   > $ sudo systemsetup -setremotelogin on
         >   > ```
         >
         >   > Note: You need to agree to Xcode's license.
-        >   > 
+        >   >
         >   > ```shell session
         >   > $ sudo xcodebuild -license
         >   > ```

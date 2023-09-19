@@ -46,7 +46,7 @@
       tags: ['pyenv']
 
   tasks:
-    - name: Configure Homebrew bin rc PATH 
+    - name: Configure Homebrew bin rc PATH
       ansible.builtin.lineinfile:
         path: "{{ ansible_env.HOME }}/.zshrc"
         line: 'export PATH="{{ homebrew_brew_bin_path }}:$PATH"'
