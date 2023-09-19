@@ -11,6 +11,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - MacOS Nox with nox-poetry.
 - MacOS Elgato Stream Deck.
 - MacOS Spotify.
+- MacOS Neovim.
+- MacOS Tmux.
+- MacOS Chezmoi.
+- MacOS Terminess Nerd Font.
+- MacOS luarocks.
+- MacOS cmake.
 
 ## [1.0.0] - 2023-02-05
 ### Added
