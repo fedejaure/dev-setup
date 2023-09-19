@@ -7,16 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
-- MacOS Ultimaker Cura.
-- MacOS Nox with nox-poetry.
-- MacOS Elgato Stream Deck.
-- MacOS Spotify.
-- MacOS Neovim.
-- MacOS Tmux.
-- MacOS Chezmoi.
-- MacOS Terminess Nerd Font.
-- MacOS luarocks.
-- MacOS cmake.
+- MacOS Apps:
+    * Ultimaker Cura.
+    * Elgato Stream Deck. 
+    * Spotify.
+    * Alacritty.
+
+- MacOS Tools/Packages:
+    * Nox with nox-poetry.
+    * Neovim.
+    * Tmux.
+    * Chezmoi.
+    * Terminess Nerd Font.
+    * luarocks.
+    * cmake.
+    * fish.
+    * Starship
+
 
 ## [1.0.0] - 2023-02-05
 ### Added

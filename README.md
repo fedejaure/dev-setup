@@ -43,6 +43,7 @@ My own Ansible collection for development setup (use by your own risk).
 * [Ultimaker Cura](https://ultimaker.com/software/ultimaker-cura)
 * [Elgato Stream Deck](https://www.elgato.com/en/stream-deck-mk2)
 * [Spotify](https://www.spotify.com/us/download/)
+* [Alacritty](https://alacritty.org/)
 
 #### Tools/Package installed with Homebrew
 
@@ -65,6 +66,8 @@ My own Ansible collection for development setup (use by your own risk).
 * [htop](https://htop.dev/)
 * [dust](https://github.com/bootandy/dust)
 * [duf](https://github.com/muesli/duf)
+* [Fish Shell](https://fishshell.com/)
+* [Starship](https://starship.rs/)
 
 #### Tools installed with pipx
 
@@ -226,6 +229,8 @@ homebrew_installed_packages:
   - htop
   - dust
   - duf
+  - fish
+  - starship
   - awscli
   - tfenv
   - ffmpeg
@@ -246,6 +251,7 @@ homebrew_cask_apps:
   - ultimaker-cura
   - elgato-stream-deck
   - spotify
+  - alacritty
 
 pyenv_python_versions:
   - 3.7.15
