@@ -30,6 +30,7 @@ homebrew_installed_packages:
   - htop
   - dust
   - duf
+  - bat
   - fish
   - starship
 

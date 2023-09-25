@@ -66,6 +66,7 @@ My own Ansible collection for development setup (use by your own risk).
 * [htop](https://htop.dev/)
 * [dust](https://github.com/bootandy/dust)
 * [duf](https://github.com/muesli/duf)
+* [bat](https://github.com/sharkdp/bat)
 * [Fish Shell](https://fishshell.com/)
 * [Starship](https://starship.rs/)
 
@@ -229,6 +230,7 @@ homebrew_installed_packages:
   - htop
   - dust
   - duf
+  - bat
   - fish
   - starship
   - awscli
