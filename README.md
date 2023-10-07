@@ -282,7 +282,7 @@ Available tasks:
   lint             Run all linting.
   mypy             Run mypy.
   playbook         Run Ansible playbooks, executing the defined tasks on the targeted hosts.
-  safety           Run safety.
+  security         Run security related checks.
   tests            Run ansible molecule test.
   version          Bump version.
   yamllint         Run yamllint, a linter for YAML files.
