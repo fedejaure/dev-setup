@@ -64,9 +64,9 @@ jobs:
         shell: bash
         run: poetry run inv galaxy-install
 
-      - name: Run safety check
+      - name: Run security checks
         shell: bash
-        run: poetry run inv safety
+        run: poetry run inv security
 
       - name: Run Molecule tests
         run: poetry run inv tests

@@ -30,6 +30,9 @@ homebrew_installed_packages:
   - htop
   - dust
   - duf
+  - bat
+  - fish
+  - starship
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
@@ -47,6 +50,7 @@ homebrew_cask_apps:
   - ultimaker-cura
   - elgato-stream-deck
   - spotify
+  - alacritty
 
 # mas-cli (Mac App Store command line interface)
 ## it should be overridden in macos.config.yml

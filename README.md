@@ -43,6 +43,7 @@ My own Ansible collection for development setup (use by your own risk).
 * [Ultimaker Cura](https://ultimaker.com/software/ultimaker-cura)
 * [Elgato Stream Deck](https://www.elgato.com/en/stream-deck-mk2)
 * [Spotify](https://www.spotify.com/us/download/)
+* [Alacritty](https://alacritty.org/)
 
 #### Tools/Package installed with Homebrew
 
@@ -65,6 +66,9 @@ My own Ansible collection for development setup (use by your own risk).
 * [htop](https://htop.dev/)
 * [dust](https://github.com/bootandy/dust)
 * [duf](https://github.com/muesli/duf)
+* [bat](https://github.com/sharkdp/bat)
+* [Fish Shell](https://fishshell.com/)
+* [Starship](https://starship.rs/)
 
 #### Tools installed with pipx
 
@@ -88,8 +92,8 @@ My own Ansible collection for development setup (use by your own risk).
 
 3. Install requirements:
 
-    Create a temporary virtualenv, activate the virtualenv and install ansible: 
-    
+    Create a temporary virtualenv, activate the virtualenv and install ansible:
+
     ```shell session
     $ /usr/bin/python3 -m venv .venv
     $ . .venv/bin/activate
@@ -103,7 +107,7 @@ My own Ansible collection for development setup (use by your own risk).
 6. Run `ansible-playbook playbooks/main.yml --ask-become-pass -i inventory`.
 
 > Note: You need to agree to Xcode's license.
-> 
+>
 > ```shell session
 > $ sudo xcodebuild -license
 > ```
@@ -145,12 +149,12 @@ My own Ansible collection for development setup (use by your own risk).
 5. Configure the `inventory` file:
 
     * Local target:
-    
+
         >  Copy `inventory.example` into `inventory`.
 
 
     * Remote target:
-    
+
         >    Configure the `inventory` file as:
         >
         >    ```ini
@@ -159,7 +163,7 @@ My own Ansible collection for development setup (use by your own risk).
         >    ```
         >
         > #### On the target Mac:
-        >    
+        >
         > 1. Ensure Apple's command line tools are installed (xcode-select --install to launch the installer).
         >
         > 2. Go to System Preferences > Sharing.
@@ -167,13 +171,13 @@ My own Ansible collection for development setup (use by your own risk).
         > 3. Enable 'Remote Login'.
         >
         >   > You can also enable remote login on the command line:
-        >   > 
+        >   >
         >   > ```shell session
         >   > $ sudo systemsetup -setremotelogin on
         >   > ```
         >
         >   > Note: You need to agree to Xcode's license.
-        >   > 
+        >   >
         >   > ```shell session
         >   > $ sudo xcodebuild -license
         >   > ```
@@ -226,6 +230,9 @@ homebrew_installed_packages:
   - htop
   - dust
   - duf
+  - bat
+  - fish
+  - starship
   - awscli
   - tfenv
   - ffmpeg
@@ -246,6 +253,7 @@ homebrew_cask_apps:
   - ultimaker-cura
   - elgato-stream-deck
   - spotify
+  - alacritty
 
 pyenv_python_versions:
   - 3.7.15
@@ -274,7 +282,7 @@ Available tasks:
   lint             Run all linting.
   mypy             Run mypy.
   playbook         Run Ansible playbooks, executing the defined tasks on the targeted hosts.
-  safety           Run safety.
+  security         Run security related checks.
   tests            Run ansible molecule test.
   version          Bump version.
   yamllint         Run yamllint, a linter for YAML files.

@@ -11,7 +11,7 @@
 - name: Install pyenv
   ansible.builtin.shell: |
     set -o pipefail
-    
+
     curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash
   when: not oh_my_zsh_st.stat.isdir is defined
   changed_when: not oh_my_zsh_st.stat.isdir is defined
