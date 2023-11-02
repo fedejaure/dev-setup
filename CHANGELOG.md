@@ -24,7 +24,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     * fish.
     * Starship
 
-
 ## [1.0.0] - 2023-02-05
 ### Added
 - First release.
