@@ -274,7 +274,6 @@ Available tasks:
   ansible-lint     Run ansible linter.
   clean            Run all clean sub-tasks.
   clean-python     Clean up python file artifacts.
-  flake8           Run flake8.
   format           Format code.
   galaxy-install   Install ansible-galaxy requirements.
   hooks            Run pre-commit hooks.
@@ -282,6 +281,7 @@ Available tasks:
   lint             Run all linting.
   mypy             Run mypy.
   playbook         Run Ansible playbooks, executing the defined tasks on the targeted hosts.
+  ruff             Run ruff.
   security         Run security related checks.
   tests            Run ansible molecule test.
   version          Bump version.
