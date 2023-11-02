@@ -28,5 +28,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - First release.
 
-[Unreleased]: https://github.com/fedejaure/dev-setup/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/fedejaure/dev-setup/compare/v1.0.0...develop
 [1.0.0]: https://github.com/fedejaure/dev-setup/compare/releases/tag/v1.0.0
