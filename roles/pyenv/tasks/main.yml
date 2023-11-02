@@ -11,9 +11,10 @@
 - name: Install pyenv
   ansible.builtin.shell: |
     set -o pipefail
-    
+
     curl https://pyenv.run | bash
   when: not pyenv_st.stat.isdir is defined
+  changed_when: not pyenv_st.stat.isdir is defined
 
 - name: Configure .pyenvrc
   ansible.builtin.template:
@@ -24,6 +25,7 @@
 - name: Update Pyenv interpreter list
   ansible.builtin.shell: . {{ pyenv_root }}/.pyenvrc && pyenv update
   when: pyenv_update
+  changed_when: pyenv_update
 
 - name: Install Python versions
   ansible.builtin.shell: ". {{ pyenv_root }}/.pyenvrc && pyenv install {{ item }}"
@@ -40,4 +42,4 @@
     block: "{{ lookup('ansible.builtin.template', '.pyenvrc.j2') }}"
     path: "{{ __pyenv_rc_path }}"
     marker_begin: "BEGIN PYENV"
-  when: configure_pyenv_rc_path
+  when: pyenv_configure_rc_path

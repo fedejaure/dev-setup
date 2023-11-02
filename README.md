@@ -35,11 +35,16 @@ My own Ansible collection for development setup (use by your own risk).
 * [Openvpn Client](https://openvpn.net/vpn-client/)
 * [dockutil](https://github.com/kcrawford/dockutil)
 * [Visual Studio Code](https://code.visualstudio.com/)
+* [Terminess Nerd Font](https://www.nerdfonts.com/)
 * [Zoom](https://zoom.us/)
 * [Tad](https://www.tadviewer.com/)
 * [Keybase](https://keybase.io/)
 * [Obsidian](https://obsidian.md/)
-  
+* [Ultimaker Cura](https://ultimaker.com/software/ultimaker-cura)
+* [Elgato Stream Deck](https://www.elgato.com/en/stream-deck-mk2)
+* [Spotify](https://www.spotify.com/us/download/)
+* [Alacritty](https://alacritty.org/)
+
 #### Tools/Package installed with Homebrew
 
 * [git](https://git-scm.com/)
@@ -48,14 +53,22 @@ My own Ansible collection for development setup (use by your own risk).
 * [xz](https://tukaani.org/xz/)
 * [sqlite](https://sqlite.org/index.html)
 * [gcc](https://gcc.gnu.org/)
+* [cmake](https://cmake.org/)
 * [zlib](https://www.zlib.net/)
 * [tcl-tk](https://www.tcl.tk/)
 * [pipx](https://pypa.github.io/pipx/)
+* [luarocks](https://luarocks.org/)
+* [neovim](https://neovim.io/)
+* [tmux](https://github.com/tmux/tmux/wiki)
+* [chezmoi](https://www.chezmoi.io/)
 * [lazydocker](https://github.com/jesseduffield/lazydocker)
 * [sshpass](https://sourceforge.net/projects/sshpass/)
 * [htop](https://htop.dev/)
 * [dust](https://github.com/bootandy/dust)
 * [duf](https://github.com/muesli/duf)
+* [bat](https://github.com/sharkdp/bat)
+* [Fish Shell](https://fishshell.com/)
+* [Starship](https://starship.rs/)
 
 #### Tools installed with pipx
 
@@ -66,6 +79,8 @@ My own Ansible collection for development setup (use by your own risk).
 
 * [oh-my-zsh](https://ohmyz.sh/)
 * [pyenv](https://github.com/pyenv/pyenv)
+* [nox](https://nox.thea.codes/en/stable/) with:
+  * [nox-poetry](https://nox-poetry.readthedocs.io/en/stable/)
 
 ## Quickstart
 
@@ -77,8 +92,8 @@ My own Ansible collection for development setup (use by your own risk).
 
 3. Install requirements:
 
-    Create a temporary virtualenv, activate the virtualenv and install ansible: 
-    
+    Create a temporary virtualenv, activate the virtualenv and install ansible:
+
     ```shell session
     $ /usr/bin/python3 -m venv .venv
     $ . .venv/bin/activate
@@ -92,7 +107,7 @@ My own Ansible collection for development setup (use by your own risk).
 6. Run `ansible-playbook playbooks/main.yml --ask-become-pass -i inventory`.
 
 > Note: You need to agree to Xcode's license.
-> 
+>
 > ```shell session
 > $ sudo xcodebuild -license
 > ```
@@ -134,12 +149,12 @@ My own Ansible collection for development setup (use by your own risk).
 5. Configure the `inventory` file:
 
     * Local target:
-    
+
         >  Copy `inventory.example` into `inventory`.
 
 
     * Remote target:
-    
+
         >    Configure the `inventory` file as:
         >
         >    ```ini
@@ -148,7 +163,7 @@ My own Ansible collection for development setup (use by your own risk).
         >    ```
         >
         > #### On the target Mac:
-        >    
+        >
         > 1. Ensure Apple's command line tools are installed (xcode-select --install to launch the installer).
         >
         > 2. Go to System Preferences > Sharing.
@@ -156,13 +171,13 @@ My own Ansible collection for development setup (use by your own risk).
         > 3. Enable 'Remote Login'.
         >
         >   > You can also enable remote login on the command line:
-        >   > 
+        >   >
         >   > ```shell session
         >   > $ sudo systemsetup -setremotelogin on
         >   > ```
         >
         >   > Note: You need to agree to Xcode's license.
-        >   > 
+        >   >
         >   > ```shell session
         >   > $ sudo xcodebuild -license
         >   > ```
@@ -197,10 +212,30 @@ mas_email: "example@example.com"
 
 homebrew_installed_packages:
   - git
+  - openssl
+  - readline
+  - xz
+  - sqlite
+  - gcc
+  - cmake
+  - zlib
+  - tcl-tk
   - pipx
+  - luarocks
+  - neovim
+  - tmux
+  - chezmoi
   - jesseduffield/lazydocker/lazydocker
+  - esolitos/ipa/sshpass
+  - htop
+  - dust
+  - duf
+  - bat
+  - fish
+  - starship
   - awscli
   - tfenv
+  - ffmpeg
 
 homebrew_cask_apps:
   - firefox
@@ -208,12 +243,17 @@ homebrew_cask_apps:
   - docker
   - openvpn-connect
   - hpedrorodrigues/tools/dockutil
+  - font-terminess-ttf-nerd-font
   - visual-studio-code
   - zoom
   - tad
   - keybase
   - obsidian
   - google-cloud-sdk
+  - ultimaker-cura
+  - elgato-stream-deck
+  - spotify
+  - alacritty
 
 pyenv_python_versions:
   - 3.7.15
@@ -228,13 +268,12 @@ Development
 To display available tasks run:
 
 ```shell session
-(dev-setu)$ inv --list
+(dev-setup)$ inv --list
 Available tasks:
 
   ansible-lint     Run ansible linter.
   clean            Run all clean sub-tasks.
   clean-python     Clean up python file artifacts.
-  flake8           Run flake8.
   format           Format code.
   galaxy-install   Install ansible-galaxy requirements.
   hooks            Run pre-commit hooks.
@@ -242,7 +281,8 @@ Available tasks:
   lint             Run all linting.
   mypy             Run mypy.
   playbook         Run Ansible playbooks, executing the defined tasks on the targeted hosts.
-  safety           Run safety.
+  ruff             Run ruff.
+  security         Run security related checks.
   tests            Run ansible molecule test.
   version          Bump version.
   yamllint         Run yamllint, a linter for YAML files.

@@ -10,7 +10,7 @@ jobs:
     name: autoupdate
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3.3.0
+      - uses: actions/checkout@v4.1.1
         with:
           ref: develop
 
@@ -19,24 +19,33 @@ jobs:
         with:
           python-version: "3.10"
 
-      - name: Install pre-commit
-        run: pip install pre-commit
+      - name: Install system deps
+        shell: bash
+        run: |
+          pip install poetry
+          poetry config virtualenvs.in-project true
+          poetry install --no-root --only dev --sync
+
+      - name: Install galaxy deps
+        shell: bash
+        run: |
+          poetry run ansible-galaxy install -r requirements.yml
 
       - name: Run autoupdate
-        run: pre-commit autoupdate
+        run: poetry run pre-commit autoupdate
 
       - name: Run pre-commit
-        run: pre-commit run --all-files
+        run: poetry run pre-commit run --all-files
 
-      - uses: peter-evans/create-pull-request@v4.2.3
+      - uses: peter-evans/create-pull-request@v5.0.2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: chore-update-pre-commit-hooks
           title: Update pre-commit hooks
           commit-message: "Update pre-commit hooks"
           body: |
-            # Update pre-commit hooks 
-            
+            # Update pre-commit hooks
+
             - Update pre-commit hooks to the latest version.
           delete-branch: true
           labels: |

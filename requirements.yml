@@ -1,8 +1,10 @@
 ---
 roles:
   - name: elliotweiser.osx-command-line-tools
+    version: 2.3.0
 
 collections:
   - name: geerlingguy.mac
+    version: 2.1.1
   - source: ../dev-setup
     type: dir

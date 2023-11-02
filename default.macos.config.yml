@@ -7,6 +7,8 @@ homebrew_brew_bin_path: "{{ homebrew_prefix }}/bin"
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
+  - homebrew/cask-drivers
+  - homebrew/cask-fonts
 
 homebrew_installed_packages:
   - git
@@ -15,14 +17,22 @@ homebrew_installed_packages:
   - xz
   - sqlite
   - gcc
+  - cmake
   - zlib
   - tcl-tk
   - pipx
+  - luarocks
+  - neovim
+  - tmux
+  - chezmoi
   - jesseduffield/lazydocker/lazydocker
   - esolitos/ipa/sshpass
   - htop
   - dust
   - duf
+  - bat
+  - fish
+  - starship
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
@@ -32,10 +42,15 @@ homebrew_cask_apps:
   - openvpn-connect
   - hpedrorodrigues/tools/dockutil
   - visual-studio-code
+  - font-terminess-ttf-nerd-font
   - zoom
   - tad
   - keybase
   - obsidian
+  - ultimaker-cura
+  - elgato-stream-deck
+  - spotify
+  - alacritty
 
 # mas-cli (Mac App Store command line interface)
 ## it should be overridden in macos.config.yml
@@ -94,7 +109,7 @@ dockitems_persist:
     path: "/Applications/OpenVPN Connect/OpenVPN Connect.app/"
     pos: 14
 
-configure_pyenv_rc_path: true
+pyenv_configure_rc_path: true
 
 configure_homebrew_bin_rc_path: true
 
@@ -102,3 +117,6 @@ configure_pipx_bin_rc_path: true
 pipx_installed_packages:
   - pipenv
   - poetry
+  - name: nox
+    inject_packages:
+      - nox-poetry

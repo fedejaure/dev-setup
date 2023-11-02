@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "dev-setup"
-version = "1.0.0"
+version = "1.1.0"
 description = "My own Ansible collection for development setup."
 authors = ["Federico Jaureguialzo <fedejaure@gmail.com>"]
 readme = "README.md"
@@ -13,47 +13,66 @@ documentation = "https://dev-setup.readthedocs.io"
 
 [tool.poetry.dependencies]
 python = "<3.11,>=3.10"
-ansible = "^7.2.0"
+ansible = "^8.5.0"
 
-[tool.poetry.dev-dependencies]
-pre-commit = "^3.0.4"
-invoke = "^2.0.0"
-flake8 = "^4.0.1"
-flakeheaven = "^3.2.1"
-flake8-builtins = "^2.1.0"
-flake8-blind-except = "^0.2.1"
-flake8-logging-format = "^0.9.0"
-flake8-bugbear = "^23.1.20"
-flake8-annotations = "^2.9.1"
-flake8-docstrings = "^1.7.0"
-flake8-bandit = "^3.0.0"
-darglint = "^1.8.0"
-pylint = "^2.16.1"
-isort = "^5.12.0"
-black = "^22.12"
-safety = "^2.3.5"
-mypy = "^0.991"
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.5.0"
+invoke = "^2.2.0"
 bump2version = "^1.0.1"
-yamllint = "^1.29.0"
-ansible-lint = {version = "^6.12.1", markers = "platform_system != 'Windows'"}
-molecule = {extras = ["docker"], version = "^4.0.4"}
 
-[tool.flakeheaven]
-format = "grouped"
-max_line_length = 99
-show_source = true
-docstring-convention = "google"
-extended_default_ignore = []
+[tool.poetry.group.test.dependencies]
+molecule = "^6.0.2"
+molecule-plugins = {extras = ["docker"], version = "^23.5.0"}
 
-[tool.flakeheaven.plugins]
-pyflakes = ["+*"]
-pycodestyle = ["+*"]
-mccabe = ["+*"]
-"flake8-*" = ["+*"]
-pylint = ["-C????", "-E????", "+F????", "+I????", "-R????", "-W????"]
+[tool.poetry.group.lint.dependencies]
+isort = "^5.12.0"
+black = "^23.10.0"
+ruff = "^0.1.2"
+yamllint = "^1.32.0"
+ansible-lint = {version = "^6.21.1", markers = "platform_system != 'Windows'"}
 
-[tool.flakeheaven.exceptions."tests/"]
-flake8-bandit = ["-S101"]
+[tool.poetry.group.security.dependencies]
+safety = "^2.4.0b1"
+
+[tool.poetry.group.typing.dependencies]
+mypy = "^1.6"
+
+[tool.ruff]
+target-version = "py311"
+show-source = true
+line-length = 99
+fix = true
+unfixable = [
+  "ERA",  # Don't remove commented-out code
+]
+extend-exclude = [
+    "docs/*",
+]
+select = [
+  "E", "F", "W",  # flake8
+  "C",  # mccabe
+  "I",  # isort
+  "N",  # pep8-naming
+  "D",  # flake8-docstrings
+  "ANN",  # flake8-annotations
+  "S",  # flake8-bandit
+  "BLE",  # flake8-blind-except
+  "B",  # flake8-bugbear
+  "A",  # flake8-builtins
+  "G",  # flake8-logging-format
+  "ERA",  # eradicate
+  "ISC",  # flake8-implicit-str-concat
+  "RUF",  # Ruff-specific rules
+]
+ignore = ["ANN101", "D203", "D213"]
+
+[tool.ruff.per-file-ignores]
+"tests/*" = ["S101"]
+".jupyter/jupyter_lab_config.py" = ["E501", "ERA001"]
+"src/deeptune/utils.py" = ["ANN401"]
+
+[tool.ruff.mccabe]
+max-complexity = 10
 
 [tool.isort]
 multi_line_output = 3
@@ -65,7 +84,26 @@ known_third_party = ["invoke", "nox"]
 
 [tool.black]
 line-length = 99
-target-version = ["py37"]
+target-version = ["py310"]
+
+[tool.mypy]
+warn_return_any = true
+warn_unused_configs = true
+
+[[tool.mypy.overrides]]
+module = ["invoke.*"]
+allow_redefinition = false
+check_untyped_defs = true
+ignore_errors = false
+ignore_missing_imports = true
+implicit_reexport = false
+local_partial_types = true
+strict_optional = true
+strict_equality = true
+no_implicit_optional = true
+warn_unused_ignores = true
+warn_unreachable = true
+warn_no_return = true
 
 [build-system]
 requires = ["poetry>=0.12"]
