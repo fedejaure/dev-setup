@@ -109,7 +109,7 @@ dockitems_persist:
     path: "/Applications/OpenVPN Connect/OpenVPN Connect.app/"
     pos: 14
 
-configure_pyenv_rc_path: true
+pyenv_configure_rc_path: true
 
 configure_homebrew_bin_rc_path: true
 

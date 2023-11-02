@@ -136,3 +136,6 @@ inventory
 .roles/**
 .collections/**
 /macos.config.yml
+
+# flakeheaven
+.flakeheaven_cache

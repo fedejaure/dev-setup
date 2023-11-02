@@ -9,4 +9,4 @@ pyenv_python_versions:
 
 pyenv_update: false
 
-configure_pyenv_rc_path: false
+pyenv_configure_rc_path: false
