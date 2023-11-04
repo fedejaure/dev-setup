@@ -115,8 +115,11 @@ configure_homebrew_bin_rc_path: true
 
 configure_pipx_bin_rc_path: true
 pipx_installed_packages:
+  - cookiecutter
   - pipenv
-  - poetry
+  - name: poetry
+    inject_packages:
+      - poetry-plugin-export
   - name: nox
     inject_packages:
       - nox-poetry
