@@ -73,14 +73,17 @@ My own Ansible collection for development setup (use by your own risk).
 #### Tools installed with pipx
 
 * [pipenv](https://pipenv.pypa.io/en/latest/)
-* [poetry](https://python-poetry.org/)
+* [cookiecutter](https://github.com/cookiecutter/cookiecutter)
+* [poetry](https://python-poetry.org/) with:
+  * [Poetry Plugin: Export](https://github.com/python-poetry/poetry-plugin-export)
+* [nox](https://nox.thea.codes/en/stable/) with:
+  * [nox-poetry](https://nox-poetry.readthedocs.io/en/stable/)
 
 #### Other installed Tools
 
 * [oh-my-zsh](https://ohmyz.sh/)
 * [pyenv](https://github.com/pyenv/pyenv)
-* [nox](https://nox.thea.codes/en/stable/) with:
-  * [nox-poetry](https://nox-poetry.readthedocs.io/en/stable/)
+
 
 ## Quickstart
 
