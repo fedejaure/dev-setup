@@ -20,7 +20,7 @@ My own Ansible collection for development setup (use by your own risk).
 
 ### Mac OS
 
-#### Applications instaled with Mac App Store
+#### Applications installed with Mac App Store
 
 * [Xcode](https://apps.apple.com/us/app/id497799835)
 * [Slack](https://apps.apple.com/us/app/id803453959)

@@ -11,6 +11,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     * Poetry Plugin: Export.
     * Cookiecutter.
 
+### Removed
+- Deprecated Homebrew tap.
+
 ## [1.1.0] - 2023-11-02
 ### Added
 - MacOS Apps:
