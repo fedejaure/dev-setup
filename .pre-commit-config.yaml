@@ -23,11 +23,11 @@ repos:
     hooks:
       - id: isort
   - repo: https://github.com/psf/black
-    rev: 23.10.1
+    rev: 23.11.0
     hooks:
       - id: black
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.1.2
+    rev: v0.1.5
     hooks:
       - id: ruff
   - repo: https://github.com/python-poetry/poetry
@@ -36,11 +36,11 @@ repos:
       - id: poetry-check
       - id: poetry-install
   - repo: https://github.com/adrienverge/yamllint.git
-    rev: v1.32.0
+    rev: v1.33.0
     hooks:
       - id: yamllint
   - repo: https://github.com/ansible-community/ansible-lint.git
-    rev: v6.21.1
+    rev: v6.22.0
     hooks:
       - id: ansible-lint
         files: \.(yaml|yml)$
