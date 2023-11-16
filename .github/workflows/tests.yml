@@ -25,6 +25,7 @@ jobs:
         shell: bash
         run: |
           pip install poetry
+          pip install poetry-plugin-export
           poetry config virtualenvs.in-project true
           poetry install --no-root --only dev --sync
 
@@ -57,6 +58,7 @@ jobs:
         shell: bash
         run: |
           pip install poetry
+          pip install poetry-plugin-export
           poetry config virtualenvs.in-project true
           poetry install --no-root
 
