@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+
+## [1.2.0] - 2023-11-16
 ### Added
 - MacOS Tools/Packages:
     * Poetry Plugin: Export.
@@ -37,6 +39,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - First release.
 
-[Unreleased]: https://github.com/fedejaure/dev-setup/compare/v1.1.0...develop
+[Unreleased]: https://github.com/fedejaure/dev-setup/compare/v1.2.0...develop
+[1.2.0]: https://github.com/fedejaure/dev-setup/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/fedejaure/dev-setup/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/fedejaure/dev-setup/compare/releases/tag/v1.0.0
