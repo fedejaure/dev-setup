@@ -13,7 +13,7 @@ documentation = "https://dev-setup.readthedocs.io"
 
 [tool.poetry.dependencies]
 python = "<3.11,>=3.10"
-ansible = "^8.6.1"
+ansible = "^9.0.1"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.5.0"
