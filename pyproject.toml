@@ -22,7 +22,7 @@ bump2version = "^1.0.1"
 
 [tool.poetry.group.test.dependencies]
 molecule = "^24.2.0"
-molecule-plugins = {extras = ["docker"], version = "^23.5.0"}
+molecule-plugins = {extras = ["docker"], version = "^23.5.3"}
 
 [tool.poetry.group.lint.dependencies]
 isort = "^5.13.2"
