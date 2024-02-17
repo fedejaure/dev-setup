@@ -247,6 +247,10 @@ homebrew_cask_apps:
   - openvpn-connect
   - hpedrorodrigues/tools/dockutil
   - font-terminess-ttf-nerd-font
+  - font-ubuntu-nerd-font
+  - font-ubuntu-mono-nerd-font
+  - font-xkcd
+  - font-xkcd-script
   - visual-studio-code
   - zoom
   - tad

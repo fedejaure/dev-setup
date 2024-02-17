@@ -42,6 +42,10 @@ homebrew_cask_apps:
   - hpedrorodrigues/tools/dockutil
   - visual-studio-code
   - font-terminess-ttf-nerd-font
+  - font-ubuntu-nerd-font
+  - font-ubuntu-mono-nerd-font
+  - font-xkcd
+  - font-xkcd-script
   - zoom
   - tad
   - keybase
