@@ -236,6 +236,7 @@ homebrew_installed_packages:
   - bat
   - fish
   - starship
+  - btop
   - awscli
   - tfenv
   - ffmpeg

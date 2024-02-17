@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     * Ubuntu Mono Nerd Font.
     * xkcd Nerd Font.
     * xkcd-script Nerd Font.
+    * btop
 
 ### Changed
 - MacOS Tools/Packages:
