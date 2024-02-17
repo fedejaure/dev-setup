@@ -5,6 +5,6 @@ roles:
 
 collections:
   - name: geerlingguy.mac
-    version: 2.1.1
+    version: 4.0.0
   - source: ../dev-setup
     type: dir
