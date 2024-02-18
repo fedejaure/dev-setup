@@ -6,8 +6,6 @@ homebrew_brew_bin_path: "{{ homebrew_prefix }}/bin"
 homebrew_brew_sbin_path: "{{ homebrew_prefix }}/sbin"
 
 homebrew_taps:
-  - homebrew/core
-  - homebrew/cask
   - homebrew/cask-fonts
 
 homebrew_installed_packages:
