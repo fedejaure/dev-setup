@@ -223,6 +223,7 @@ homebrew_installed_packages:
   - cmake
   - zlib
   - tcl-tk
+  - dockutil
   - pipx
   - luarocks
   - neovim
@@ -246,7 +247,6 @@ homebrew_cask_apps:
   - google-chrome
   - docker
   - openvpn-connect
-  - hpedrorodrigues/tools/dockutil
   - font-terminess-ttf-nerd-font
   - font-ubuntu-nerd-font
   - font-ubuntu-mono-nerd-font

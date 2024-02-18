@@ -3,6 +3,7 @@
 homebrew_prefix: "{{ (ansible_machine == 'arm64') | ternary('/opt/homebrew', '/usr/local') }}"
 homebrew_install_path: "{{ homebrew_prefix }}/Homebrew"
 homebrew_brew_bin_path: "{{ homebrew_prefix }}/bin"
+homebrew_brew_sbin_path: "{{ homebrew_prefix }}/sbin"
 
 homebrew_taps:
   - homebrew/core
@@ -19,6 +20,7 @@ homebrew_installed_packages:
   - cmake
   - zlib
   - tcl-tk
+  - dockutil
   - pipx
   - luarocks
   - neovim
@@ -40,7 +42,6 @@ homebrew_cask_apps:
   - google-chrome
   - docker
   - openvpn-connect
-  - hpedrorodrigues/tools/dockutil
   - visual-studio-code
   - font-terminess-ttf-nerd-font
   - font-ubuntu-nerd-font
@@ -116,6 +117,7 @@ dockitems_persist:
 pyenv_configure_rc_path: true
 
 configure_homebrew_bin_rc_path: true
+configure_homebrew_sbin_rc_path: true
 
 configure_pipx_bin_rc_path: true
 pipx_installed_packages:
