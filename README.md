@@ -46,6 +46,7 @@ My own Ansible collection for development setup (use by your own risk).
 * [Elgato Stream Deck](https://www.elgato.com/en/stream-deck-mk2)
 * [Spotify](https://www.spotify.com/us/download/)
 * [Alacritty](https://alacritty.org/)
+* [Discord](https://discord.com/)
 
 #### Tools/Package installed with Homebrew
 
@@ -264,6 +265,7 @@ homebrew_cask_apps:
   - elgato-stream-deck
   - spotify
   - alacritty
+  - discord
 
 pyenv_python_versions:
   - 3.9.18

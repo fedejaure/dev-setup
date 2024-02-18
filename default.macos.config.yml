@@ -54,6 +54,7 @@ homebrew_cask_apps:
   - elgato-stream-deck
   - spotify
   - alacritty
+  - discord
 
 # mas-cli (Mac App Store command line interface)
 ## it should be overridden in macos.config.yml
