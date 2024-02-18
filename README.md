@@ -36,6 +36,8 @@ My own Ansible collection for development setup (use by your own risk).
 * [dockutil](https://github.com/kcrawford/dockutil)
 * [Visual Studio Code](https://code.visualstudio.com/)
 * [Terminess Nerd Font](https://www.nerdfonts.com/)
+* [Ubuntu Nerd Font](https://www.nerdfonts.com/)
+* [xkcd Font](https://github.com/ipython/xkcd-font)
 * [Zoom](https://zoom.us/)
 * [Tad](https://www.tadviewer.com/)
 * [Keybase](https://keybase.io/)
