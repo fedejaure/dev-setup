@@ -36,6 +36,8 @@ My own Ansible collection for development setup (use by your own risk).
 * [dockutil](https://github.com/kcrawford/dockutil)
 * [Visual Studio Code](https://code.visualstudio.com/)
 * [Terminess Nerd Font](https://www.nerdfonts.com/)
+* [Ubuntu Nerd Font](https://www.nerdfonts.com/)
+* [xkcd Font](https://github.com/ipython/xkcd-font)
 * [Zoom](https://zoom.us/)
 * [Tad](https://www.tadviewer.com/)
 * [Keybase](https://keybase.io/)
@@ -44,6 +46,7 @@ My own Ansible collection for development setup (use by your own risk).
 * [Elgato Stream Deck](https://www.elgato.com/en/stream-deck-mk2)
 * [Spotify](https://www.spotify.com/us/download/)
 * [Alacritty](https://alacritty.org/)
+* [Discord](https://discord.com/)
 
 #### Tools/Package installed with Homebrew
 
@@ -223,6 +226,7 @@ homebrew_installed_packages:
   - cmake
   - zlib
   - tcl-tk
+  - dockutil
   - pipx
   - luarocks
   - neovim
@@ -236,6 +240,7 @@ homebrew_installed_packages:
   - bat
   - fish
   - starship
+  - btop
   - awscli
   - tfenv
   - ffmpeg
@@ -245,8 +250,11 @@ homebrew_cask_apps:
   - google-chrome
   - docker
   - openvpn-connect
-  - hpedrorodrigues/tools/dockutil
   - font-terminess-ttf-nerd-font
+  - font-ubuntu-nerd-font
+  - font-ubuntu-mono-nerd-font
+  - font-xkcd
+  - font-xkcd-script
   - visual-studio-code
   - zoom
   - tad
@@ -257,13 +265,13 @@ homebrew_cask_apps:
   - elgato-stream-deck
   - spotify
   - alacritty
+  - discord
 
 pyenv_python_versions:
-  - 3.7.15
-  - 3.8.15
-  - 3.9.15
-  - 3.10.8
-  - 3.11.0
+  - 3.9.18
+  - 3.10.13
+  - 3.11.7
+  - 3.12.1
 ```
 
 Development

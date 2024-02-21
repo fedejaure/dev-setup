@@ -6,6 +6,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+### Added
+- MacOS Tools/Packages:
+    * Ubuntu Nerd Font.
+    * Ubuntu Mono Nerd Font.
+    * xkcd Nerd Font.
+    * xkcd-script Nerd Font.
+    * btop.
+
+- MacOS Apps:
+    * Discord.
+
+### Changed
+- MacOS Tools/Packages:
+    * Upgrade python versions.
+
+### Fixed
+- MacOS:
+    * brew doctor issues.
 
 ## [1.2.0] - 2023-11-16
 ### Added
