@@ -233,7 +233,7 @@ homebrew_installed_packages:
   - tmux
   - chezmoi
   - jesseduffield/lazydocker/lazydocker
-  - esolitos/ipa/sshpass
+  - sshpass
   - htop
   - dust
   - duf
