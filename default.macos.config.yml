@@ -7,6 +7,7 @@ homebrew_brew_sbin_path: "{{ homebrew_prefix }}/sbin"
 
 homebrew_taps:
   - homebrew/cask-fonts
+  - esolitos/ipa
 
 homebrew_installed_packages:
   - git
@@ -25,7 +26,7 @@ homebrew_installed_packages:
   - tmux
   - chezmoi
   - jesseduffield/lazydocker/lazydocker
-  - esolitos/ipa/sshpass
+  - sshpass
   - htop
   - dust
   - duf
