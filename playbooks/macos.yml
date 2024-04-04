@@ -75,7 +75,21 @@
         executable: "{{ homebrew_brew_bin_path }}/pipx"
         name: "{{ item.name | default(item) }}"
         state: "latest"
-        include_injected: true
-        inject_packages: "{{ item.inject_packages | default([]) }}"
       tags: ['pipx']
       loop: "{{ pipx_installed_packages }}"
+
+    - name: Inject pipx packages
+      community.general.pipx:
+        executable: "{{ homebrew_brew_bin_path }}/pipx"
+        name: "{{ item.name | default(item) }}"
+        state: "inject"
+        include_injected: true
+        inject_packages: "{{ item.inject_packages }}"
+      tags: ['pipx']
+      loop: "{{ pipx_installed_packages }}"
+      when: |
+        (item.inject_packages is defined)
+        and (item.inject_packages is not string)
+        and (item.inject_packages is not mapping)
+        and (item.inject_packages is iterable)
+        and (item.inject_packages | length > 0)
