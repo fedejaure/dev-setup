@@ -56,19 +56,19 @@ resolvelib = ">=0.5.3,<1.1.0"
 
 [[package]]
 name = "ansible-lint"
-version = "24.2.1"
+version = "24.2.3"
 description = "Checks playbooks for practices and behavior that could potentially be improved"
 optional = false
 python-versions = ">=3.10"
 files = [
-    {file = "ansible-lint-24.2.1.tar.gz", hash = "sha256:c3619deaadf852c353decff7242589bd1339e29271552e4e37bfa8f67db4c56b"},
-    {file = "ansible_lint-24.2.1-py3-none-any.whl", hash = "sha256:d9e11aa06429610f0b461ec5eb9adf7317d4b2abb78475a9a1ec7e8f8e2c1316"},
+    {file = "ansible_lint-24.2.3-py3-none-any.whl", hash = "sha256:8aad0de454e0e803b0416a9c6e409302a8eb93c0f3866a98f035b96647e72213"},
+    {file = "ansible_lint-24.2.3.tar.gz", hash = "sha256:2ec67cc1719f56e63b1dfc3728d0c2c4142e531f4452f6ae31f618438d59469a"},
 ]
 
 [package.dependencies]
 ansible-compat = ">=4.1.11"
 ansible-core = ">=2.12.0"
-black = ">=22.8.0"
+black = ">=24.3.0"
 filelock = ">=3.3.0"
 jsonschema = ">=4.10.0"
 packaging = ">=21.3"
@@ -82,7 +82,7 @@ yamllint = ">=1.30.0"
 
 [package.extras]
 docs = ["mkdocs-ansible (>=0.2.0)", "pipdeptree (>=2.7.1)"]
-test = ["black", "coverage-enable-subprocess", "coverage[toml] (>=6.4.4)", "jmespath", "license-expression (>=30.1.1)", "mypy", "netaddr", "psutil", "pylint", "pytest (>=7.2.2)", "pytest-mock", "pytest-plus (>=0.6)", "pytest-xdist (>=2.1.0)", "ruamel-yaml-clib", "ruamel.yaml (>=0.17.31)", "types-jsonschema", "types-pyyaml"]
+test = ["black", "coverage-enable-subprocess", "coverage[toml] (>=6.4.4)", "jmespath", "license-expression (>=30.3.0)", "mypy", "netaddr", "psutil", "pylint", "pytest (>=7.2.2)", "pytest-mock", "pytest-plus (>=0.6)", "pytest-xdist (>=2.1.0)", "ruamel-yaml-clib", "ruamel.yaml (>=0.17.31)", "types-jsonschema", "types-pyyaml"]
 
 [[package]]
 name = "attrs"
@@ -1638,4 +1638,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "sphinx"]
 [metadata]
 lock-version = "2.0"
 python-versions = "<3.11,>=3.10"
-content-hash = "e87d399cdd1b349e50a8037f5e0a572e72464a74fe9135b70d0ecd1d8713ae5a"
+content-hash = "29b2ec6f91e06b8c99903182c2eb7c2e95d6c0205ae46e11defb811b4e0e88f5"
