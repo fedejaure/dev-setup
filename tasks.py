@@ -24,7 +24,7 @@ META_DIR = ROOT_DIR / "meta"
 ANSIBLE_TARGETS = [MOLECULE_DIR, ROLES_DIR, PLAYBOOKS_DIR, META_DIR]
 ANSIBLE_TARGETS_STR = " ".join([str(t) for t in ANSIBLE_TARGETS])
 
-SAFETY_IGNORE = [42923, 54229, 54230, 54564]
+SAFETY_IGNORE = [70612]
 
 
 def _run(c: Context, command: str, env: dict[str, Any] | None = None) -> Optional[Result]:
