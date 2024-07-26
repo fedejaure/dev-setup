@@ -27,7 +27,7 @@ repos:
     hooks:
       - id: black
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.4.8
+    rev: v0.5.5
     hooks:
       - id: ruff
   - repo: https://github.com/python-poetry/poetry
@@ -40,7 +40,7 @@ repos:
     hooks:
       - id: yamllint
   - repo: https://github.com/ansible-community/ansible-lint.git
-    rev: v24.6.0
+    rev: v24.7.0
     hooks:
       - id: ansible-lint
         stages:
