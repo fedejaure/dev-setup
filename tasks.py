@@ -24,8 +24,6 @@ META_DIR = ROOT_DIR / "meta"
 ANSIBLE_TARGETS = [MOLECULE_DIR, ROLES_DIR, PLAYBOOKS_DIR, META_DIR]
 ANSIBLE_TARGETS_STR = " ".join([str(t) for t in ANSIBLE_TARGETS])
 
-SAFETY_IGNORE = [70612]
-
 
 def _run(c: Context, command: str, env: dict[str, Any] | None = None) -> Optional[Result]:
     return c.run(command, pty=platform.system() != "Windows", env=env)
@@ -86,13 +84,10 @@ def ruff(c: Context) -> None:
 @task()
 def security(c: Context) -> None:
     """Run security related checks."""
-    safety_options = ["--stdin", "--full-report"]
-    if SAFETY_IGNORE:
-        safety_options += ["-i", ",".join([str(ignore) for ignore in SAFETY_IGNORE])]
     _run(
         c,
         "poetry export --with dev --format=requirements.txt --without-hashes | "
-        f"poetry run safety check {' '.join(safety_options)}",
+        "poetry run safety check --stdin --full-report",
     )
 
 
