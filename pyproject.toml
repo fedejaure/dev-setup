@@ -6,7 +6,7 @@ authors = ["Federico Jaureguialzo <fedejaure@gmail.com>"]
 readme = "README.md"
 homepage = "https://github.com/fedejaure/dev-setup"
 repository = "https://github.com/fedejaure/dev-setup"
-documentation = "https://dev-setup.readthedocs.io"
+package-mode = false
 
 [tool.poetry.urls]
 "Bug Tracker" = "https://github.com/fedejaure/dev-setup/issues"
