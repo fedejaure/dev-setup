@@ -18,6 +18,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     * Discord.
 
 ### Changed
+- MacOS Apps:
+    * WhatsApp.
+
 - MacOS Tools/Packages:
     * Upgrade python versions.
 

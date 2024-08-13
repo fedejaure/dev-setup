@@ -24,7 +24,7 @@ My own Ansible collection for development setup (use by your own risk).
 
 * [Xcode](https://apps.apple.com/us/app/id497799835)
 * [Slack](https://apps.apple.com/us/app/id803453959)
-* [WhatsApp](https://apps.apple.com/us/app/id1147396723)
+* [WhatsApp](https://apps.apple.com/us/app/id310633997)
 * [Telegram](https://apps.apple.com/us/app/id747648890)
 
 #### Applications installed with Homebrew Cask
