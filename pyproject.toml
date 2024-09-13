@@ -13,7 +13,7 @@ package-mode = false
 
 [tool.poetry.dependencies]
 python = "<3.11,>=3.10"
-ansible = "^10.3.0"
+ansible = "^10.4.0"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.8.0"
