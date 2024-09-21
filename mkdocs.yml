@@ -94,6 +94,20 @@ extra:
   analytics:
     provider: google
     property: !ENV GOOGLE_ANALYTICS_KEY
+  feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback! Help us improve this page by
+            using our <a href="https://github.com/fedejaure/dev-setup/issues/new?title=[Feedback]+{title}+-+{url}" target="_blank" rel="noopener">filing an issue</a>.
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/fedejaure
@@ -123,6 +137,8 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - pymdownx.tilde
 
 # Page tree
@@ -133,4 +149,15 @@ nav:
     - Contributing: contributing.md
     - Code of Conduct: code_of_conduct.md
     - License: license.md
+  - Features:
+    - features/index.md
+    - MacOS:
+      - features/macos/index.md
+      - Mac App Store: features/macos/mas.md
+      - Homebrew Cask: features/macos/homebrew_cask.md
+      - Homebrew Packages: features/macos/homebrew_packages.md
+      - Pipx: features/macos/pipx.md
+      - Other Tools: features/macos/other_tools.md
+    - Linux:
+      - features/linux/index.md
   - Changelog: changelog.md
