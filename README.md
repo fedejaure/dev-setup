@@ -300,7 +300,7 @@ pyenv_python_versions:
   - 3.12.1
 ```
 
-Development
+### Development
 
 To display available tasks run:
 

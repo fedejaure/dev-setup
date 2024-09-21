@@ -86,7 +86,8 @@ plugins:
         - "(dev-setup)$"
 
 # Hooks
-# hooks:
+hooks:
+  - docs/material/overrides/hooks/fix_markdown_links.py
 
 # Additional configuration
 extra:
@@ -124,11 +125,12 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tilde
 
-
 # Page tree
 nav:
   - Home: index.md
   - Getting started:
     - Overview: readme.md
+    - Contributing: contributing.md
+    - Code of Conduct: code_of_conduct.md
     - License: license.md
   - Changelog: changelog.md
