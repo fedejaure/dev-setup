@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- Docs site.
+
 - MacOS Tools/Packages:
     * Ubuntu Nerd Font.
     * Ubuntu Mono Nerd Font.

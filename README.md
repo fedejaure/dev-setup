@@ -1,6 +1,6 @@
 # Development Setup
 
-<div align="center">
+<div markdown="span" align="center">
 
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/fedejaure/dev-setup?logo=github)](https://github.com/fedejaure/dev-setup/releases)
 [![Tests](https://github.com/fedejaure/dev-setup/workflows/tests/badge.svg)](https://github.com/fedejaure/dev-setup/actions?workflow=tests)
@@ -78,9 +78,9 @@ My own Ansible collection for development setup (use by your own risk).
 * [pipenv](https://pipenv.pypa.io/en/latest/)
 * [cookiecutter](https://github.com/cookiecutter/cookiecutter)
 * [poetry](https://python-poetry.org/) with:
-  * [Poetry Plugin: Export](https://github.com/python-poetry/poetry-plugin-export)
+    - [Poetry Plugin: Export](https://github.com/python-poetry/poetry-plugin-export)
 * [nox](https://nox.thea.codes/en/stable/) with:
-  * [nox-poetry](https://nox-poetry.readthedocs.io/en/stable/)
+    - [nox-poetry](https://nox-poetry.readthedocs.io/en/stable/)
 
 #### Other installed Tools
 
@@ -100,10 +100,14 @@ My own Ansible collection for development setup (use by your own risk).
 
     Create a temporary virtualenv, activate the virtualenv and install ansible:
 
-    ```shell session
+    <!-- termynal -->
+
+    ```console
     $ /usr/bin/python3 -m venv .venv
     $ . .venv/bin/activate
     (.venv)$ pip3 install ansible
+    ---> 100%
+    Installed
     ```
 
 4. Install ansible requirements `ansible-galaxy install -r requirements.yml`.
@@ -112,11 +116,11 @@ My own Ansible collection for development setup (use by your own risk).
 
 6. Run `ansible-playbook playbooks/main.yml --ask-become-pass -i inventory`.
 
-> Note: You need to agree to Xcode's license.
->
-> ```shell session
-> $ sudo xcodebuild -license
-> ```
+    > Note: You need to agree to Xcode's license.
+    >
+    > ```console
+    > $ sudo xcodebuild -license
+    > ```
 
 ### Configuring a remote Mac
 
@@ -126,7 +130,9 @@ My own Ansible collection for development setup (use by your own risk).
 
 2. Install dependencies:
 
-    ```shell session
+    <!-- termynal -->
+
+    ```console
     $ poetry install --no-root
     Using python3.10 (3.10.8)
     Creating virtualenv .venv
@@ -139,7 +145,9 @@ My own Ansible collection for development setup (use by your own risk).
 
 3. Activate the virtual environment:
 
-    ```shell session
+    <!-- termynal -->
+
+    ```console
     $ poetry shell
     Using python3.10 (3.10.8)
     Spawning shell within .venv
@@ -148,8 +156,15 @@ My own Ansible collection for development setup (use by your own risk).
 
 4. Install required Ansible roles:
 
-    ```shell session
+    <!-- termynal -->
+
+    ```console
     (dev-setup)$ inv galaxy-install
+    Starting galaxy role install process
+    ...
+    Starting galaxy collection install process
+    ...
+    fedejaure.dev_setup was installed successfully
     ```
 
 5. Configure the `inventory` file:
@@ -178,20 +193,31 @@ My own Ansible collection for development setup (use by your own risk).
         >
         >   > You can also enable remote login on the command line:
         >   >
-        >   > ```shell session
+        >   > ```console
         >   > $ sudo systemsetup -setremotelogin on
         >   > ```
         >
         >   > Note: You need to agree to Xcode's license.
         >   >
-        >   > ```shell session
+        >   > ```console
         >   > $ sudo xcodebuild -license
         >   > ```
 
 6. Run the playbook:
 
-    ```shell session
+    <!-- termynal -->
+
+    ```console
     (dev-setup)$ inv playbook --ask-pass --ask-become-pass
+    SSH password:
+    BECOME password[defaults to SSH password]:
+
+    PLAY [Mac OSX Playbook] ***************************************************
+
+    TASK [Gathering Facts] ****************************************************
+    ok: [127.0.0.1]
+
+    ...
     ```
 
 7. Enjoy!
@@ -278,13 +304,16 @@ Development
 
 To display available tasks run:
 
-```shell session
+<!-- termynal -->
+
+```console
 (dev-setup)$ inv --list
 Available tasks:
 
   ansible-lint     Run ansible linter.
   clean            Run all clean sub-tasks.
   clean-python     Clean up python file artifacts.
+  docs             Build documentation.
   format           Format code.
   galaxy-install   Install ansible-galaxy requirements.
   hooks            Run pre-commit hooks.
