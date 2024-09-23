@@ -146,6 +146,7 @@ nav:
   - Home: index.md
   - Getting started:
     - Overview: readme.md
+    - Usage: usage.md
     - Contributing: contributing.md
     - Code of Conduct: code_of_conduct.md
     - License: license.md

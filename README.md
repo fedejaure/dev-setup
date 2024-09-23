@@ -27,7 +27,7 @@ My own Ansible collection for development setup (use by your own risk).
 
 ### Linux
 
-Comming soon ...
+- [ ] Comming soon ...
 
 ## Quickstart
 
@@ -67,102 +67,8 @@ Comming soon ...
 
 6. Run `ansible-playbook playbooks/main.yml --ask-become-pass -i inventory`.
 
-    > On a target Mac:
-    >
-    > 1. Ensure Apple's command line tools are installed (`xcode-select --install` to launch the installer).
-    >
-    >   > Note: You need to agree to Xcode's license.
-    >   >
-    >   > ```console
-    >   > $ sudo xcodebuild -license
-    >   > ```
-
-### Starting from a configured machine (Configuring a remote one)
-
-1. Clone this repository.
-
-2. Install dependencies:
-
-    <!-- termynal -->
-
-    ```console
-    $ poetry install --no-root
-    Using python3.10 (3.10.8)
-    Creating virtualenv .venv
-    Installing dependencies from lock file
-
-    Package operations: 97 installs, 0 updates, 0 removals
-
-    ...
-    ```
-
-3. Activate the virtual environment:
-
-    <!-- termynal -->
-
-    ```console
-    $ poetry shell
-    Using python3.10 (3.10.8)
-    Spawning shell within .venv
-    (dev-setup)$
-    ```
-
-4. Install required Ansible roles:
-
-    <!-- termynal -->
-
-    ```console
-    (dev-setup)$ inv galaxy-install
-    Starting galaxy role install process
-    ...
-    Starting galaxy collection install process
-    ...
-    fedejaure.dev_setup was installed successfully
-    ```
-
-5. Configure the `inventory` file and set the desired `<target-os>` (`macos`):
-
-    ```ini
-    [<target-os>]
-    <ip address or hostname of the target> ansible_user=<target user> ansible_python_interpreter=/usr/bin/python3
-    ```
-
-    > On a target Mac:
-    >
-    > 1. Ensure Apple's command line tools are installed (`xcode-select --install` to launch the installer).
-    >
-    > 2. Go to System Preferences > Sharing.
-    >
-    > 3. Enable 'Remote Login'.
-    >
-    >   > You can also enable remote login on the command line:
-    >   >
-    >   > ```console
-    >   > $ sudo systemsetup -setremotelogin on
-    >   > ```
-    >
-    >   > Note: You need to agree to Xcode's license.
-    >   >
-    >   > ```console
-    >   > $ sudo xcodebuild -license
-    >   > ```
-
-6. Run the playbook:
-
-    <!-- termynal -->
-
-    ```console
-    (dev-setup)$ inv playbook --ask-pass --ask-become-pass
-    SSH password:
-    BECOME password[defaults to SSH password]:
-
-    PLAY [Mac OSX Playbook] ***************************************************
-
-    TASK [Gathering Facts] ****************************************************
-    ok: [127.0.0.1]
-
-    ...
-    ```
+For a more detailed usage guide by OS, including remote machine setup and configuration options,
+please refer to the [Usage Section](http://fedejaure.github.io/dev-setup/usage/) in the official documentation.
 
 ## Author Information
 
