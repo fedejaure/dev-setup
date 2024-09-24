@@ -37,5 +37,5 @@
 - [**Fish Shell**](https://fishshell.com/): A user-friendly, interactive shell with features like syntax highlighting, autosuggestions, and better scripting.
 - [**Starship**](https://starship.rs/): A cross-shell prompt that is fast and highly customizable.
 
-???+ note "Customization Options"
+!!! note "Customization Options"
     You can customize your installation by adding or removing applications as needed. For more information on how to override default settings, visit our [Work in Progress (WIP) customization guide](#).

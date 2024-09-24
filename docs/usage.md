@@ -5,14 +5,14 @@ the differents supported targets.
 
 ## MacOS
 
-???+ info "Ensure Apple's command line tools are installed"
+!!! info "Ensure Apple's command line tools are installed"
 
     On a terminal launch the installer:
     ```console
     $ xcode-select --install
     ```
 
-???+ warning "Agree Xcode's license"
+!!! warning "Agree Xcode's license"
     You need to agree to Xcode's license.
 
     ```console
@@ -130,7 +130,7 @@ the differents supported targets.
     <ip address or hostname of the target> ansible_user=<target user> ansible_python_interpreter=/usr/bin/python3
     ```
 
-    ???+ note "Enable 'Remote Login'"
+    !!! note "Enable 'Remote Login'"
         1. Go to System Preferences > Sharing.
         2. Enable 'Remote Login'.
 
@@ -161,5 +161,5 @@ the differents supported targets.
 
 ## Linux
 
-???+ warning
+!!! warning
     Linux support is in development and will be added in a future release.

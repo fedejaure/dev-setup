@@ -32,5 +32,5 @@
 - [**Elgato Stream Deck**](https://www.elgato.com/en/stream-deck-mk2): A customizable control pad for streamers and content creators.
 - [**Spotify**](https://www.spotify.com/us/download/): A popular music streaming service.
 
-???+ note "Customization Options"
+!!! note "Customization Options"
     You can customize your installation by adding or removing applications as needed. For more information on how to override default settings, visit our [Work in Progress (WIP) customization guide](#).

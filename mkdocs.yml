@@ -145,7 +145,7 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Getting started:
-    - Overview: readme.md
+    - Overview: overview.md
     - Usage: usage.md
     - Contributing: contributing.md
     - Code of Conduct: code_of_conduct.md
