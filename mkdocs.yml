@@ -162,3 +162,12 @@ nav:
       - Other Tools: features/macos/other_tools.md
     - Linux:
       - features/linux/index.md
+  - Configuration:
+    - MacOS:
+      - configuration/index.md
+    - Roles:
+      - Third-party Roles: configuration/third_party_roles.md
+      - First-party Roles:
+        - configuration/first_party_roles/index.md
+        - configuration/first_party_roles/oh_my_zsh.md
+        - configuration/first_party_roles/pyenv.md

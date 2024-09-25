@@ -1,5 +1,9 @@
 # Features
 
+This playbooks provides a comprehensive set of features for managing application
+installations and configurations across different operating systems, with an
+emphasis on flexibility and ease of use.
+
 ## MacOS
 
 The current implementation for macOS includes:
@@ -13,6 +17,8 @@ The current implementation for macOS includes:
 
 ## Linux
 
-Linux support is under development and will be available soon.
+!!! warning
+
+    Linux support is under development and will be available soon.
 
 [Explore Linux features](linux/index.md)
