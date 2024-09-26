@@ -1,4 +1,4 @@
-# dev-setup pyenv
+# pyenv
 
 This Ansible role automates the installation and configuration of [pyenv](https://github.com/pyenv/pyenv) on macOS.
 `pyenv` is a popular tool that allows you to easily switch between multiple versions of Python. The role handles the installation of `pyenv`,

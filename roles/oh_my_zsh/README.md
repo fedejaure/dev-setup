@@ -1,4 +1,4 @@
-# dev-setup oh-my-zsh
+# oh-my-zsh
 
 This Ansible role automates the installation and configuration of [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) on macOS.
 `Oh My Zsh` is an open-source framework for managing Zsh configurations. This role handles the installation of `Oh My Zsh`,
