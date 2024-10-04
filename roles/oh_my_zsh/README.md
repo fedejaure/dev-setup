@@ -1,38 +1,44 @@
-Role Name
-=========
+# oh-my-zsh
 
-A brief description of the role goes here.
+This Ansible role automates the installation and configuration of [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) on macOS.
+`Oh My Zsh` is an open-source framework for managing Zsh configurations. This role handles the installation of `Oh My Zsh`,
+required packages, and the configuration of the user's shell environment to work seamlessly with `Oh My Zsh`.
 
-Requirements
-------------
+# Requirements
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+- **macOS**: This role is specifically designed for macOS systems.
+    - **Homebrew**: Homebrew must be pre-installed on the target machine before running this role.
 
-Role Variables
---------------
+# Role Variables
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+This role provides a few key variables for configuration. Below are the variables that can be set, including default values from `defaults/main.yml`:
 
-Dependencies
-------------
+- `oh_my_zsh_root`: (Default: `"{{ ansible_env.HOME }}/.oh-my-zsh"`)
+  The directory where Oh My Zsh will be installed.
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+# Dependencies
 
-Example Playbook
-----------------
+This role relies on the following Ansible collections and roles:
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+- **community.general**: Specifically for the `homebrew` module, which is used to install required dependencies on macOS.
 
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+## Example Playbook
 
-License
--------
+Below is an example playbook that demonstrates how to use this role to install Oh My Zsh:
 
-BSD
+```yaml
+- name: Example playbook
+  hosts: example_target
+  roles:
+    - role: fedejaure.dev_setup.oh_my_zsh
+```
 
-Author Information
-------------------
+## License
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+MIT
+
+## Author Information
+
+This role was created in 2020 by [Federico Jaureguialzo][fedejaure].
+
+[fedejaure]: https://github.com/fedejaure

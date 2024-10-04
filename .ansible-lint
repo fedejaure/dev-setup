@@ -5,5 +5,6 @@ exclude_paths:
   - .cache/
   - ~/.cache/ansible-lint/
   - ~/.cache/ansible-compat/
+  - mkdocs.yml
 warn_list:
   - galaxy[version-incorrect]

@@ -25,24 +25,24 @@
     - role: geerlingguy.mac.mas
       environment:
         # Fix first run path
-        PATH: "{{ homebrew_brew_bin_path }}:{{ ansible_env.PATH }}"
+        PATH: "{{ homebrew_brew_bin_path }}:{{ homebrew_brew_sbin_path }}:/usr/local/bin:{{ ansible_env.PATH }}"
       when: mas_installed_apps or mas_installed_app_ids
       tags: ['mas']
     - role: geerlingguy.mac.dock
       environment:
         # Fix first run path
-        PATH: "/usr/local/bin:{{ ansible_env.PATH }}"
+        PATH: "{{ homebrew_brew_bin_path }}:{{ homebrew_brew_sbin_path }}:/usr/local/bin:{{ ansible_env.PATH }}"
       when: configure_dock
       tags: ['dock']
     - role: fedejaure.dev_setup.oh_my_zsh
       environment:
         # Fix first run path
-        PATH: "{{ homebrew_brew_bin_path }}:/usr/local/bin:{{ ansible_env.PATH }}"
+        PATH: "{{ homebrew_brew_bin_path }}:{{ homebrew_brew_sbin_path }}:/usr/local/bin:{{ ansible_env.PATH }}"
       tags: ['oh-my-zsh']
     - role: fedejaure.dev_setup.pyenv
       environment:
         # Fix first run path
-        PATH: "{{ homebrew_brew_bin_path }}:/usr/local/bin:{{ ansible_env.PATH }}"
+        PATH: "{{ homebrew_brew_bin_path }}:{{ homebrew_brew_sbin_path }}:/usr/local/bin:{{ ansible_env.PATH }}"
       tags: ['pyenv']
 
   tasks:
@@ -53,6 +53,14 @@
         insertbefore: "^# BEGIN PYENV"
       tags: ['homebrew']
       when: configure_homebrew_bin_rc_path
+
+    - name: Configure Homebrew sbin rc PATH
+      ansible.builtin.lineinfile:
+        path: "{{ ansible_env.HOME }}/.zshrc"
+        line: 'export PATH="{{ homebrew_brew_sbin_path }}:$PATH"'
+        insertbefore: "^# BEGIN PYENV"
+      tags: ['homebrew']
+      when: configure_homebrew_sbin_rc_path
 
     - name: Configure pipx bin rc PATH
       ansible.builtin.lineinfile:
@@ -67,7 +75,21 @@
         executable: "{{ homebrew_brew_bin_path }}/pipx"
         name: "{{ item.name | default(item) }}"
         state: "latest"
-        include_injected: true
-        inject_packages: "{{ item.inject_packages | default([]) }}"
       tags: ['pipx']
       loop: "{{ pipx_installed_packages }}"
+
+    - name: Inject pipx packages
+      community.general.pipx:
+        executable: "{{ homebrew_brew_bin_path }}/pipx"
+        name: "{{ item.name | default(item) }}"
+        state: "inject"
+        include_injected: true
+        inject_packages: "{{ item.inject_packages }}"
+      tags: ['pipx']
+      loop: "{{ pipx_installed_packages }}"
+      when: |
+        (item.inject_packages is defined)
+        and (item.inject_packages is not string)
+        and (item.inject_packages is not mapping)
+        and (item.inject_packages is iterable)
+        and (item.inject_packages | length > 0)

@@ -1,53 +1,58 @@
 [tool.poetry]
 name = "dev-setup"
-version = "1.2.0"
+version = "1.3.0"
 description = "My own Ansible collection for development setup."
 authors = ["Federico Jaureguialzo <fedejaure@gmail.com>"]
 readme = "README.md"
 homepage = "https://github.com/fedejaure/dev-setup"
 repository = "https://github.com/fedejaure/dev-setup"
-documentation = "https://dev-setup.readthedocs.io"
+package-mode = false
 
 [tool.poetry.urls]
 "Bug Tracker" = "https://github.com/fedejaure/dev-setup/issues"
 
 [tool.poetry.dependencies]
 python = "<3.11,>=3.10"
-ansible = "^8.6.1"
+ansible = "^10.4.0"
 
 [tool.poetry.group.dev.dependencies]
-pre-commit = "^3.5.0"
+pre-commit = "^3.8.0"
 invoke = "^2.2.0"
 bump2version = "^1.0.1"
 
 [tool.poetry.group.test.dependencies]
-molecule = "^6.0.2"
-molecule-plugins = {extras = ["docker"], version = "^23.5.0"}
+molecule = "^24.9.0"
+molecule-plugins = {extras = ["docker"], version = "^23.5.3"}
 
 [tool.poetry.group.lint.dependencies]
-isort = "^5.12.0"
-black = "^23.11.0"
-ruff = "^0.1.5"
-yamllint = "^1.33.0"
-ansible-lint = {version = "^6.22.0", markers = "platform_system != 'Windows'"}
+isort = "^5.13.2"
+black = "^24.8.0"
+ruff = "^0.6.5"
+yamllint = "^1.35.1"
+ansible-lint = {version = "^24.7.0", markers = "platform_system != 'Windows'"}
 
 [tool.poetry.group.security.dependencies]
-safety = "^2.4.0b2"
+safety = "^3.2.7"
 
 [tool.poetry.group.typing.dependencies]
-mypy = "^1.7"
+mypy = "^1.11.2"
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.6.1"
+mkdocs-material = "^9.5.34"
+mkdocs-minify-plugin = "^0.8.0"
+termynal = "^0.12.1"
 
 [tool.ruff]
-target-version = "py311"
-show-source = true
+target-version = "py310"
+output-format = "full"
 line-length = 99
 fix = true
-unfixable = [
-  "ERA",  # Don't remove commented-out code
-]
 extend-exclude = [
-    "docs/*",
+    "material/*",
 ]
+
+[tool.ruff.lint]
 select = [
   "E", "F", "W",  # flake8
   "C",  # mccabe
@@ -65,13 +70,16 @@ select = [
   "RUF",  # Ruff-specific rules
 ]
 ignore = ["ANN101", "D203", "D213"]
+unfixable = [
+  "ERA",  # Don't remove commented-out code
+]
 
-[tool.ruff.per-file-ignores]
+[tool.ruff.lint.per-file-ignores]
 "tests/*" = ["S101"]
 ".jupyter/jupyter_lab_config.py" = ["E501", "ERA001"]
 "src/deeptune/utils.py" = ["ANN401"]
 
-[tool.ruff.mccabe]
+[tool.ruff.lint.mccabe]
 max-complexity = 10
 
 [tool.isort]

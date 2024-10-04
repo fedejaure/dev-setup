@@ -1,14 +1,19 @@
 ---
-# homebrew
+# Homebrew Configuration
+# These settings configure the Homebrew package manager and its installations.
 homebrew_prefix: "{{ (ansible_machine == 'arm64') | ternary('/opt/homebrew', '/usr/local') }}"
 homebrew_install_path: "{{ homebrew_prefix }}/Homebrew"
 homebrew_brew_bin_path: "{{ homebrew_prefix }}/bin"
+homebrew_brew_sbin_path: "{{ homebrew_prefix }}/sbin"
 
+# Additional Homebrew Taps
+# Custom repositories for Homebrew formulas and casks.
 homebrew_taps:
-  - homebrew/core
-  - homebrew/cask
   - homebrew/cask-fonts
+  - esolitos/ipa
 
+# Homebrew Installed Packages
+# List of packages to be installed via Homebrew.
 homebrew_installed_packages:
   - git
   - openssl
@@ -19,29 +24,36 @@ homebrew_installed_packages:
   - cmake
   - zlib
   - tcl-tk
+  - dockutil
   - pipx
   - luarocks
   - neovim
   - tmux
   - chezmoi
   - jesseduffield/lazydocker/lazydocker
-  - esolitos/ipa/sshpass
+  - sshpass
   - htop
   - dust
   - duf
   - bat
   - fish
   - starship
+  - btop
 
+# Homebrew Cask Applications
+# Directory for Cask applications and list of applications to install.
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - firefox
   - google-chrome
   - docker
   - openvpn-connect
-  - hpedrorodrigues/tools/dockutil
   - visual-studio-code
   - font-terminess-ttf-nerd-font
+  - font-ubuntu-nerd-font
+  - font-ubuntu-mono-nerd-font
+  - font-xkcd
+  - font-xkcd-script
   - zoom
   - tad
   - keybase
@@ -50,25 +62,37 @@ homebrew_cask_apps:
   - elgato-stream-deck
   - spotify
   - alacritty
+  - discord
 
-# mas-cli (Mac App Store command line interface)
-## it should be overridden in macos.config.yml
+# Shell Configuration for Homebrew
+# These flags control the addition of Homebrew paths to the shell's initialization files.
+configure_homebrew_bin_rc_path: true
+configure_homebrew_sbin_rc_path: true
+
+# macOS App Store (mas-cli) Configuration
+# Settings for the Mac App Store command line interface.
+# These should be overridden in the macos.config.yml file.
 mas_email: ""
 
+# Installed Applications from the Mac App Store
+# List of applications to install from the Mac App Store.
 mas_installed_apps:
   - id: 497799835
     name: "Xcode"
   - id: 803453959
     name: "Slack"
-  - id: 1147396723
+  - id: 310633997
     name: "WhatsApp"
   - id: 747648890
     name: "Telegram"
 
-# dock
+# Dock Configuration
+# Settings for configuring the macOS Dock.
 configure_dock: true
 dockutil_install: false
 
+# Applications to Remove from Dock
+# List of applications to be removed from the Dock.
 dockitems_remove:
   - Safari
   - Messages
@@ -82,6 +106,8 @@ dockitems_remove:
   - Numbers
   - Pages
 
+# Persistent Dock Items
+# Applications to persistently keep in the Dock with specific positions.
 dockitems_persist:
   - name: "Firefox"
     path: "/Applications/Firefox.app/"
@@ -108,11 +134,12 @@ dockitems_persist:
     path: "/Applications/OpenVPN Connect/OpenVPN Connect.app/"
     pos: 14
 
+# pyenv Configuration
+# Settings for configuring pyenv in the shell.
 pyenv_configure_rc_path: true
 
-configure_homebrew_bin_rc_path: true
-
-configure_pipx_bin_rc_path: true
+# pipx Installed Packages
+# List of Python applications to install via pipx, including optional inject packages.
 pipx_installed_packages:
   - cookiecutter
   - pipenv
@@ -122,3 +149,7 @@ pipx_installed_packages:
   - name: nox
     inject_packages:
       - nox-poetry
+
+# Shell Configuration for pipx
+# Flag to configure pipx binary path in the shell.
+configure_pipx_bin_rc_path: true

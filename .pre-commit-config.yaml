@@ -5,11 +5,12 @@ default_install_hook_types:
   - post-merge
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.5.0
+    rev: v4.6.0
     hooks:
       - id: check-toml
       - id: check-json
       - id: check-yaml
+        args: ['--unsafe']
       - id: debug-statements
       - id: check-merge-conflict
       - id: pretty-format-json
@@ -19,28 +20,29 @@ repos:
       - id: trailing-whitespace
         exclude: .bumpversion.cfg
   - repo: https://github.com/timothycrosley/isort
-    rev: 5.12.0
+    rev: 5.13.2
     hooks:
       - id: isort
   - repo: https://github.com/psf/black
-    rev: 23.11.0
+    rev: 24.8.0
     hooks:
       - id: black
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.1.5
+    rev: v0.6.5
     hooks:
       - id: ruff
   - repo: https://github.com/python-poetry/poetry
-    rev: 1.7.0
+    rev: 1.8.0
     hooks:
       - id: poetry-check
       - id: poetry-install
   - repo: https://github.com/adrienverge/yamllint.git
-    rev: v1.33.0
+    rev: v1.35.1
     hooks:
       - id: yamllint
   - repo: https://github.com/ansible-community/ansible-lint.git
-    rev: v6.22.0
+    rev: v24.9.0
     hooks:
       - id: ansible-lint
-        files: \.(yaml|yml)$
+        stages:
+          - pre-commit

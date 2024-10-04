@@ -1,38 +1,56 @@
-Role Name
-=========
+# pyenv
 
-A brief description of the role goes here.
+This Ansible role automates the installation and configuration of [pyenv](https://github.com/pyenv/pyenv) on macOS.
+`pyenv` is a popular tool that allows you to easily switch between multiple versions of Python. The role handles the installation of `pyenv`,
+required packages, multiple Python versions, and the configuration of shell environment files for `pyenv` to work seamlessly.
 
-Requirements
-------------
+# Requirements
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+- **macOS**: This role is specifically designed for macOS systems.
+    - **Homebrew**: Homebrew must be pre-installed on the target machine before running this role.
 
-Role Variables
---------------
+# Role Variables
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+This role provides several variables for configuration. Below are the key variables that can be set, including default values from `defaults/main.yml`:
 
-Dependencies
-------------
+- `pyenv_root`: (Default: `"{{ ansible_env.HOME }}/.pyenv"`)
+  The directory where pyenv will be installed.
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+- `pyenv_python_versions`: (Default: `[3.9, 3.10, 3.11, 3.12]`)
+  A list of Python versions to be installed by pyenv.
 
-Example Playbook
-----------------
+- `pyenv_update`: (Default: `false`)
+  If set to `true`, this option will trigger an update of the pyenv interpreter list.
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+- `pyenv_configure_rc_path`: (Default: `false`)
+  If `true`, the role will configure the shell environment by adding pyenv to the user's rc file (`~/.zshrc` by default).
 
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+# Dependencies
 
-License
--------
+This role relies on the following Ansible collections and roles:
 
-BSD
+- **community.general**: Specifically for the `homebrew` module, which is used to install pyenv dependencies on macOS.
 
-Author Information
-------------------
+## Example Playbook
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+Below is an example playbook that demonstrates how to use this role to install pyenv and configure it with multiple Python versions:
+
+```yaml
+- name: Example playbook
+  hosts: example_target
+  roles:
+    - role: fedejaure.dev_setup.pyenv
+      vars:
+        pyenv_update: true
+        pyenv_configure_rc_path: true
+```
+
+## License
+
+MIT
+
+## Author Information
+
+This role was created in 2020 by [Federico Jaureguialzo][fedejaure].
+
+[fedejaure]: https://github.com/fedejaure

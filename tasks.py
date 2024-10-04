@@ -2,6 +2,7 @@
 
 Execute 'invoke --list' for guidance on using Invoke
 """
+
 import platform
 from pathlib import Path
 from typing import Any, List, Optional
@@ -15,15 +16,12 @@ PYTHON_TARGETS = [
     Path(__file__),
 ]
 PYTHON_TARGETS_STR = " ".join([str(p) for p in PYTHON_TARGETS])
-
 MOLECULE_DIR = ROOT_DIR / "molecule"
 ROLES_DIR = ROOT_DIR / "roles"
 PLAYBOOKS_DIR = ROOT_DIR / "playbooks"
 META_DIR = ROOT_DIR / "meta"
 ANSIBLE_TARGETS = [MOLECULE_DIR, ROLES_DIR, PLAYBOOKS_DIR, META_DIR]
 ANSIBLE_TARGETS_STR = " ".join([str(t) for t in ANSIBLE_TARGETS])
-
-SAFETY_IGNORE = [42923, 54229, 54230]
 
 
 def _run(c: Context, command: str, env: dict[str, Any] | None = None) -> Optional[Result]:
@@ -85,13 +83,10 @@ def ruff(c: Context) -> None:
 @task()
 def security(c: Context) -> None:
     """Run security related checks."""
-    safety_options = ["--stdin", "--full-report"]
-    if SAFETY_IGNORE:
-        safety_options += ["-i", ",".join([str(ignore) for ignore in SAFETY_IGNORE])]
     _run(
         c,
         "poetry export --with dev --format=requirements.txt --without-hashes | "
-        f"poetry run safety check {' '.join(safety_options)}",
+        "poetry run safety check --stdin --full-report",
     )
 
 
@@ -158,6 +153,23 @@ def playbook(
     if ask_become_pass:
         playbook_options.append("--ask-become-pass")
     _run(c, f"poetry run ansible-playbook playbooks/{target}.yml {' '.join(playbook_options)}")
+
+
+@task(
+    help={
+        "serve": "Build the docs watching for changes",
+        "open_browser": "Open the docs in the web browser",
+    }
+)
+def docs(c: Context, serve: bool = False, open_browser: bool = False) -> None:
+    """Build documentation."""
+    mkdocs_options = ["--clean"]
+    if serve:
+        if open_browser:
+            mkdocs_options.append("--open")
+        _run(c, f"mkdocs serve {' '.join(mkdocs_options)}")
+    else:
+        _run(c, f"mkdocs build {' '.join(mkdocs_options)}")
 
 
 @task(
