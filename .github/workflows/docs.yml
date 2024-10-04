@@ -38,7 +38,7 @@ jobs:
           pip install poetry
           pip install poetry-plugin-export
           poetry config virtualenvs.in-project true
-          poetry install --only docs --sync
+          poetry install --only dev --only docs --sync
 
       - name: Build docs
         shell: bash

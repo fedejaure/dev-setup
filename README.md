@@ -19,6 +19,7 @@
 My own Ansible collection for development setup (use by your own risk).
 
 * GitHub repo: <https://github.com/fedejaure/dev-setup.git>
+* Documentation: <https://fedejaure.github.io/dev-setup/>
 * Free software: MIT
 
 ## Features
