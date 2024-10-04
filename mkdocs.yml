@@ -16,7 +16,7 @@ copyright: "Copyright &copy; 2020 - <script>document.write(new Date().getFullYea
 # Configuration
 theme:
   name: material
-  # custom_dir: docs/overrides
+  custom_dir: material/overrides
   features:
     - announce.dismiss
     # - content.action.edit
@@ -67,12 +67,11 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
+  logo: assets/favicon.png
+  favicon: assets/favicon.png
   icon:
     repo: fontawesome/brands/github-alt
-  # logo: img/icon-white.svg
-  # favicon: assets/favicon.png
-  # icon:
-  #   logo: logo
+    logo: logo
 
 # Plugins
 plugins:
@@ -87,7 +86,7 @@ plugins:
 
 # Hooks
 hooks:
-  - docs/material/overrides/hooks/fix_markdown_links.py
+  - material/overrides/hooks/fix_markdown_links.py
 
 # Additional configuration
 extra:

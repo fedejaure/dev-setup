@@ -49,7 +49,7 @@ output-format = "full"
 line-length = 99
 fix = true
 extend-exclude = [
-    "docs/*",
+    "material/*",
 ]
 
 [tool.ruff.lint]

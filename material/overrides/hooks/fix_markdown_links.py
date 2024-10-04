@@ -3,7 +3,7 @@
 import re
 
 from mkdocs.config.defaults import MkDocsConfig
-from mkdocs.structure.files import File, Files
+from mkdocs.structure.files import Files
 from mkdocs.structure.pages import Page
 
 
@@ -14,7 +14,6 @@ def on_page_markdown(
     # Define a regex to match GitHub-style markdown links
     github_link_pattern = re.compile(r"\[([^\]]+)\]\(([^)]+)\.md\)")
 
-    # Substitute the GitHub-style .md links to MkDocs format (no .md and relative paths)
     def replace_md_link(match):
         link_text = match.group(1)
         link_target = match.group(2)

@@ -2,8 +2,13 @@
 
 <div markdown="span" align="center">
 
+<figure>
+    <img src="docs/assets/logo.png" onerror="this.onerror=null;this.src='../assets/logo.png'" width="300" />
+</figure>
+
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/fedejaure/dev-setup?logo=github)](https://github.com/fedejaure/dev-setup/releases)
 [![Tests](https://github.com/fedejaure/dev-setup/workflows/tests/badge.svg)](https://github.com/fedejaure/dev-setup/actions?workflow=tests)
+[![Docs](https://github.com/fedejaure/dev-setup/workflows/docs/badge.svg)](https://fedejaure.github.io/dev-setup/)
 [![License](https://img.shields.io/badge/license-MIT-brightgreen)](https://opensource.org/licenses/MIT)
 
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
