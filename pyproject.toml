@@ -37,13 +37,19 @@ safety = "^3.2.7"
 [tool.poetry.group.typing.dependencies]
 mypy = "^1.11.2"
 
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.6.1"
+mkdocs-material = "^9.5.34"
+mkdocs-minify-plugin = "^0.8.0"
+termynal = "^0.12.1"
+
 [tool.ruff]
-target-version = "py311"
+target-version = "py310"
 output-format = "full"
 line-length = 99
 fix = true
 extend-exclude = [
-    "docs/*",
+    "material/*",
 ]
 
 [tool.ruff.lint]

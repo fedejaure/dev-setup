@@ -16,7 +16,6 @@ PYTHON_TARGETS = [
     Path(__file__),
 ]
 PYTHON_TARGETS_STR = " ".join([str(p) for p in PYTHON_TARGETS])
-
 MOLECULE_DIR = ROOT_DIR / "molecule"
 ROLES_DIR = ROOT_DIR / "roles"
 PLAYBOOKS_DIR = ROOT_DIR / "playbooks"
@@ -154,6 +153,23 @@ def playbook(
     if ask_become_pass:
         playbook_options.append("--ask-become-pass")
     _run(c, f"poetry run ansible-playbook playbooks/{target}.yml {' '.join(playbook_options)}")
+
+
+@task(
+    help={
+        "serve": "Build the docs watching for changes",
+        "open_browser": "Open the docs in the web browser",
+    }
+)
+def docs(c: Context, serve: bool = False, open_browser: bool = False) -> None:
+    """Build documentation."""
+    mkdocs_options = ["--clean"]
+    if serve:
+        if open_browser:
+            mkdocs_options.append("--open")
+        _run(c, f"mkdocs serve {' '.join(mkdocs_options)}")
+    else:
+        _run(c, f"mkdocs build {' '.join(mkdocs_options)}")
 
 
 @task(

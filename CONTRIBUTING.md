@@ -9,6 +9,7 @@ mostly guidelines, not rules. Use your best judgment, and feel free to propose c
 
 We take our open source community seriously and hold ourselves and other contributors to high standards of communication. By participating and contributing to this project, you agree to uphold our [Code of Conduct](CODE_OF_CONDUCT.md).
 
+
 ## Getting Started
 
 ### Requirements
