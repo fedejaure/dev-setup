@@ -18,6 +18,8 @@ provisioner:
     host_vars:
       otacon:
         ansible_user: root
+  env:
+    ANSIBLE_CONFIG: ../../ansible.cfg
   playbooks:
     prepare: ../prepare-docker-in-docker.yml
 verifier:
