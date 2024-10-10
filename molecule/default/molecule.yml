@@ -19,6 +19,7 @@ provisioner:
       otacon:
         ansible_user: root
   env:
+    ANSIBLE_ROLES_PATH: "../../.roles"
     ANSIBLE_CONFIG: ../../ansible.cfg
   playbooks:
     prepare: ../prepare-docker-in-docker.yml
