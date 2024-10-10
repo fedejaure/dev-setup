@@ -12,6 +12,7 @@ from invoke.context import Context
 from invoke.runners import Result
 
 ROOT_DIR = Path(__file__).parent
+DOCS_BUILD_DIR = ROOT_DIR.joinpath("site")
 PYTHON_TARGETS = [
     Path(__file__),
 ]
@@ -37,7 +38,13 @@ def clean_python(c: Context) -> None:
     _run(c, "find . -name '__pycache__' -exec rm -fr {} +")
 
 
-@task(pre=[clean_python])
+@task()
+def clean_docs(c: Context) -> None:
+    """Clean up files from documentation builds."""
+    _run(c, f"rm -fr {DOCS_BUILD_DIR}")
+
+
+@task(pre=[clean_python, clean_docs])
 def clean(c: Context) -> None:
     """Run all clean sub-tasks."""
 
