@@ -2,17 +2,17 @@
 
 [[package]]
 name = "ansible"
-version = "10.5.0"
+version = "10.6.0"
 description = "Radically simple IT automation"
 optional = false
 python-versions = ">=3.10"
 files = [
-    {file = "ansible-10.5.0-py3-none-any.whl", hash = "sha256:1d10bddba58f1edd0fe0b8e0387e0fafc519535066bb3c919c33b6ea3ec32a0f"},
-    {file = "ansible-10.5.0.tar.gz", hash = "sha256:ba2045031a7d60c203b6e5fe1f8eaddd53ae076f7ada910e636494384135face"},
+    {file = "ansible-10.6.0-py3-none-any.whl", hash = "sha256:b873b6ca13bde5b6bf9f0ae3b9dba91e135a9612c699d5f6a1e07d7ca2b00458"},
+    {file = "ansible-10.6.0.tar.gz", hash = "sha256:a8bde9c3ee8ee7c4a085e125777ba39bf837c6e74a0733e1f786389b125e6db2"},
 ]
 
 [package.dependencies]
-ansible-core = ">=2.17.5,<2.18.0"
+ansible-core = ">=2.17.6,<2.18.0"
 
 [[package]]
 name = "ansible-compat"
@@ -2119,4 +2119,4 @@ test = ["big-O", "importlib-resources", "jaraco.functools", "jaraco.itertools", 
 [metadata]
 lock-version = "2.0"
 python-versions = "<3.11,>=3.10"
-content-hash = "97713874b4c30aed2413739f48380f5ce261c1b02f25370d7a198df4736d4f63"
+content-hash = "91c27390e2269a67e473d7a0d614835097169b9f490d24fe396f3999e03747e0"
