@@ -2029,20 +2029,20 @@ test = ["enrich (>=1.2.6)", "molecule (>=3.4.0)", "pytest (>=6.2.5)", "pytest-co
 
 [[package]]
 name = "termynal"
-version = "0.12.1"
+version = "0.12.2"
 description = "A lightweight and modern animated terminal window"
 optional = false
-python-versions = ">=3.8.1,<4.0.0"
+python-versions = ">=3.9"
 files = [
-    {file = "termynal-0.12.1-py3-none-any.whl", hash = "sha256:8420fc7ddc9daa5733c5aa370e7d2567a0e9299caa6e47fe8b5efd228fdffc47"},
-    {file = "termynal-0.12.1.tar.gz", hash = "sha256:48842b5066eee25d5efef570b776bbc7e2875fca547c38c39e73fec1bb562fa9"},
+    {file = "termynal-0.12.2-py3-none-any.whl", hash = "sha256:62314dac6e77f1b7b64a251c2c90702eb6e6910f72ea9c6e5ef68d715b272709"},
+    {file = "termynal-0.12.2.tar.gz", hash = "sha256:cc2356bbf8650c16abd0558786251fabdde6b25e1125c1f091607ed3e422f7f2"},
 ]
 
 [package.dependencies]
-markdown = "*"
+markdown = ">=3"
 
 [package.extras]
-mkdocs = ["mkdocs (>=1.4,<2.0)"]
+mkdocs = ["mkdocs (>=1.4)"]
 
 [[package]]
 name = "tomli"
@@ -2216,4 +2216,4 @@ test = ["big-O", "importlib-resources", "jaraco.functools", "jaraco.itertools", 
 [metadata]
 lock-version = "2.0"
 python-versions = "<3.11,>=3.10"
-content-hash = "04b469a03e03df7709b42a30ef3f6196bf3415f61ba7f55df47c55f4723df9f8"
+content-hash = "d3670815bd1f8749187e80c6e44c0f697793554c7491221dea4d6d02ab6f1e7c"
