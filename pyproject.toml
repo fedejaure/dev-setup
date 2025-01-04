@@ -12,7 +12,7 @@ package-mode = false
 "Bug Tracker" = "https://github.com/fedejaure/dev-setup/issues"
 
 [tool.poetry.dependencies]
-python = "<3.11,>=3.10"
+python = "<3.12,>=3.11"
 ansible = "^10.6.0"
 
 [tool.poetry.group.dev.dependencies]
