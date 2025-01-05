@@ -35,7 +35,7 @@ ansible-lint = {version = "^24.7.0", markers = "platform_system != 'Windows'"}
 safety = "^3.2.14"
 
 [tool.poetry.group.typing.dependencies]
-mypy = "^1.13.0"
+mypy = "^1.14.1"
 
 [tool.poetry.group.docs.dependencies]
 mkdocs = "^1.6.1"
