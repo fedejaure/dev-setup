@@ -27,13 +27,13 @@ ansible-core = ">=2.18.1,<2.19.0"
 
 [[package]]
 name = "ansible-compat"
-version = "24.7.0"
+version = "24.10.0"
 description = "Ansible compatibility goodies"
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "ansible_compat-24.7.0-py3-none-any.whl", hash = "sha256:9f18ed1104e3affc716a95720bdd7e0c01bb1ecb0c316335fd23c31ade6e4582"},
-    {file = "ansible_compat-24.7.0.tar.gz", hash = "sha256:7bc7a0c20a505a1eb6ff9877071fe20330130429087da298e25099a14f70d02f"},
+    {file = "ansible_compat-24.10.0-py3-none-any.whl", hash = "sha256:0415bcd82f7d84e5b344c03439154c1f16576809dc3a523b81178354c86ae5a1"},
+    {file = "ansible_compat-24.10.0.tar.gz", hash = "sha256:0ad873e0dae8b2de79bc33ced813d6c92c716c4d7b82f9a4693e1fd57f43776e"},
 ]
 
 [package.dependencies]
@@ -45,7 +45,7 @@ subprocess-tee = ">=0.4.1"
 
 [package.extras]
 docs = ["argparse-manpage", "black", "mkdocs-ansible (>=24.3.1)"]
-test = ["coverage", "pip-tools", "pytest (>=7.2.0)", "pytest-mock", "pytest-plus (>=0.6.1)"]
+test = ["coverage", "pip", "pytest (>=7.2.0)", "pytest-mock", "pytest-plus (>=0.6.1)", "uv (>=0.4.30)"]
 
 [[package]]
 name = "ansible-core"
@@ -67,17 +67,17 @@ resolvelib = ">=0.5.3,<1.1.0"
 
 [[package]]
 name = "ansible-lint"
-version = "24.7.0"
+version = "24.12.2"
 description = "Checks playbooks for practices and behavior that could potentially be improved"
 optional = false
 python-versions = ">=3.10"
 files = [
-    {file = "ansible_lint-24.7.0-py3-none-any.whl", hash = "sha256:a2305f1d69a25be27810c64a32711d1d0463d2fda5b9308166362347aeda36e0"},
-    {file = "ansible_lint-24.7.0.tar.gz", hash = "sha256:ca2edc7e4e80cf19df4b28cbf4c118f761ce6cdd6a5ef9c8561e454ed7af5a24"},
+    {file = "ansible_lint-24.12.2-py3-none-any.whl", hash = "sha256:ce7a783ce4f053a965e31f308cdb57554259052efea04b8491c9704f11095e54"},
+    {file = "ansible_lint-24.12.2.tar.gz", hash = "sha256:f636309c4e7f724fc1a544df529c4c2354f54cf35ede11d750366afb1158a464"},
 ]
 
 [package.dependencies]
-ansible-compat = ">=24.5.0dev0"
+ansible-compat = ">=24.10.0"
 ansible-core = ">=2.13.0"
 black = ">=24.3.0"
 filelock = ">=3.3.0"
@@ -86,15 +86,14 @@ jsonschema = ">=4.10.0"
 packaging = ">=21.3"
 pathspec = ">=0.10.3"
 pyyaml = ">=5.4.1"
-rich = ">=12.0.0"
 "ruamel.yaml" = ">=0.18.5"
 subprocess-tee = ">=0.4.1"
 wcmatch = {version = ">=8.1.2", markers = "python_version < \"3.12\""}
 yamllint = ">=1.30.0"
 
 [package.extras]
-docs = ["mkdocs-ansible (>=0.2.0)", "pipdeptree (>=2.7.1)"]
-test = ["black", "coverage-enable-subprocess", "coverage[toml] (>=6.4.4)", "jmespath", "license-expression (>=30.3.0)", "mypy", "netaddr", "psutil", "pylint", "pytest (>=7.2.2)", "pytest-mock", "pytest-plus (>=0.6)", "pytest-xdist (>=2.1.0)", "ruamel-yaml-clib", "ruamel.yaml (>=0.17.31)", "tox (>=4.0.0)", "types-jsonschema", "types-pyyaml"]
+docs = ["mkdocs-ansible (>=24.12.0)", "uv (>=0.5.5)"]
+test = ["black", "coverage-enable-subprocess", "coverage[toml] (>=6.4.4)", "jmespath", "license-expression (>=30.3.0)", "mypy", "netaddr", "pip", "psutil", "pylint", "pytest (>=7.2.2)", "pytest-instafail (>=0.5.0)", "pytest-mock", "pytest-plus (>=0.6)", "pytest-xdist[psutil,setproctitle] (>=2.1.0)", "ruamel-yaml-clib", "ruamel.yaml (>=0.17.31)", "tox (>=4.0.0)", "types-jsonschema", "types-pyyaml"]
 
 [[package]]
 name = "attrs"
@@ -449,6 +448,7 @@ files = [
     {file = "cryptography-44.0.0-cp37-abi3-manylinux_2_28_aarch64.whl", hash = "sha256:761817a3377ef15ac23cd7834715081791d4ec77f9297ee694ca1ee9c2c7e5eb"},
     {file = "cryptography-44.0.0-cp37-abi3-manylinux_2_28_x86_64.whl", hash = "sha256:3c672a53c0fb4725a29c303be906d3c1fa99c32f58abe008a82705f9ee96f40b"},
     {file = "cryptography-44.0.0-cp37-abi3-manylinux_2_34_aarch64.whl", hash = "sha256:4ac4c9f37eba52cb6fbeaf5b59c152ea976726b865bd4cf87883a7e7006cc543"},
+    {file = "cryptography-44.0.0-cp37-abi3-manylinux_2_34_x86_64.whl", hash = "sha256:60eb32934076fa07e4316b7b2742fa52cbb190b42c2df2863dbc4230a0a9b385"},
     {file = "cryptography-44.0.0-cp37-abi3-musllinux_1_2_aarch64.whl", hash = "sha256:ed3534eb1090483c96178fcb0f8893719d96d5274dfde98aa6add34614e97c8e"},
     {file = "cryptography-44.0.0-cp37-abi3-musllinux_1_2_x86_64.whl", hash = "sha256:f3f6fdfa89ee2d9d496e2c087cebef9d4fcbb0ad63c40e821b39f74bf48d9c5e"},
     {file = "cryptography-44.0.0-cp37-abi3-win32.whl", hash = "sha256:eb33480f1bad5b78233b0ad3e1b0be21e8ef1da745d8d2aecbb20671658b9053"},
@@ -459,6 +459,7 @@ files = [
     {file = "cryptography-44.0.0-cp39-abi3-manylinux_2_28_aarch64.whl", hash = "sha256:c5eb858beed7835e5ad1faba59e865109f3e52b3783b9ac21e7e47dc5554e289"},
     {file = "cryptography-44.0.0-cp39-abi3-manylinux_2_28_x86_64.whl", hash = "sha256:f53c2c87e0fb4b0c00fa9571082a057e37690a8f12233306161c8f4b819960b7"},
     {file = "cryptography-44.0.0-cp39-abi3-manylinux_2_34_aarch64.whl", hash = "sha256:9e6fc8a08e116fb7c7dd1f040074c9d7b51d74a8ea40d4df2fc7aa08b76b9e6c"},
+    {file = "cryptography-44.0.0-cp39-abi3-manylinux_2_34_x86_64.whl", hash = "sha256:9abcc2e083cbe8dde89124a47e5e53ec38751f0d7dfd36801008f316a127d7ba"},
     {file = "cryptography-44.0.0-cp39-abi3-musllinux_1_2_aarch64.whl", hash = "sha256:d2436114e46b36d00f8b72ff57e598978b37399d2786fd39793c36c6d5cb1c64"},
     {file = "cryptography-44.0.0-cp39-abi3-musllinux_1_2_x86_64.whl", hash = "sha256:a01956ddfa0a6790d594f5b34fc1bfa6098aca434696a03cfdbe469b8ed79285"},
     {file = "cryptography-44.0.0-cp39-abi3-win32.whl", hash = "sha256:eca27345e1214d1b9f9490d200f9db5a874479be914199194e746c893788d417"},
@@ -2199,4 +2200,4 @@ test = ["big-O", "importlib-resources", "jaraco.functools", "jaraco.itertools", 
 [metadata]
 lock-version = "2.0"
 python-versions = "<3.12,>=3.11"
-content-hash = "479408a88543fe40a5b7aba59be5b076d2ac5c446f8907a02dedf0d9d2af77a0"
+content-hash = "244e2e7b3fcd3050ebfb8a3381a64dd7c19b28815e051332ed39c3e7eacb7cc7"
