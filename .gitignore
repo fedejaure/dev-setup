@@ -136,3 +136,4 @@ inventory
 .roles/**
 .collections/**
 /macos.config.yml
+.ansible/**
