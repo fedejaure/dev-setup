@@ -46,7 +46,7 @@ Below is a list of the key default variables available in `default.macos.config.
     !!! info "Default"
 
         ```yaml
-        ["homebrew/cask-fonts", "esolitos/ipa"]
+        ["esolitos/ipa"]
         ```
 
 - `homebrew_installed_packages`: List of packages to install via Homebrew.

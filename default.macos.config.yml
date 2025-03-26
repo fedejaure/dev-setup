@@ -9,7 +9,6 @@ homebrew_brew_sbin_path: "{{ homebrew_prefix }}/sbin"
 # Additional Homebrew Taps
 # Custom repositories for Homebrew formulas and casks.
 homebrew_taps:
-  - homebrew/cask-fonts
   - esolitos/ipa
 
 # Homebrew Installed Packages
