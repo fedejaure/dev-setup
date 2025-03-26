@@ -41,7 +41,7 @@ mypy = "^1.14.1"
 mkdocs = "^1.6.1"
 mkdocs-material = "^9.5.49"
 mkdocs-minify-plugin = "^0.8.0"
-termynal = "^0.12.2"
+termynal = "^0.13.0"
 
 [tool.ruff]
 target-version = "py310"

@@ -2240,15 +2240,15 @@ test = ["enrich (>=1.2.6)", "molecule (>=3.4.0)", "pytest (>=6.2.5)", "pytest-co
 
 [[package]]
 name = "termynal"
-version = "0.12.2"
+version = "0.13.0"
 description = "A lightweight and modern animated terminal window"
 optional = false
 python-versions = ">=3.9"
 groups = ["docs"]
 markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
-    {file = "termynal-0.12.2-py3-none-any.whl", hash = "sha256:62314dac6e77f1b7b64a251c2c90702eb6e6910f72ea9c6e5ef68d715b272709"},
-    {file = "termynal-0.12.2.tar.gz", hash = "sha256:cc2356bbf8650c16abd0558786251fabdde6b25e1125c1f091607ed3e422f7f2"},
+    {file = "termynal-0.13.0-py3-none-any.whl", hash = "sha256:0507eba6d8d96a2b29fddb8ae4d58b07b2a48b9144bda976629de3b9e2a47ced"},
+    {file = "termynal-0.13.0.tar.gz", hash = "sha256:8d41cc80b03e040398bf57f37a584d06295b5ad82a7add54f1ad000daf537573"},
 ]
 
 [package.dependencies]
@@ -2434,4 +2434,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.1"
 python-versions = "<3.12,>=3.11"
-content-hash = "fbb30eac1ea73532d85bd4c8186b7f914bae25bf4bfc4e08efa4ae3912825073"
+content-hash = "b74f196dbf622d4d16234cfbb12594fb2a912ab858fb265b3c7dbf5a59831842"
