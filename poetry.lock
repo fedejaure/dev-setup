@@ -15,19 +15,19 @@ files = [
 
 [[package]]
 name = "ansible"
-version = "11.1.0"
+version = "11.4.0"
 description = "Radically simple IT automation"
 optional = false
 python-versions = ">=3.11"
 groups = ["main"]
 markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
-    {file = "ansible-11.1.0-py3-none-any.whl", hash = "sha256:bbaf7073993f019fc0293fc8b76c7b215081831957c28eb020f12c270a16e8f0"},
-    {file = "ansible-11.1.0.tar.gz", hash = "sha256:d01b425990d960d2a33fc378e1b73dbca1c0e28bc22f4056ab6b3c8e9ae74fba"},
+    {file = "ansible-11.4.0-py3-none-any.whl", hash = "sha256:fb56f6e5d5b08f69499a76f0972ac0b88ddc488ada1f386129ba40cb0b5c6ec7"},
+    {file = "ansible-11.4.0.tar.gz", hash = "sha256:d25a7f26bf5821f8043bc806019822fd2810bd65e6b6bafb698bbeedadba72bf"},
 ]
 
 [package.dependencies]
-ansible-core = ">=2.18.1,<2.19.0"
+ansible-core = ">=2.18.4,<2.19.0"
 
 [[package]]
 name = "ansible-compat"
@@ -55,14 +55,14 @@ test = ["coverage", "pip", "pytest (>=7.2.0)", "pytest-mock", "pytest-plus (>=0.
 
 [[package]]
 name = "ansible-core"
-version = "2.18.1"
+version = "2.18.4"
 description = "Radically simple IT automation"
 optional = false
 python-versions = ">=3.11"
 groups = ["main", "lint", "test"]
 files = [
-    {file = "ansible_core-2.18.1-py3-none-any.whl", hash = "sha256:4a312e416e09c7271188d6b8e2b1062fc6834fefd6a1814d0e02fb8aadb3e1ba"},
-    {file = "ansible_core-2.18.1.tar.gz", hash = "sha256:14cac1f92bbdae881cb0616eddeb17925e8cb507e486087975e724533d9de74f"},
+    {file = "ansible_core-2.18.4-py3-none-any.whl", hash = "sha256:c642d484c1d3486a923b152150034eddd5cdf4bea58039c928183900fb35d8ba"},
+    {file = "ansible_core-2.18.4.tar.gz", hash = "sha256:e1f8f5c33546362b0ee933e0969a3ba364b486515a6fa1bc25ebb5d95f8ec5f4"},
 ]
 markers = {main = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\"", lint = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_system != \"Windows\"", test = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""}
 
@@ -2344,4 +2344,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.1"
 python-versions = "<3.12,>=3.11"
-content-hash = "3c6ea418b8a00b931ede5121427267b2e46e303345a71672ac0232648f2eff02"
+content-hash = "f3a583e5f38a89706616387c8e3105995216c697fc9c29ed0403dbfe7f43b148"
