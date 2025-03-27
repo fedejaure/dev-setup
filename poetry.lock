@@ -31,19 +31,19 @@ ansible-core = ">=2.18.4,<2.19.0"
 
 [[package]]
 name = "ansible-compat"
-version = "24.10.0"
+version = "25.1.4"
 description = "Ansible compatibility goodies"
 optional = false
-python-versions = ">=3.9"
+python-versions = ">=3.10"
 groups = ["lint", "test"]
 files = [
-    {file = "ansible_compat-24.10.0-py3-none-any.whl", hash = "sha256:0415bcd82f7d84e5b344c03439154c1f16576809dc3a523b81178354c86ae5a1"},
-    {file = "ansible_compat-24.10.0.tar.gz", hash = "sha256:0ad873e0dae8b2de79bc33ced813d6c92c716c4d7b82f9a4693e1fd57f43776e"},
+    {file = "ansible_compat-25.1.4-py3-none-any.whl", hash = "sha256:25acf1bb49d8072e2737fc109fa9aa981ca9fed17b075af3c812635dad48ba2a"},
+    {file = "ansible_compat-25.1.4.tar.gz", hash = "sha256:ebf8620021dd25c2d7c3e8e9382efbe7328db58ea396cbbe688ebef80dc8f8ae"},
 ]
 markers = {lint = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_system != \"Windows\"", test = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""}
 
 [package.dependencies]
-ansible-core = ">=2.14"
+ansible-core = ">=2.16"
 jsonschema = ">=4.6.0"
 packaging = "*"
 PyYAML = "*"
@@ -51,7 +51,7 @@ subprocess-tee = ">=0.4.1"
 
 [package.extras]
 docs = ["argparse-manpage", "black", "mkdocs-ansible (>=24.3.1)"]
-test = ["coverage", "pip", "pytest (>=7.2.0)", "pytest-mock", "pytest-plus (>=0.6.1)", "uv (>=0.4.30)"]
+test = ["coverage", "pip", "pytest (>=7.2.0)", "pytest-instafail", "pytest-mock", "pytest-plus (>=0.6.1)", "uv (>=0.4.30)"]
 
 [[package]]
 name = "ansible-core"
@@ -75,31 +75,32 @@ resolvelib = ">=0.5.3,<1.1.0"
 
 [[package]]
 name = "ansible-lint"
-version = "24.12.2"
+version = "25.1.3"
 description = "Checks playbooks for practices and behavior that could potentially be improved"
 optional = false
 python-versions = ">=3.10"
 groups = ["lint"]
 markers = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_system != \"Windows\""
 files = [
-    {file = "ansible_lint-24.12.2-py3-none-any.whl", hash = "sha256:ce7a783ce4f053a965e31f308cdb57554259052efea04b8491c9704f11095e54"},
-    {file = "ansible_lint-24.12.2.tar.gz", hash = "sha256:f636309c4e7f724fc1a544df529c4c2354f54cf35ede11d750366afb1158a464"},
+    {file = "ansible_lint-25.1.3-py3-none-any.whl", hash = "sha256:b68b2149423246ec6369be86df2b79e3555b2b71507e4f7915671ec77381fa2b"},
+    {file = "ansible_lint-25.1.3.tar.gz", hash = "sha256:ff92b31c83a2366381907e21c9a9d4de57f0cd7574e9943ea1b7e32b371f31a2"},
 ]
 
 [package.dependencies]
-ansible-compat = ">=24.10.0"
-ansible-core = ">=2.13.0"
+ansible-compat = ">=25.1.3"
+ansible-core = ">=2.16.0"
 black = ">=24.3.0"
-filelock = ">=3.3.0"
+filelock = ">=3.8.2"
 importlib-metadata = "*"
 jsonschema = ">=4.10.0"
-packaging = ">=21.3"
+packaging = ">=22.0"
 pathspec = ">=0.10.3"
-pyyaml = ">=5.4.1"
-"ruamel.yaml" = ">=0.18.5"
+pyyaml = ">=6.0.2"
+referencing = ">=0.36.2"
+"ruamel.yaml" = ">=0.18.5,<0.18.7 || >0.18.7,<0.18.8 || >0.18.8"
 subprocess-tee = ">=0.4.1"
 wcmatch = {version = ">=8.1.2", markers = "python_version < \"3.12\""}
-yamllint = ">=1.30.0"
+yamllint = ">=1.34.0"
 
 [package.extras]
 docs = ["mkdocs-ansible (>=24.12.0)", "uv (>=0.5.5)"]
@@ -1713,20 +1714,21 @@ pyyaml = "*"
 
 [[package]]
 name = "referencing"
-version = "0.35.1"
+version = "0.36.2"
 description = "JSON Referencing + Python"
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.9"
 groups = ["lint", "test"]
 files = [
-    {file = "referencing-0.35.1-py3-none-any.whl", hash = "sha256:eda6d3234d62814d1c64e305c1331c9a3a6132da475ab6382eaa997b21ee75de"},
-    {file = "referencing-0.35.1.tar.gz", hash = "sha256:25b42124a6c8b632a425174f24087783efb348a6f1e0008e63cd4466fedf703c"},
+    {file = "referencing-0.36.2-py3-none-any.whl", hash = "sha256:e8699adbbf8b5c7de96d8ffa0eb5c158b3beafce084968e2ea8bb08c6794dcd0"},
+    {file = "referencing-0.36.2.tar.gz", hash = "sha256:df2e89862cd09deabbdba16944cc3f10feb6b3e6f18e902f7cc25609a34775aa"},
 ]
 markers = {lint = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_system != \"Windows\"", test = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""}
 
 [package.dependencies]
 attrs = ">=22.2.0"
 rpds-py = ">=0.7.0"
+typing-extensions = {version = ">=4.4.0", markers = "python_version < \"3.13\""}
 
 [[package]]
 name = "requests"
@@ -2192,12 +2194,12 @@ version = "4.12.2"
 description = "Backported and Experimental Type Hints for Python 3.8+"
 optional = false
 python-versions = ">=3.8"
-groups = ["security", "typing"]
-markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
+groups = ["lint", "security", "test", "typing"]
 files = [
     {file = "typing_extensions-4.12.2-py3-none-any.whl", hash = "sha256:04e5ca0351e0f3f85c6853954072df659d0d13fac324d0072316b67d7794700d"},
     {file = "typing_extensions-4.12.2.tar.gz", hash = "sha256:1a7ead55c7e559dd4dee8856e3a88b41225abfe1ce8df57b7c13915fe121ffb8"},
 ]
+markers = {lint = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_system != \"Windows\"", security = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\"", test = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\"", typing = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""}
 
 [[package]]
 name = "urllib3"
@@ -2344,4 +2346,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.1"
 python-versions = "<3.12,>=3.11"
-content-hash = "f3a583e5f38a89706616387c8e3105995216c697fc9c29ed0403dbfe7f43b148"
+content-hash = "17404b2a169199f2d7855a8cbd6301716f3bedde25bf3fc87c5e4635efa0b467"
