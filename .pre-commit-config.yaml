@@ -28,20 +28,20 @@ repos:
     hooks:
       - id: black
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.11.4
+    rev: v0.11.9
     hooks:
       - id: ruff
   - repo: https://github.com/python-poetry/poetry
-    rev: 2.1.2
+    rev: 2.1.3
     hooks:
       - id: poetry-check
       - id: poetry-install
   - repo: https://github.com/adrienverge/yamllint.git
-    rev: v1.37.0
+    rev: v1.37.1
     hooks:
       - id: yamllint
   - repo: https://github.com/ansible-community/ansible-lint.git
-    rev: v25.2.1
+    rev: v25.4.0
     hooks:
       - id: ansible-lint
         stages:
