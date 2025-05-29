@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+### Added
+- `uv` via pipx.
+
 ### Changed
 - Python default versions instaled with pyenv to (`3.10`, `3.11`, `3.12`, `3.13`).
 

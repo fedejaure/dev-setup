@@ -148,6 +148,7 @@ pipx_installed_packages:
   - name: nox
     inject_packages:
       - nox-poetry
+  - uv
 
 # Shell Configuration for pipx
 # Flag to configure pipx binary path in the shell.
