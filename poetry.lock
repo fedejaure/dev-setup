@@ -1167,15 +1167,15 @@ mkdocs = ">=1.4.1"
 
 [[package]]
 name = "molecule"
-version = "25.4.0"
+version = "25.5.0"
 description = "Molecule aids in the development and testing of Ansible roles"
 optional = false
 python-versions = ">=3.10"
 groups = ["test"]
 markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
-    {file = "molecule-25.4.0-py3-none-any.whl", hash = "sha256:09506acc2af7fa66acab8bb032508dbb282869f372ed034620883f26801e08e3"},
-    {file = "molecule-25.4.0.tar.gz", hash = "sha256:c531e2a1051f827f3878dcd7d40d6d6868da066d461ef28b5e8fedea5e93f0f9"},
+    {file = "molecule-25.5.0-py3-none-any.whl", hash = "sha256:224a0286eb36d341cecd50e57d6c93ea5276ea1fbb6a8854fb4a325c879681cd"},
+    {file = "molecule-25.5.0.tar.gz", hash = "sha256:585d8ce0ad493be3ae94de096f8b4a896ab9010a7ea36a869fdf5e29bd668f4b"},
 ]
 
 [package.dependencies]
@@ -1194,7 +1194,7 @@ wcmatch = ">=8.1.2"
 
 [package.extras]
 docs = ["linkchecker (>=10.4.0)", "mkdocs-ansible (>=24.3.0)"]
-test = ["ansi2html (>=1.8.0)", "ansible-lint (>=6.12.1)", "black", "coverage[toml]", "docker (>=7.1.0)", "filelock (>=3.9.0)", "mypy", "pexpect (>=4.9.0,<5)", "pre-commit", "pydoclint", "pylint", "pytest", "pytest-instafail", "pytest-mock (>=3.10.0)", "pytest-plus (>=0.7.0)", "pytest-xdist", "requests (!=2.32.0)", "ruff", "toml-sort", "tox", "types-jsonschema", "types-pexpect", "types-pyyaml"]
+test = ["ansi2html (>=1.8.0)", "ansible-lint (>=6.12.1)", "coverage[toml]", "docker (>=7.1.0)", "filelock (>=3.9.0)", "mypy", "pexpect (>=4.9.0,<5)", "pre-commit", "pydoclint", "pylint", "pytest", "pytest-instafail", "pytest-mock (>=3.10.0)", "pytest-plus (>=0.7.0)", "pytest-xdist", "requests (!=2.32.0)", "ruff", "toml-sort", "tox", "types-jsonschema", "types-pexpect", "types-pyyaml"]
 testinfra = ["pytest-testinfra (>=8.1.0)"]
 
 [[package]]
@@ -2531,4 +2531,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.1"
 python-versions = "<3.12,>=3.11"
-content-hash = "22f5d24bbeac2467ca49f88de8e18a928edc86404b017f9c6c6e09e4df11a696"
+content-hash = "c4154123a696a2ced09613570468c5b7177ebf156ee0743f50d490f321a877dd"
