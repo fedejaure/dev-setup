@@ -10,6 +10,7 @@ homebrew_brew_sbin_path: "{{ homebrew_prefix }}/sbin"
 # Custom repositories for Homebrew formulas and casks.
 homebrew_taps:
   - esolitos/ipa
+  - jesseduffield/lazydocker
 
 # Homebrew Installed Packages
 # List of packages to be installed via Homebrew.
@@ -29,7 +30,7 @@ homebrew_installed_packages:
   - neovim
   - tmux
   - chezmoi
-  - jesseduffield/lazydocker/lazydocker
+  - lazydocker
   - sshpass
   - htop
   - dust
