@@ -8,7 +8,7 @@
 - [**Cookiecutter**](https://github.com/cookiecutter/cookiecutter): A utility that generates project boilerplate based on templates. It helps streamline the creation of new projects with predefined structures and configurations.
 - [**Nox**](https://nox.thea.codes/en/stable/): An automation tool for Python testing that can run test suites in different environments. Installed with:
     - [**Nox-Poetry**](https://nox-poetry.readthedocs.io/en/stable/): A plugin that integrates Poetry into Nox, allowing seamless management of testing environments and dependencies.
-
+- [**uv**](https://docs.astral.sh/uv/): An extremely fast Python package and project manager, written in Rust.
 
 !!! note "Customization Options"
     You can customize your installation by adding or removing applications as needed. For more information on how to override default settings, visit our [Work in Progress (WIP) customization guide](#).

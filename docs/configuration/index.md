@@ -236,6 +236,7 @@ packages into some applications.
         - name: nox
           inject_packages:
             - nox-poetry
+        - uv
         ```
 
 - `configure_pipx_bin_rc_path`: Adds the `pipx` installation path to the shell configuration.
