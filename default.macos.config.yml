@@ -130,9 +130,6 @@ dockitems_persist:
   - name: "WhatsApp"
     path: "/Applications/WhatsApp.app/"
     pos: 13
-  - name: "OpenVPN Connect"
-    path: "/Applications/OpenVPN Connect/OpenVPN Connect.app/"
-    pos: 14
 
 # pyenv Configuration
 # Settings for configuring pyenv in the shell.
