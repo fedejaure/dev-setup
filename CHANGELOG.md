@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.0] - 2025-05-31
+### Added
+- `uv` via pipx.
+
+### Changed
+- Python default versions instaled with pyenv to (`3.10`, `3.11`, `3.12`, `3.13`).
+- geerlingguy.mac to `4.1.0`.
+
 ## [1.3.1] - 2024-10-04
 ### Fixed
 - Docs site deployment.
@@ -69,7 +77,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - First release.
 
-[Unreleased]: https://github.com/fedejaure/dev-setup/compare/v1.3.1...develop
+[Unreleased]: https://github.com/fedejaure/dev-setup/compare/v1.4.0...develop
+[1.4.0]: https://github.com/fedejaure/dev-setup/compare/v1.3.1...v1.4.0
 [1.3.1]: https://github.com/fedejaure/dev-setup/compare/v1.3.0...v1.3.1
 [1.3.0]: https://github.com/fedejaure/dev-setup/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/fedejaure/dev-setup/compare/v1.1.0...v1.2.0

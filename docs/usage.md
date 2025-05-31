@@ -90,7 +90,7 @@ the differents supported targets.
 
     ```console
     $ poetry install --no-root
-    Using python3.10 (3.10.8)
+    Using python3.11 (3.11.11)
     Creating virtualenv .venv
     Installing dependencies from lock file
 
@@ -105,7 +105,7 @@ the differents supported targets.
 
     ```console
     $ poetry shell
-    Using python3.10 (3.10.8)
+    Using python3.11 (3.11.11)
     Spawning shell within .venv
     (dev-setup)$
     ```
@@ -158,6 +158,17 @@ the differents supported targets.
 
     ...
     ```
+
+??? warning "Homebrew Cask Apps Failing with 'sudo'?"
+    If you're installing Homebrew Cask apps on a **remote macOS machine** and encounter permission issues requiring `sudo`, a workaround is available — but **it's not recommended for general use**.
+
+    You can try:
+
+    - Defining `ansible_become_password` directly in your `inventory` file.
+    - Reviewing [this related GitHub issue](https://github.com/geerlingguy/ansible-collection-mac/issues/102) for context and alternatives.
+
+    ⚠️ This workaround is **only suggested if you're stuck** and working on a remote Mac. It is better to ensure proper local privilege escalation via `--ask-become-pass` whenever possible.
+
 
 ## Linux
 

@@ -9,8 +9,8 @@ homebrew_brew_sbin_path: "{{ homebrew_prefix }}/sbin"
 # Additional Homebrew Taps
 # Custom repositories for Homebrew formulas and casks.
 homebrew_taps:
-  - homebrew/cask-fonts
   - esolitos/ipa
+  - jesseduffield/lazydocker
 
 # Homebrew Installed Packages
 # List of packages to be installed via Homebrew.
@@ -30,7 +30,7 @@ homebrew_installed_packages:
   - neovim
   - tmux
   - chezmoi
-  - jesseduffield/lazydocker/lazydocker
+  - lazydocker
   - sshpass
   - htop
   - dust
@@ -130,9 +130,6 @@ dockitems_persist:
   - name: "WhatsApp"
     path: "/Applications/WhatsApp.app/"
     pos: 13
-  - name: "OpenVPN Connect"
-    path: "/Applications/OpenVPN Connect/OpenVPN Connect.app/"
-    pos: 14
 
 # pyenv Configuration
 # Settings for configuring pyenv in the shell.
@@ -149,6 +146,7 @@ pipx_installed_packages:
   - name: nox
     inject_packages:
       - nox-poetry
+  - uv
 
 # Shell Configuration for pipx
 # Flag to configure pipx binary path in the shell.

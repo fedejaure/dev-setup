@@ -46,7 +46,7 @@ Below is a list of the key default variables available in `default.macos.config.
     !!! info "Default"
 
         ```yaml
-        ["homebrew/cask-fonts", "esolitos/ipa"]
+        ["esolitos/ipa"]
         ```
 
 - `homebrew_installed_packages`: List of packages to install via Homebrew.
@@ -236,6 +236,7 @@ packages into some applications.
         - name: nox
           inject_packages:
             - nox-poetry
+        - uv
         ```
 
 - `configure_pipx_bin_rc_path`: Adds the `pipx` installation path to the shell configuration.
@@ -314,10 +315,10 @@ a `<target-os>.config.yml` file and setting the overrides in that file. e.g.:
       - inkscape
 
     pyenv_python_versions:
-      - 3.9.18
-      - 3.10.13
-      - 3.11.7
-      - 3.12.1
+      - 3.10.16
+      - 3.11.11
+      - 3.12.8
+      - 3.13.1
     ```
 
 !!! tip "Advanced Role Configuration"
