@@ -32,7 +32,7 @@ yamllint = "^1.37.1"
 ansible-lint = {version = "^25.6.1", markers = "platform_system != 'Windows'"}
 
 [tool.poetry.group.security.dependencies]
-safety = "^3.5.1"
+safety = "^3.6.0"
 
 [tool.poetry.group.typing.dependencies]
 mypy = "^1.17.0"
