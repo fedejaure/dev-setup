@@ -21,7 +21,7 @@ invoke = "^2.2.0"
 bump2version = "^1.0.1"
 
 [tool.poetry.group.test.dependencies]
-molecule = "^25.5.0"
+molecule = "^25.6.0"
 molecule-plugins = {extras = ["docker"], version = "^23.7.0"}
 
 [tool.poetry.group.lint.dependencies]
