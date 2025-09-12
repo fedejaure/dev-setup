@@ -1252,15 +1252,15 @@ mkdocs = ">=1.4.1"
 
 [[package]]
 name = "molecule"
-version = "25.6.0"
+version = "25.7.0"
 description = "Molecule aids in the development and testing of Ansible roles"
 optional = false
 python-versions = ">=3.10"
 groups = ["test"]
 markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
-    {file = "molecule-25.6.0-py3-none-any.whl", hash = "sha256:76e968908802ad56bda4d46306da334e71e2211d4ef30429bdf4830042b3ed7c"},
-    {file = "molecule-25.6.0.tar.gz", hash = "sha256:0db208de58bececb0ca87bf2cc48e1017234e1e3ad947c179487737f884e7c7c"},
+    {file = "molecule-25.7.0-py3-none-any.whl", hash = "sha256:4184fdc2494a17fe6aecb144c01e14e6929cc5d2b5461ebfe90ed3fe3f37d01d"},
+    {file = "molecule-25.7.0.tar.gz", hash = "sha256:a258ccaf0a2d15aa0b492fc4a5ad63868bb229e098451cd9a58fbf4015bba510"},
 ]
 
 [package.dependencies]
@@ -2672,4 +2672,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.1"
 python-versions = "<3.12,>=3.11"
-content-hash = "99d564878ab4e2a87f21241936d6bb8b961484d4ab3d8872f1f9c384c5709837"
+content-hash = "f17cb085eda932ca2e1fa5252cb41b6d91764ee4bd433bf1a9b89a17105f88e0"
