@@ -29,27 +29,23 @@ ansible-core = ">=2.19.3,<2.20.0"
 
 [[package]]
 name = "ansible-compat"
-version = "25.8.1"
+version = "25.11.0"
 description = "Ansible compatibility goodies"
 optional = false
 python-versions = ">=3.10"
 groups = ["lint", "test"]
 files = [
-    {file = "ansible_compat-25.8.1-py3-none-any.whl", hash = "sha256:5bb843838414b75efff24dae5ff5b332cd503a596143d471980243cec4b46c9c"},
-    {file = "ansible_compat-25.8.1.tar.gz", hash = "sha256:f29ab81264b3f04fb94ac2d7f68fe73efc2eb3cbe4ecf00f9b4742e77c41756f"},
+    {file = "ansible_compat-25.11.0-py3-none-any.whl", hash = "sha256:e6f013b8a7d1fd87a9624b9dc125e4e76a61eb90680800cb4119d97d8ce63ae7"},
+    {file = "ansible_compat-25.11.0.tar.gz", hash = "sha256:b9e6655d8f4942c427a39fa1df6697830d987fe5d311bc7be2b2f81c1edd48f5"},
 ]
 markers = {lint = "platform_system != \"Windows\""}
 
 [package.dependencies]
 ansible-core = ">=2.16"
 jsonschema = ">=4.6.0"
-packaging = "*"
-PyYAML = "*"
+packaging = ">=25.0"
+pyyaml = ">=6.0.2"
 subprocess-tee = ">=0.4.1"
-
-[package.extras]
-docs = ["argparse-manpage", "black", "mkdocs-ansible (>=24.3.1)"]
-test = ["coverage", "pip", "pytest (>=7.2.0)", "pytest-instafail", "pytest-mock", "pytest-plus (>=0.6.1)", "uv (>=0.4.30)"]
 
 [[package]]
 name = "ansible-core"
@@ -73,37 +69,36 @@ resolvelib = ">=0.5.3,<2.0.0"
 
 [[package]]
 name = "ansible-lint"
-version = "25.8.2"
+version = "25.11.0"
 description = "Checks playbooks for practices and behavior that could potentially be improved"
 optional = false
 python-versions = ">=3.10"
 groups = ["lint"]
 markers = "platform_system != \"Windows\""
 files = [
-    {file = "ansible_lint-25.8.2-py3-none-any.whl", hash = "sha256:14de8c51650af33255a5ba14a01d798d64c2559eaec9d6a92927535b46d1d9ab"},
-    {file = "ansible_lint-25.8.2.tar.gz", hash = "sha256:35dd3ddd12d8063876915bf2f06b9a1b80fd27a7cb1ca4ce51c8cebb84690922"},
+    {file = "ansible_lint-25.11.0-py3-none-any.whl", hash = "sha256:4a0f83e292fa70e9922ad2c02e10708013b7e77a93364d729abc2cbf165c75c4"},
+    {file = "ansible_lint-25.11.0.tar.gz", hash = "sha256:79e35246c8bdaacdbe37aa30a6ea471177482ac58fbcf1868f765bdafca3427e"},
 ]
 
 [package.dependencies]
-ansible-compat = ">=25.8.0"
-ansible-core = ">=2.16.11"
+ansible-compat = ">=25.8.2"
+ansible-core = ">=2.17.10"
 black = ">=24.3.0"
+cffi = ">=1.17.1"
+cryptography = ">=38"
+distro = ">=1.9.0"
 filelock = ">=3.8.2"
-importlib-metadata = "*"
+importlib-metadata = ">=8.7.0"
 jsonschema = ">=4.10.0"
 packaging = ">=22.0"
 pathspec = ">=0.10.3"
-pyyaml = ">=6.0.2"
+pyyaml = {version = ">=6.0.2", markers = "python_version < \"3.14\""}
 referencing = ">=0.36.2"
-"ruamel.yaml" = ">=0.18.11"
+ruamel-yaml = ">=0.18.11"
+ruamel-yaml-clib = {version = ">=0.2.12", markers = "python_version < \"3.14\""}
 subprocess-tee = ">=0.4.1"
 wcmatch = {version = ">=8.1.2", markers = "python_version < \"3.12\""}
 yamllint = ">=1.34.0"
-
-[package.extras]
-docs = ["mkdocs-ansible (>=25.5.0)"]
-lock = ["ansible-compat (==25.8.1)", "attrs (==25.3.0)", "black (==25.1.0)", "bracex (==2.6)", "cffi (==1.17.1)", "click (==8.2.1)", "cryptography (==45.0.6)", "filelock (==3.19.1)", "importlib-metadata (==8.7.0)", "jinja2 (==3.1.6)", "jsonschema (==4.25.0)", "jsonschema-specifications (==2025.4.1)", "markupsafe (==3.0.2)", "mypy-extensions (==1.1.0)", "packaging (==25.0)", "pathspec (==0.12.1)", "platformdirs (==4.3.8)", "pycparser (==2.22)", "pyyaml (==6.0.2)", "referencing (==0.36.2)", "rpds-py (==0.27.0)", "ruamel-yaml (==0.18.14)", "subprocess-tee (==0.4.2)", "wcmatch (==10.1)", "yamllint (==1.37.1)", "zipp (==3.23.0)"]
-test = ["ansible-creator (>=24.6.0)", "black", "coverage-enable-subprocess", "coverage[toml] (>=6.4.4)", "ipdb", "ipython", "jmespath", "license-expression (>=30.3.0)", "mypy", "netaddr", "pip", "psutil", "pylint", "pytest (>=7.2.2)", "pytest-instafail (>=0.5.0)", "pytest-mock", "pytest-plus (>=0.6)", "pytest-sugar", "pytest-xdist[psutil,setproctitle] (>=2.1.0)", "ruamel-yaml-clib ; python_version < \"3.14\"", "ruamel.yaml (>=0.18.11)", "tox (>=4.0.0)", "tox (>=4.24.2)", "tox-extra (>=2.1)", "tox-uv (>=1.25)", "types-jsonschema", "types-pyyaml"]
 
 [[package]]
 name = "anyio"
@@ -355,7 +350,7 @@ files = [
     {file = "cffi-1.17.1-cp39-cp39-win_amd64.whl", hash = "sha256:d016c76bdd850f3c626af19b0542c9677ba156e4ee4fccfdd7848803533ef662"},
     {file = "cffi-1.17.1.tar.gz", hash = "sha256:1c39c6016c32bc48dd54561950ebd6836e1670f2ae46128f67cf49e789c52824"},
 ]
-markers = {main = "platform_python_implementation != \"PyPy\"", lint = "platform_system != \"Windows\" and platform_python_implementation != \"PyPy\"", security = "platform_python_implementation != \"PyPy\"", test = "platform_python_implementation != \"PyPy\""}
+markers = {main = "platform_python_implementation != \"PyPy\"", lint = "platform_system != \"Windows\"", security = "platform_python_implementation != \"PyPy\"", test = "platform_python_implementation != \"PyPy\""}
 
 [package.dependencies]
 pycparser = "*"
@@ -610,12 +605,12 @@ version = "1.9.0"
 description = "Distro - an OS platform information API"
 optional = false
 python-versions = ">=3.6"
-groups = ["test"]
-markers = "sys_platform == \"linux2\" or sys_platform == \"linux\""
+groups = ["lint", "test"]
 files = [
     {file = "distro-1.9.0-py3-none-any.whl", hash = "sha256:7bffd925d65168f85027d8da9af6bddab658135b840670a223589bc0c8ef02b2"},
     {file = "distro-1.9.0.tar.gz", hash = "sha256:2fa77c6fd8940f116ee1d6b94a2f90b13b5ea8d019b98bc8bafdcabcdd9bdbed"},
 ]
+markers = {lint = "platform_system != \"Windows\"", test = "sys_platform == \"linux2\" or sys_platform == \"linux\""}
 
 [[package]]
 name = "docker"
@@ -1513,7 +1508,7 @@ files = [
     {file = "pycparser-2.22-py3-none-any.whl", hash = "sha256:c3702b6d3dd8c7abc1afa565d7e63d53a1d0bd86cdc24edd75470f4de499cfcc"},
     {file = "pycparser-2.22.tar.gz", hash = "sha256:491c8be9c040f5390f5bf44a5b07752bd07f56edf992381b05c701439eec10f6"},
 ]
-markers = {main = "platform_python_implementation != \"PyPy\"", lint = "platform_system != \"Windows\" and platform_python_implementation != \"PyPy\"", security = "platform_python_implementation != \"PyPy\"", test = "platform_python_implementation != \"PyPy\""}
+markers = {main = "platform_python_implementation != \"PyPy\"", lint = "platform_system != \"Windows\"", security = "platform_python_implementation != \"PyPy\"", test = "platform_python_implementation != \"PyPy\""}
 
 [[package]]
 name = "pydantic"
@@ -2177,7 +2172,7 @@ files = [
     {file = "ruamel.yaml.clib-0.2.12-cp39-cp39-win_amd64.whl", hash = "sha256:040ae85536960525ea62868b642bdb0c2cc6021c9f9d507810c0c604e66f5a7b"},
     {file = "ruamel.yaml.clib-0.2.12.tar.gz", hash = "sha256:6c8fbb13ec503f99a91901ab46e0b07ae7941cd527393187039aec586fdfd36f"},
 ]
-markers = {lint = "platform_python_implementation == \"CPython\" and platform_system != \"Windows\"", security = "platform_python_implementation == \"CPython\""}
+markers = {lint = "platform_system != \"Windows\"", security = "platform_python_implementation == \"CPython\""}
 
 [[package]]
 name = "ruff"
@@ -2595,4 +2590,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.1"
 python-versions = "<3.12,>=3.11"
-content-hash = "660b464593d730596e65192ba6bdb0fbec4718d743aaeee83abc6f78fe3ef3c2"
+content-hash = "e4d3d9348065c000506d7bc54cbeee3ad31ec421694c49f27a12650da4a173f3"
