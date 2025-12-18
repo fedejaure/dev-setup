@@ -2287,14 +2287,14 @@ test = ["pytest", "tornado (>=4.5)", "typeguard"]
 
 [[package]]
 name = "termynal"
-version = "0.13.0"
+version = "0.13.1"
 description = "A lightweight and modern animated terminal window"
 optional = false
 python-versions = ">=3.9"
 groups = ["docs"]
 files = [
-    {file = "termynal-0.13.0-py3-none-any.whl", hash = "sha256:0507eba6d8d96a2b29fddb8ae4d58b07b2a48b9144bda976629de3b9e2a47ced"},
-    {file = "termynal-0.13.0.tar.gz", hash = "sha256:8d41cc80b03e040398bf57f37a584d06295b5ad82a7add54f1ad000daf537573"},
+    {file = "termynal-0.13.1-py3-none-any.whl", hash = "sha256:7a1605a4d4ed38bf851bf25f842aafa52ef29786d52762aecee59622ed030592"},
+    {file = "termynal-0.13.1.tar.gz", hash = "sha256:c7abecfdbda3ccdeee2723049a70f0e2e7f63e1973bb9b8f0b3fe6c1bfb391cd"},
 ]
 
 [package.dependencies]
@@ -2488,4 +2488,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "sphinx"]
 [metadata]
 lock-version = "2.1"
 python-versions = "<3.12,>=3.11"
-content-hash = "bad9f422f63df41d0f0b4e9f1903a884171cb1893892e08d567a1354a497e561"
+content-hash = "141b37537229364b9ca355a4451e99d565487c5a76aa330ad8a642f8f00e28f8"
