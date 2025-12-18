@@ -1275,34 +1275,29 @@ mkdocs = ">=1.4.1"
 
 [[package]]
 name = "molecule"
-version = "25.7.0"
+version = "25.12.0"
 description = "Molecule aids in the development and testing of Ansible roles"
 optional = false
 python-versions = ">=3.10"
 groups = ["test"]
 files = [
-    {file = "molecule-25.7.0-py3-none-any.whl", hash = "sha256:4184fdc2494a17fe6aecb144c01e14e6929cc5d2b5461ebfe90ed3fe3f37d01d"},
-    {file = "molecule-25.7.0.tar.gz", hash = "sha256:a258ccaf0a2d15aa0b492fc4a5ad63868bb229e098451cd9a58fbf4015bba510"},
+    {file = "molecule-25.12.0-py3-none-any.whl", hash = "sha256:3df4fc034f3204efce7247b5b1087b2a7e411e27374a05fe96c6c676656e82bd"},
+    {file = "molecule-25.12.0.tar.gz", hash = "sha256:b226bf1be67ce0fa30c726aab226063f9443e561d7e3d048f55dfb2ee51adbd6"},
 ]
 
 [package.dependencies]
 ansible-compat = ">=25.1.4"
 ansible-core = ">=2.15.0"
 click = ">=8.0,<9"
-click-help-colors = "*"
+click-help-colors = ">=0.9.4"
 enrich = ">=1.2.7"
-Jinja2 = ">=2.11.3"
+jinja2 = ">=2.11.3"
 jsonschema = ">=4.9.1"
-packaging = "*"
+packaging = ">=23.2"
 pluggy = ">=0.7.1,<2.0"
-PyYAML = ">=5.1"
+pyyaml = ">=5.1"
 rich = ">=9.5.1"
 wcmatch = ">=8.1.2"
-
-[package.extras]
-docs = ["linkchecker (>=10.4.0)", "mkdocs-ansible (>=24.3.0)"]
-test = ["ansi2html (>=1.8.0)", "ansible-lint (>=6.12.1)", "ansible-navigator", "coverage[toml]", "docker (>=7.1.0)", "filelock (>=3.9.0)", "mypy", "pexpect (>=4.9.0,<5)", "pre-commit", "pydoclint", "pylint", "pytest", "pytest-instafail", "pytest-mock (>=3.10.0)", "pytest-plus (>=0.7.0)", "pytest-xdist", "requests (!=2.32.0)", "ruff", "toml-sort", "tox", "types-jsonschema", "types-pexpect", "types-pyyaml"]
-testinfra = ["pytest-testinfra (>=8.1.0)"]
 
 [[package]]
 name = "molecule-plugins"
@@ -2597,4 +2592,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "sphinx"]
 [metadata]
 lock-version = "2.1"
 python-versions = "<3.12,>=3.11"
-content-hash = "887349610b996d5b43f0d08b0704e177faa4e1d9ceaef01a17f8190dfb66c561"
+content-hash = "aaba79327570b49375d72208f98c661e55cb9bd3289a7087b22ae06f1880f560"
