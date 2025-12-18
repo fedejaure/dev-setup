@@ -14,18 +14,18 @@ files = [
 
 [[package]]
 name = "ansible"
-version = "12.1.0"
+version = "12.3.0"
 description = "Radically simple IT automation"
 optional = false
 python-versions = ">=3.11"
 groups = ["main"]
 files = [
-    {file = "ansible-12.1.0-py3-none-any.whl", hash = "sha256:1e9b616ff1f3bb5fbf48c89755a1ed395e453dc73d971ed68158933f8bfd4084"},
-    {file = "ansible-12.1.0.tar.gz", hash = "sha256:22dea1938d433fa515b3001cfad65cb308ef97c980f1520174d054dd38f32c83"},
+    {file = "ansible-12.3.0-py3-none-any.whl", hash = "sha256:cd156f82fa87f7a899212b0efa9f7ca3a24d609212de9f78428a572eb01e5414"},
+    {file = "ansible-12.3.0.tar.gz", hash = "sha256:02721f6fb432ddd47f1044ac49b04b5e9ae08890bd427def8df3db1607aeec51"},
 ]
 
 [package.dependencies]
-ansible-core = ">=2.19.3,<2.20.0"
+ansible-core = ">=2.19.5,<2.20.0"
 
 [[package]]
 name = "ansible-compat"
@@ -49,14 +49,14 @@ subprocess-tee = ">=0.4.1"
 
 [[package]]
 name = "ansible-core"
-version = "2.19.3"
+version = "2.19.5"
 description = "Radically simple IT automation"
 optional = false
 python-versions = ">=3.11"
 groups = ["main", "lint", "test"]
 files = [
-    {file = "ansible_core-2.19.3-py3-none-any.whl", hash = "sha256:7d312c2b76a3cea19e6dc2648b4ca4eb13233e58a58539fd80ecbb3a77881e72"},
-    {file = "ansible_core-2.19.3.tar.gz", hash = "sha256:243a69669a007be0794360bc4477f70e0128ce0091dc3af4c5cb81c6a466f573"},
+    {file = "ansible_core-2.19.5-py3-none-any.whl", hash = "sha256:7fa6c052bad2c294284b960d240b4cd227060fd2e3836d381db44d2bcfcdf4b7"},
+    {file = "ansible_core-2.19.5.tar.gz", hash = "sha256:d03660ff32ba8a5ae40a82148cb24b38a35d26c0155621ddd9148b7562fd8be2"},
 ]
 markers = {lint = "platform_system != \"Windows\""}
 
@@ -2488,4 +2488,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "sphinx"]
 [metadata]
 lock-version = "2.1"
 python-versions = "<3.12,>=3.11"
-content-hash = "b3368a190344c83e5c4dfdd98cafba798c5d5014f001a05cdef71e62e2c73465"
+content-hash = "bad9f422f63df41d0f0b4e9f1903a884171cb1893892e08d567a1354a497e561"
