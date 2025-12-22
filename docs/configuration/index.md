@@ -315,10 +315,10 @@ a `<target-os>.config.yml` file and setting the overrides in that file. e.g.:
       - inkscape
 
     pyenv_python_versions:
-      - 3.10.16
-      - 3.11.11
-      - 3.12.8
-      - 3.13.1
+      - 3.11.14
+      - 3.12.12
+      - 3.13.11
+      - 3.14.2
     ```
 
 !!! tip "Advanced Role Configuration"
