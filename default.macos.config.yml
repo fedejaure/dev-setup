@@ -39,6 +39,7 @@ homebrew_installed_packages:
   - fish
   - starship
   - btop
+  - opencode
 
 # Homebrew Cask Applications
 # Directory for Cask applications and list of applications to install.
