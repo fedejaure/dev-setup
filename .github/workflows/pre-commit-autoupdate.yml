@@ -14,10 +14,10 @@ jobs:
         with:
           ref: develop
 
-      - name: Set up Python 3.11
+      - name: Set up Python 3.14
         uses: actions/setup-python@v6
         with:
-          python-version: "3.11"
+          python-version: "3.14"
 
       - name: Install system deps
         shell: bash
