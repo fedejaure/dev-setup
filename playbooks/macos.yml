@@ -26,7 +26,8 @@
       environment:
         # Fix first run path
         PATH: "{{ homebrew_brew_bin_path }}:{{ homebrew_brew_sbin_path }}:/usr/local/bin:{{ ansible_env.PATH }}"
-      when: mas_installed_apps or mas_installed_app_ids
+      when: (mas_installed_apps | default([]) | length > 0) or
+            (mas_installed_app_ids | default([]) | length > 0)
       tags: ['mas']
     - role: geerlingguy.mac.dock
       environment:

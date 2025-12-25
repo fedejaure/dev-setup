@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+### Changed
+- Python default versions instaled with pyenv to (`3.11`, `3.12`, `3.13`, `3.14`).
 
 ## [1.4.0] - 2025-05-31
 ### Added
