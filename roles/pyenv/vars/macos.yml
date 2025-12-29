@@ -8,4 +8,4 @@ __pyenv_homebrew_required_packages:
   - zlib
   - tcl-tk
 
-__pyenv_rc_path: "{{ ansible_env.HOME }}/.zshrc"
+__pyenv_rc_path: "{{ ansible_facts['env']['HOME'] }}/.zshrc"

@@ -1,5 +1,5 @@
 ---
-pyenv_root: "{{ ansible_env.HOME }}/.pyenv"
+pyenv_root: "{{ ansible_facts['env']['HOME'] }}/.pyenv"
 
 pyenv_python_versions:
   - 3.11.14

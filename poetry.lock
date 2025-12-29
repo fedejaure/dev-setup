@@ -91,9 +91,10 @@ filelock = ">=3.8.2"
 jsonschema = ">=4.10.0"
 packaging = ">=22.0"
 pathspec = ">=0.10.3"
-pyyaml = {version = ">=6.0.1", markers = "python_version >= \"3.14\""}
+pyyaml = {version = ">=6.0.1", markers = "python_version < \"3.14\""}
 referencing = ">=0.36.2"
 ruamel-yaml = ">=0.18.11"
+ruamel-yaml-clib = {version = ">=0.2.12", markers = "python_version < \"3.14\""}
 subprocess-tee = ">=0.4.1"
 wcmatch = {version = ">=8.5.0", markers = "python_version >= \"3.12\""}
 yamllint = ">=1.34.0"
@@ -2372,7 +2373,7 @@ files = [
     {file = "ruamel_yaml_clib-0.2.15-cp39-cp39-win_amd64.whl", hash = "sha256:27dc656e84396e6d687f97c6e65fb284d100483628f02d95464fd731743a4afe"},
     {file = "ruamel_yaml_clib-0.2.15.tar.gz", hash = "sha256:46e4cc8c43ef6a94885f72512094e482114a8a706d3c555a34ed4b0d20200600"},
 ]
-markers = {lint = "platform_python_implementation == \"CPython\" and platform_system != \"Windows\"", security = "platform_python_implementation == \"CPython\""}
+markers = {lint = "platform_system != \"Windows\"", security = "platform_python_implementation == \"CPython\""}
 
 [[package]]
 name = "ruff"
@@ -2747,5 +2748,5 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "sphinx"]
 
 [metadata]
 lock-version = "2.1"
-python-versions = "<3.15,>=3.14"
-content-hash = "0d0b4d2855c0266e0ea2c26cf055a09e3d4ba2bb67471376498ec480efbf78af"
+python-versions = "<3.14,>=3.13"
+content-hash = "ff0f0cf76f8dbdd6bc9d04ab4c95e0e6cbf37f5cbf61d0db6e8b644c6719fb35"
