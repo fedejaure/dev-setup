@@ -280,7 +280,7 @@ a `<target-os>.config.yml` file and setting the overrides in that file. e.g.:
       - neovim
       - tmux
       - chezmoi
-      - "jesseduffield/lazydocker/lazydocker"
+      - lazydocker
       - sshpass
       - htop
       - dust
