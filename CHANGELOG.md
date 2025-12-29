@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+### Added
+- MacOS Tools/Packages:
+    * opencode.
+    * godot.
+
 ### Changed
 - Python default versions instaled with pyenv to (`3.11`, `3.12`, `3.13`, `3.14`).
 - Updated dev dependencies.

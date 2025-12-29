@@ -1,7 +1,7 @@
 ---
 # Homebrew Configuration
 # These settings configure the Homebrew package manager and its installations.
-homebrew_prefix: "{{ (ansible_machine == 'arm64') | ternary('/opt/homebrew', '/usr/local') }}"
+homebrew_prefix: "{{ (ansible_facts['machine'] == 'arm64') | ternary('/opt/homebrew', '/usr/local') }}"
 homebrew_install_path: "{{ homebrew_prefix }}/Homebrew"
 homebrew_brew_bin_path: "{{ homebrew_prefix }}/bin"
 homebrew_brew_sbin_path: "{{ homebrew_prefix }}/sbin"
@@ -39,6 +39,8 @@ homebrew_installed_packages:
   - fish
   - starship
   - btop
+  - opencode
+  - godot
 
 # Homebrew Cask Applications
 # Directory for Cask applications and list of applications to install.

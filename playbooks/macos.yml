@@ -15,7 +15,7 @@
     - name: Installs Rosetta 2
       ansible.builtin.command: /usr/sbin/softwareupdate --install-rosetta --agree-to-license
       changed_when: false
-      when: ansible_distribution == "MacOSX" and ansible_architecture == "arm64"
+      when: ansible_facts["distribution"] == "MacOSX" and ansible_facts["architecture"] == "arm64"
       tags: ['always']
 
   roles:
@@ -25,31 +25,31 @@
     - role: geerlingguy.mac.mas
       environment:
         # Fix first run path
-        PATH: "{{ homebrew_brew_bin_path }}:{{ homebrew_brew_sbin_path }}:/usr/local/bin:{{ ansible_env.PATH }}"
+        PATH: "{{ homebrew_brew_bin_path }}:{{ homebrew_brew_sbin_path }}:/usr/local/bin:{{ ansible_facts['env']['PATH'] }}"
       when: (mas_installed_apps | default([]) | length > 0) or
             (mas_installed_app_ids | default([]) | length > 0)
       tags: ['mas']
     - role: geerlingguy.mac.dock
       environment:
         # Fix first run path
-        PATH: "{{ homebrew_brew_bin_path }}:{{ homebrew_brew_sbin_path }}:/usr/local/bin:{{ ansible_env.PATH }}"
+        PATH: "{{ homebrew_brew_bin_path }}:{{ homebrew_brew_sbin_path }}:/usr/local/bin:{{ ansible_facts['env']['PATH'] }}"
       when: configure_dock
       tags: ['dock']
     - role: fedejaure.dev_setup.oh_my_zsh
       environment:
         # Fix first run path
-        PATH: "{{ homebrew_brew_bin_path }}:{{ homebrew_brew_sbin_path }}:/usr/local/bin:{{ ansible_env.PATH }}"
+        PATH: "{{ homebrew_brew_bin_path }}:{{ homebrew_brew_sbin_path }}:/usr/local/bin:{{ ansible_facts['env']['PATH'] }}"
       tags: ['oh-my-zsh']
     - role: fedejaure.dev_setup.pyenv
       environment:
         # Fix first run path
-        PATH: "{{ homebrew_brew_bin_path }}:{{ homebrew_brew_sbin_path }}:/usr/local/bin:{{ ansible_env.PATH }}"
+        PATH: "{{ homebrew_brew_bin_path }}:{{ homebrew_brew_sbin_path }}:/usr/local/bin:{{ ansible_facts['env']['PATH'] }}"
       tags: ['pyenv']
 
   tasks:
     - name: Configure Homebrew bin rc PATH
       ansible.builtin.lineinfile:
-        path: "{{ ansible_env.HOME }}/.zshrc"
+        path: "{{ ansible_facts['env']['HOME'] }}/.zshrc"
         line: 'export PATH="{{ homebrew_brew_bin_path }}:$PATH"'
         insertbefore: "^# BEGIN PYENV"
       tags: ['homebrew']
@@ -57,7 +57,7 @@
 
     - name: Configure Homebrew sbin rc PATH
       ansible.builtin.lineinfile:
-        path: "{{ ansible_env.HOME }}/.zshrc"
+        path: "{{ ansible_facts['env']['HOME'] }}/.zshrc"
         line: 'export PATH="{{ homebrew_brew_sbin_path }}:$PATH"'
         insertbefore: "^# BEGIN PYENV"
       tags: ['homebrew']
@@ -65,8 +65,8 @@
 
     - name: Configure pipx bin rc PATH
       ansible.builtin.lineinfile:
-        path: "{{ ansible_env.HOME }}/.zshrc"
-        line: 'export PATH="$PATH:{{ ansible_env.HOME }}/.local/bin"'
+        path: "{{ ansible_facts['env']['HOME'] }}/.zshrc"
+        line: "export PATH=\"$PATH:{{ ansible_facts['env']['HOME'] }}/.local/bin\""
         insertbefore: "^# BEGIN PYENV"
       tags: ['pipx']
       when: configure_pipx_bin_rc_path

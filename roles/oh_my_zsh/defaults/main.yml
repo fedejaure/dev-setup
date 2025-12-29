@@ -1,2 +1,2 @@
 ---
-oh_my_zsh_root: "{{ ansible_env.HOME }}/.oh-my-zsh"
+oh_my_zsh_root: "{{ ansible_facts['env']['HOME'] }}/.oh-my-zsh"
