@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "dev-setup"
-version = "1.4.0"
+version = "1.5.0"
 description = "My own Ansible collection for development setup."
 authors = ["Federico Jaureguialzo <fedejaure@gmail.com>"]
 readme = "README.md"
@@ -12,36 +12,36 @@ package-mode = false
 "Bug Tracker" = "https://github.com/fedejaure/dev-setup/issues"
 
 [tool.poetry.dependencies]
-python = "<3.12,>=3.11"
-ansible = "^11.6.0"
+python = "<3.14,>=3.13"
+ansible = "^13.2.0"
 
 [tool.poetry.group.dev.dependencies]
-pre-commit = "^4.2.0"
-invoke = "^2.2.0"
+pre-commit = "^4.5.1"
+invoke = "^2.2.1"
 bump2version = "^1.0.1"
 
 [tool.poetry.group.test.dependencies]
-molecule = "^25.5.0"
-molecule-plugins = {extras = ["docker"], version = "^23.7.0"}
+molecule = "^25.12.0"
+molecule-plugins = {extras = ["docker"], version = "^25.8.12"}
 
 [tool.poetry.group.lint.dependencies]
-isort = "^6.0.1"
-black = "^25.1.0"
-ruff = "^0.11.12"
+isort = "^7.0.0"
+black = "^25.12.0"
+ruff = "^0.14.10"
 yamllint = "^1.37.1"
-ansible-lint = {version = "^25.5.0", markers = "platform_system != 'Windows'"}
+ansible-lint = {version = "^25.12.2", markers = "platform_system != 'Windows'"}
 
 [tool.poetry.group.security.dependencies]
-safety = "^3.5.1"
+safety = "^3.7.0"
 
 [tool.poetry.group.typing.dependencies]
-mypy = "^1.16.0"
+mypy = "^1.19.1"
 
 [tool.poetry.group.docs.dependencies]
 mkdocs = "^1.6.1"
-mkdocs-material = "^9.6.14"
+mkdocs-material = "^9.7.1"
 mkdocs-minify-plugin = "^0.8.0"
-termynal = "^0.13.0"
+termynal = "^0.13.1"
 
 [tool.ruff]
 target-version = "py310"
@@ -69,7 +69,7 @@ select = [
   "ISC",  # flake8-implicit-str-concat
   "RUF",  # Ruff-specific rules
 ]
-ignore = ["ANN101", "D203", "D213"]
+ignore = ["D203", "D213"]
 unfixable = [
   "ERA",  # Don't remove commented-out code
 ]

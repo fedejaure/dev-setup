@@ -69,7 +69,7 @@ Below is a list of the key default variables available in `default.macos.config.
         - neovim
         - tmux
         - chezmoi
-        - jesseduffield/lazydocker/lazydocker
+        - lazydocker
         - sshpass
         - htop
         - dust
@@ -78,6 +78,8 @@ Below is a list of the key default variables available in `default.macos.config.
         - fish
         - starship
         - btop
+        - opencode
+        - godot
         ```
 
 - `homebrew_cask_appdir`: Directory where cask applications will be installed.
@@ -278,7 +280,7 @@ a `<target-os>.config.yml` file and setting the overrides in that file. e.g.:
       - neovim
       - tmux
       - chezmoi
-      - "jesseduffield/lazydocker/lazydocker"
+      - lazydocker
       - sshpass
       - htop
       - dust
@@ -287,9 +289,10 @@ a `<target-os>.config.yml` file and setting the overrides in that file. e.g.:
       - fish
       - starship
       - btop
-      - awscli
-      - tfenv
+      - opencode
+      - godot
       - ffmpeg
+      - duckdb
 
     homebrew_cask_apps:
       - firefox
@@ -315,10 +318,10 @@ a `<target-os>.config.yml` file and setting the overrides in that file. e.g.:
       - inkscape
 
     pyenv_python_versions:
-      - 3.10.16
-      - 3.11.11
-      - 3.12.8
-      - 3.13.1
+      - 3.11.14
+      - 3.12.12
+      - 3.13.11
+      - 3.14.2
     ```
 
 !!! tip "Advanced Role Configuration"

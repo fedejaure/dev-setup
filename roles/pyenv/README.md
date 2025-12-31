@@ -16,7 +16,7 @@ This role provides several variables for configuration. Below are the key variab
 - `pyenv_root`: (Default: `"{{ ansible_env.HOME }}/.pyenv"`)
   The directory where pyenv will be installed.
 
-- `pyenv_python_versions`: (Default: `[3.10, 3.11, 3.12, 3.13]`)
+- `pyenv_python_versions`: (Default: `[3.11, 3.12, 3.13, 3.14]`)
   A list of Python versions to be installed by pyenv.
 
 - `pyenv_update`: (Default: `false`)

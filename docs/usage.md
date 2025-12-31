@@ -90,7 +90,7 @@ the differents supported targets.
 
     ```console
     $ poetry install --no-root
-    Using python3.11 (3.11.11)
+    Using python3.14 (3.14.2)
     Creating virtualenv .venv
     Installing dependencies from lock file
 
@@ -105,7 +105,7 @@ the differents supported targets.
 
     ```console
     $ poetry shell
-    Using python3.11 (3.11.11)
+    Using python3.14 (3.14.2)
     Spawning shell within .venv
     (dev-setup)$
     ```

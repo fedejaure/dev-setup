@@ -1,7 +1,7 @@
 ---
 - name: Setup on macOS
   ansible.builtin.include_tasks: macos.yml
-  when: "ansible_os_family == 'Darwin'"
+  when: "ansible_facts['os_family'] == 'Darwin'"
 
 - name: Check if ~/.oh-my-zsh already exists
   ansible.builtin.stat:

@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.5.0] - 2025-12-31
+### Added
+- MacOS Tools/Packages:
+    * opencode.
+    * godot.
+
+### Changed
+- Python default versions instaled with pyenv to (`3.11`, `3.12`, `3.13`, `3.14`).
+- Updated dev dependencies.
+
 ## [1.4.0] - 2025-05-31
 ### Added
 - `uv` via pipx.
@@ -77,7 +87,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - First release.
 
-[Unreleased]: https://github.com/fedejaure/dev-setup/compare/v1.4.0...develop
+[Unreleased]: https://github.com/fedejaure/dev-setup/compare/v1.5.0...develop
+[1.5.0]: https://github.com/fedejaure/dev-setup/compare/v1.4.0...v1.5.0
 [1.4.0]: https://github.com/fedejaure/dev-setup/compare/v1.3.1...v1.4.0
 [1.3.1]: https://github.com/fedejaure/dev-setup/compare/v1.3.0...v1.3.1
 [1.3.0]: https://github.com/fedejaure/dev-setup/compare/v1.2.0...v1.3.0
