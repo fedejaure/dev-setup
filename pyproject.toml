@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "dev-setup"
-version = "1.4.0"
+version = "1.5.0"
 description = "My own Ansible collection for development setup."
 authors = ["Federico Jaureguialzo <fedejaure@gmail.com>"]
 readme = "README.md"
