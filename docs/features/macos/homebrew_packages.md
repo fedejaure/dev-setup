@@ -28,6 +28,7 @@
 - [**Chezmoi**](https://www.chezmoi.io/): A cross-platform tool for managing your dotfiles.
 - [**Lazydocker**](https://github.com/jesseduffield/lazydocker): A simple terminal UI for managing Docker containers and images.
 - [**Bat**](https://github.com/sharkdp/bat): A cat command clone with syntax highlighting and Git integration.
+- [**lstr**](https://github.com/bgreenwell/lstr): A fast, minimalist directory tree viewer with interactive mode and Git integration.
 - [**Htop**](https://htop.dev/): An interactive process viewer for Unix systems.
 - [**Dust**](https://github.com/bootandy/dust): A disk usage tool written in Rust.
 - [**Duf**](https://github.com/muesli/duf): A user-friendly command-line utility to view disk usage information.

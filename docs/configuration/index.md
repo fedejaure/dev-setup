@@ -75,6 +75,7 @@ Below is a list of the key default variables available in `default.macos.config.
         - dust
         - duf
         - bat
+        - lstr
         - fish
         - starship
         - btop
