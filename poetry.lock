@@ -69,15 +69,15 @@ resolvelib = ">=0.8.0,<2.0.0"
 
 [[package]]
 name = "ansible-lint"
-version = "25.12.2"
+version = "26.1.1"
 description = "Checks playbooks for practices and behavior that could potentially be improved"
 optional = false
 python-versions = ">=3.10"
 groups = ["lint"]
 markers = "platform_system != \"Windows\""
 files = [
-    {file = "ansible_lint-25.12.2-py3-none-any.whl", hash = "sha256:cafcd991c9ddfd9a13e5b56e5a4f1d9997973e0c0d6a0f6eb2b148d39f42e2c3"},
-    {file = "ansible_lint-25.12.2.tar.gz", hash = "sha256:d4dbf2905c868d6f7b330941efc586f19a5e2b3b6826fd6a2edf0d5080329e46"},
+    {file = "ansible_lint-26.1.1-py3-none-any.whl", hash = "sha256:1ee6f472f1516fbbc86784f0046a9042cbcded87dba4e31e4611f6b62103f340"},
+    {file = "ansible_lint-26.1.1.tar.gz", hash = "sha256:7415b1b96ad7d7a453eb7e2afc74644e291dbcd8326f230f0216145fdee29a67"},
 ]
 
 [package.dependencies]
@@ -85,19 +85,19 @@ ansible-compat = ">=25.8.2"
 ansible-core = ">=2.16.14"
 black = ">=24.3.0"
 cffi = ">=1.15.1"
-cryptography = ">=38"
+cryptography = ">=37"
 distro = ">=1.9.0"
 filelock = ">=3.8.2"
 jsonschema = ">=4.10.0"
 packaging = ">=22.0"
-pathspec = ">=0.10.3"
+pathspec = ">=1.0.3,<1.1.0"
 pyyaml = {version = ">=6.0.1", markers = "python_version < \"3.14\""}
 referencing = ">=0.36.2"
 ruamel-yaml = ">=0.18.11"
 ruamel-yaml-clib = {version = ">=0.2.12", markers = "python_version < \"3.14\""}
 subprocess-tee = ">=0.4.1"
 wcmatch = {version = ">=8.5.0", markers = "python_version >= \"3.12\""}
-yamllint = ">=1.34.0"
+yamllint = ">=1.38.0"
 
 [[package]]
 name = "anyio"
@@ -2767,4 +2767,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "ruff", "sph
 [metadata]
 lock-version = "2.1"
 python-versions = "<3.14,>=3.13"
-content-hash = "d58fb0b4190720f0837003242d17bd32839739cefb14b4e1ce0f1df345503d2e"
+content-hash = "9d364366097417bab9435b1a46d7a3479df406742c3f516a3cc421163aaa1653"
