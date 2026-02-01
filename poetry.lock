@@ -14,18 +14,18 @@ files = [
 
 [[package]]
 name = "ansible"
-version = "13.2.0"
+version = "13.3.0"
 description = "Radically simple IT automation"
 optional = false
 python-versions = ">=3.12"
 groups = ["main"]
 files = [
-    {file = "ansible-13.2.0-py3-none-any.whl", hash = "sha256:8a7f536542d4b18118200b8eaba40aa62ed990bd0e7b7622368b656b67db056f"},
-    {file = "ansible-13.2.0.tar.gz", hash = "sha256:fac46e202d1020027341659918b39e588dd7c43cef26537d7ca7fe51c324fe31"},
+    {file = "ansible-13.3.0-py3-none-any.whl", hash = "sha256:59638dc893088353254b2e589ac732012a0a005ad29d8d859ffecf52b5c1dc90"},
+    {file = "ansible-13.3.0.tar.gz", hash = "sha256:7e7ed052c8ee7b1449fb285d0e1dac0029f6440c70ce9f473af6c1a31887bb84"},
 ]
 
 [package.dependencies]
-ansible-core = ">=2.20.1,<2.21.0"
+ansible-core = ">=2.20.2,<2.21.0"
 
 [[package]]
 name = "ansible-compat"
@@ -49,14 +49,14 @@ subprocess-tee = ">=0.4.1"
 
 [[package]]
 name = "ansible-core"
-version = "2.20.1"
+version = "2.20.2"
 description = "Radically simple IT automation"
 optional = false
 python-versions = ">=3.12"
 groups = ["main", "lint", "test"]
 files = [
-    {file = "ansible_core-2.20.1-py3-none-any.whl", hash = "sha256:2a66825b4a53f130b62515e7e2a3d811d544b19b6e8a22d9ef88c55896384cb3"},
-    {file = "ansible_core-2.20.1.tar.gz", hash = "sha256:a891e5f90cd46626778f0f3d545ec1115840c9b50e8adf25944c5e1748452106"},
+    {file = "ansible_core-2.20.2-py3-none-any.whl", hash = "sha256:1bbd101e3e3b1ace91d8be123007050f7efd94c4c78bbeb9e45ad1c7016d08ef"},
+    {file = "ansible_core-2.20.2.tar.gz", hash = "sha256:75e19a3ad8cf659579ea182cdf948ee0900d700e564802e92876de53dbd9715d"},
 ]
 markers = {lint = "platform_system != \"Windows\""}
 
@@ -2767,4 +2767,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "ruff", "sph
 [metadata]
 lock-version = "2.1"
 python-versions = "<3.14,>=3.13"
-content-hash = "9d364366097417bab9435b1a46d7a3479df406742c3f516a3cc421163aaa1653"
+content-hash = "3e36941a1b2880bfc1a74330f1551692ffb087d948ee02d48d0b3eecedc27773"
