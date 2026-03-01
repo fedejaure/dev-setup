@@ -14,18 +14,18 @@ files = [
 
 [[package]]
 name = "ansible"
-version = "13.2.0"
+version = "13.4.0"
 description = "Radically simple IT automation"
 optional = false
 python-versions = ">=3.12"
 groups = ["main"]
 files = [
-    {file = "ansible-13.2.0-py3-none-any.whl", hash = "sha256:8a7f536542d4b18118200b8eaba40aa62ed990bd0e7b7622368b656b67db056f"},
-    {file = "ansible-13.2.0.tar.gz", hash = "sha256:fac46e202d1020027341659918b39e588dd7c43cef26537d7ca7fe51c324fe31"},
+    {file = "ansible-13.4.0-py3-none-any.whl", hash = "sha256:8c869fcc07954b53c5b125f1e914957cc7b541a92a7d512496207d80385a78eb"},
+    {file = "ansible-13.4.0.tar.gz", hash = "sha256:6d741511abc1f724443aa16992fb615cc822a22da427ade925ff937ccd691eb1"},
 ]
 
 [package.dependencies]
-ansible-core = ">=2.20.1,<2.21.0"
+ansible-core = ">=2.20.3,<2.21.0"
 
 [[package]]
 name = "ansible-compat"
@@ -49,14 +49,14 @@ subprocess-tee = ">=0.4.1"
 
 [[package]]
 name = "ansible-core"
-version = "2.20.1"
+version = "2.20.3"
 description = "Radically simple IT automation"
 optional = false
 python-versions = ">=3.12"
 groups = ["main", "lint", "test"]
 files = [
-    {file = "ansible_core-2.20.1-py3-none-any.whl", hash = "sha256:2a66825b4a53f130b62515e7e2a3d811d544b19b6e8a22d9ef88c55896384cb3"},
-    {file = "ansible_core-2.20.1.tar.gz", hash = "sha256:a891e5f90cd46626778f0f3d545ec1115840c9b50e8adf25944c5e1748452106"},
+    {file = "ansible_core-2.20.3-py3-none-any.whl", hash = "sha256:7fe2da953192cac5d5eb37bfc984bf9339daa252e0e3d1deb5526eb1f8be9f7f"},
+    {file = "ansible_core-2.20.3.tar.gz", hash = "sha256:38670ab2d2ffd67ee7e9e562f7c94e0927c8b7b4b0eb69233bc008c29e32d591"},
 ]
 markers = {lint = "platform_system != \"Windows\""}
 
@@ -2767,4 +2767,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "ruff", "sph
 [metadata]
 lock-version = "2.1"
 python-versions = "<3.14,>=3.13"
-content-hash = "9d364366097417bab9435b1a46d7a3479df406742c3f516a3cc421163aaa1653"
+content-hash = "268ce488b23129a5b5a60dcfe5b2a9b6c10cbcb3f074621370bcbab239b57a82"
