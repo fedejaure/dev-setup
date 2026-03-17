@@ -1,19 +1,23 @@
-[tool.poetry]
+[project]
 name = "dev-setup"
 version = "1.5.0"
 description = "My own Ansible collection for development setup."
-authors = ["Federico Jaureguialzo <fedejaure@gmail.com>"]
+authors = [
+    {name = "Federico Jaureguialzo", email = "fedejaure@gmail.com"}
+]
 readme = "README.md"
+requires-python = "<3.15,>=3.14"
+dependencies = [
+  "ansible>=13.2.0,<14.0.0",
+]
+
+[project.urls]
 homepage = "https://github.com/fedejaure/dev-setup"
 repository = "https://github.com/fedejaure/dev-setup"
-package-mode = false
-
-[tool.poetry.urls]
 "Bug Tracker" = "https://github.com/fedejaure/dev-setup/issues"
 
-[tool.poetry.dependencies]
-python = "<3.15,>=3.14"
-ansible = "^13.2.0"
+[tool.poetry]
+package-mode = false
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^4.5.1"
