@@ -5,6 +5,7 @@
 - [**Git**](https://git-scm.com/): A distributed version control system to manage source code efficiently.
 - [**GCC**](https://gcc.gnu.org/): A compiler system supporting various programming languages, such as C, C++, and Fortran.
 - [**CMake**](https://cmake.org/): A cross-platform build system that manages the build process across different platforms.
+- [**Godot**](https://godotengine.org/): A free and open-source game engine for creating 2D and 3D games with a scene-driven design philosophy and GDScript programming language.
 
 ## System Utilities
 
@@ -30,13 +31,13 @@
 - [**Bat**](https://github.com/sharkdp/bat): A cat command clone with syntax highlighting and Git integration.
 - [**lstr**](https://github.com/bgreenwell/lstr): A fast, minimalist directory tree viewer with interactive mode and Git integration.
 - [**Htop**](https://htop.dev/): An interactive process viewer for Unix systems.
+- [**btop**](https://github.com/aristocratos/btop): A modern resource monitor with a customizable interface, real-time graphs, and advanced process management capabilities.
 - [**Dust**](https://github.com/bootandy/dust): A disk usage tool written in Rust.
 - [**Duf**](https://github.com/muesli/duf): A user-friendly command-line utility to view disk usage information.
 
-## Shell and Terminal Customization
+## AI and Development Tools
 
-- [**Fish Shell**](https://fishshell.com/): A user-friendly, interactive shell with features like syntax highlighting, autosuggestions, and better scripting.
-- [**Starship**](https://starship.rs/): A cross-shell prompt that is fast and highly customizable.
+- [**OpenCode**](https://opencode.ai/): An AI-powered coding assistant and terminal agent with LSP support, multi-model integration, and interactive development workflows.
 
 !!! note "Customization Options"
     You can customize your installation by adding or removing applications as needed. For more information on how to override default settings, visit our [Work in Progress (WIP) customization guide](#).
