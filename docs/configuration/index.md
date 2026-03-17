@@ -46,8 +46,11 @@ Below is a list of the key default variables available in `default.macos.config.
     !!! info "Default"
 
         ```yaml
-        ["esolitos/ipa"]
+        ["esolitos/ipa", "jesseduffield/lazydocker"]
         ```
+
+    !!! note "About Homebrew Taps"
+        The `jesseduffield/lazydocker` tap is included to provide access to the lazydocker package, which offers a terminal UI for Docker management. This tap maintains the latest version of lazydocker separate from the core Homebrew repository.
 
 - `homebrew_installed_packages`: List of packages to install via Homebrew.
 
@@ -75,6 +78,7 @@ Below is a list of the key default variables available in `default.macos.config.
         - dust
         - duf
         - bat
+        - lstr
         - fish
         - starship
         - btop
@@ -316,6 +320,7 @@ a `<target-os>.config.yml` file and setting the overrides in that file. e.g.:
       - alacritty
       - discord
       - inkscape
+      - steam
 
     pyenv_python_versions:
       - 3.11.14
