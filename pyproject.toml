@@ -33,7 +33,7 @@ isort = "^8.0.1"
 black = "^26.1.0"
 ruff = "^0.15.8"
 yamllint = "^1.38.0"
-ansible-lint = {version = "^26.1.1", markers = "platform_system != 'Windows'"}
+ansible-lint = {version = "^26.4.0", markers = "platform_system != 'Windows'"}
 
 [tool.poetry.group.security.dependencies]
 safety = "^3.7.0"
