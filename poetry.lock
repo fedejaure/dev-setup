@@ -26,18 +26,18 @@ files = [
 
 [[package]]
 name = "ansible"
-version = "13.4.0"
+version = "13.6.0"
 description = "Radically simple IT automation"
 optional = false
 python-versions = ">=3.12"
 groups = ["main"]
 files = [
-    {file = "ansible-13.4.0-py3-none-any.whl", hash = "sha256:8c869fcc07954b53c5b125f1e914957cc7b541a92a7d512496207d80385a78eb"},
-    {file = "ansible-13.4.0.tar.gz", hash = "sha256:6d741511abc1f724443aa16992fb615cc822a22da427ade925ff937ccd691eb1"},
+    {file = "ansible-13.6.0-py3-none-any.whl", hash = "sha256:d011ee5f895ca68b4670e39b910cee447b416a00a3e8d1bd599f4a6dff32ff12"},
+    {file = "ansible-13.6.0.tar.gz", hash = "sha256:5141552c1bd37f56839eb5b11ef0d93e92391295c97947d507b8daf7265b12b8"},
 ]
 
 [package.dependencies]
-ansible-core = ">=2.20.3,<2.21.0"
+ansible-core = ">=2.20.5,<2.21.0"
 
 [[package]]
 name = "ansible-compat"
@@ -61,14 +61,14 @@ subprocess-tee = ">=0.4.1"
 
 [[package]]
 name = "ansible-core"
-version = "2.20.3"
+version = "2.20.5"
 description = "Radically simple IT automation"
 optional = false
 python-versions = ">=3.12"
 groups = ["main", "lint", "test"]
 files = [
-    {file = "ansible_core-2.20.3-py3-none-any.whl", hash = "sha256:7fe2da953192cac5d5eb37bfc984bf9339daa252e0e3d1deb5526eb1f8be9f7f"},
-    {file = "ansible_core-2.20.3.tar.gz", hash = "sha256:38670ab2d2ffd67ee7e9e562f7c94e0927c8b7b4b0eb69233bc008c29e32d591"},
+    {file = "ansible_core-2.20.5-py3-none-any.whl", hash = "sha256:ff6ff15c6a37fda07dc7400207e17e93727b24173ca48c068b3311a50d75ecc3"},
+    {file = "ansible_core-2.20.5.tar.gz", hash = "sha256:82e3049d95e6e02e5d20d4a5a8e10533a55e0cc52e878e4cf77166c45410f16f"},
 ]
 markers = {lint = "platform_system != \"Windows\""}
 
@@ -2756,4 +2756,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "ruff", "sph
 [metadata]
 lock-version = "2.1"
 python-versions = "<3.15,>=3.14"
-content-hash = "7fb3a9ba66398a9294900987bda482b555053ac4a832b7532d6d1b59251e5559"
+content-hash = "bf3c773491153f5de42faf32ca11cbf40c2f36143b097a65ab5ba4d4416642ce"
