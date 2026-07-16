@@ -61,14 +61,14 @@ subprocess-tee = ">=0.4.1"
 
 [[package]]
 name = "ansible-core"
-version = "2.20.6"
+version = "2.20.7"
 description = "Radically simple IT automation"
 optional = false
 python-versions = ">=3.12"
 groups = ["main", "lint", "test"]
 files = [
-    {file = "ansible_core-2.20.6-py3-none-any.whl", hash = "sha256:28f8cb1647f3459ccd38d098a06a33eaf49cbfce649e506ae6d5f1c2ac77dc1d"},
-    {file = "ansible_core-2.20.6.tar.gz", hash = "sha256:3066c430e8cba46777bf736ebcd085c90b0d7664c3fbd8c5b85227f8579cdcbf"},
+    {file = "ansible_core-2.20.7-py3-none-any.whl", hash = "sha256:f4be63a9a8b6bb5f4fc68d41f8582f5b289b1ee1db0600caab8b3a660b9d7ddc"},
+    {file = "ansible_core-2.20.7.tar.gz", hash = "sha256:84d4097a28e816e8bf8066307088f833837db9efdc9dc6716b43253de3b14106"},
 ]
 markers = {lint = "platform_system != \"Windows\""}
 
@@ -1114,7 +1114,7 @@ version = "3.10.2"
 description = "Python implementation of John Gruber's Markdown."
 optional = false
 python-versions = ">=3.10"
-groups = ["dev", "docs"]
+groups = ["docs"]
 files = [
     {file = "markdown-3.10.2-py3-none-any.whl", hash = "sha256:e91464b71ae3ee7afd3017d9f358ef0baf158fd9a298db92f1d4761133824c36"},
     {file = "markdown-3.10.2.tar.gz", hash = "sha256:994d51325d25ad8aa7ce4ebaec003febcce822c3f8c911e3b17c52f7f589f950"},
@@ -1849,7 +1849,7 @@ version = "10.21.3"
 description = "Extension pack for Python Markdown."
 optional = false
 python-versions = ">=3.9"
-groups = ["dev", "docs"]
+groups = ["docs"]
 files = [
     {file = "pymdown_extensions-10.21.3-py3-none-any.whl", hash = "sha256:d7a5d08014fc571e80ca21dd6f854e31f94c489800350564d55d15b3c41e76b6"},
     {file = "pymdown_extensions-10.21.3.tar.gz", hash = "sha256:72cfcf55f07aea0d4af2c4f11dd4e52466ddfb1bb819673146398e0bd3a77354"},
