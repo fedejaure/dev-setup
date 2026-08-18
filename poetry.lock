@@ -1571,14 +1571,14 @@ wcmatch = ">=8.1.2"
 
 [[package]]
 name = "molecule-plugins"
-version = "25.8.12"
+version = "26.7.15"
 description = "Molecule Plugins"
 optional = false
 python-versions = ">=3.10"
 groups = ["test"]
 files = [
-    {file = "molecule_plugins-25.8.12-py3-none-any.whl", hash = "sha256:c5b8ceb209a5ff87326631d60408f8d08b9431b2e339dad4c620130b50279ce0"},
-    {file = "molecule_plugins-25.8.12.tar.gz", hash = "sha256:75f32763e90275bfc24bcc0d27b9bb22ac973658bf902b2e3e8af8e2a1c32083"},
+    {file = "molecule_plugins-26.7.15-py3-none-any.whl", hash = "sha256:191dfa7fd965c637e3b61d0929f2fb741f0df1181a250df62eca3657b1182794"},
+    {file = "molecule_plugins-26.7.15.tar.gz", hash = "sha256:df4cab8d9e13ed448fc33d72af1fbae54883e9255a42c021ae7e875dfd3374c1"},
 ]
 
 [package.dependencies]
@@ -1592,7 +1592,6 @@ docker = ["docker (>=4.3.1)", "requests", "selinux ; sys_platform == \"linux\"",
 gce = ["google-auth (>=2.28.2)", "requests (>=2.31.0)"]
 openstack = ["openstacksdk (>=1.1.0)"]
 selinux = ["selinux ; sys_platform == \"linux\"", "selinux ; sys_platform == \"linux2\""]
-test = ["molecule[test] (>=25.1.0)", "pytest-helpers-namespace (>=2019.1.8)"]
 vagrant = ["python-vagrant"]
 
 [[package]]
@@ -2950,4 +2949,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "ruff", "sph
 [metadata]
 lock-version = "2.1"
 python-versions = "<3.15,>=3.14"
-content-hash = "4fcaa7458eeaccfcce6e0bc1a46d979961aef70fa51bbd3e482660fb25fd9cf7"
+content-hash = "ed9c9d111caad1818f5e9eabb34ff80f0f8656c82f5b13fed527db7f51b456af"
