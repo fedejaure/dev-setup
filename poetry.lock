@@ -61,14 +61,14 @@ subprocess-tee = ">=0.4.1"
 
 [[package]]
 name = "ansible-core"
-version = "2.20.6"
+version = "2.20.8"
 description = "Radically simple IT automation"
 optional = false
 python-versions = ">=3.12"
 groups = ["main", "lint", "test"]
 files = [
-    {file = "ansible_core-2.20.6-py3-none-any.whl", hash = "sha256:28f8cb1647f3459ccd38d098a06a33eaf49cbfce649e506ae6d5f1c2ac77dc1d"},
-    {file = "ansible_core-2.20.6.tar.gz", hash = "sha256:3066c430e8cba46777bf736ebcd085c90b0d7664c3fbd8c5b85227f8579cdcbf"},
+    {file = "ansible_core-2.20.8-py3-none-any.whl", hash = "sha256:fc6b18073900b6c886124faf5298ae0fc5d148e58635a04c9b358048981136d8"},
+    {file = "ansible_core-2.20.8.tar.gz", hash = "sha256:66e0e91ee43d98b3968a612c42c8e6e3d1ea43be501c4f8f6fc8c75b35892cdf"},
 ]
 markers = {lint = "platform_system != \"Windows\""}
 
