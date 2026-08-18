@@ -81,20 +81,20 @@ resolvelib = ">=0.8.0,<2.0.0"
 
 [[package]]
 name = "ansible-lint"
-version = "26.4.0"
+version = "26.8.0"
 description = "Checks playbooks for practices and behavior that could potentially be improved"
 optional = false
 python-versions = ">=3.10"
 groups = ["lint"]
 markers = "platform_system != \"Windows\""
 files = [
-    {file = "ansible_lint-26.4.0-py3-none-any.whl", hash = "sha256:f33c4823544a5a8e5e36614866e111d1a929eeffee5e84481ede10d524a9d6d6"},
-    {file = "ansible_lint-26.4.0.tar.gz", hash = "sha256:29e0438f8af685a4fec96f9ea3404a3beb50d2911bc8df43f283256954ceea5b"},
+    {file = "ansible_lint-26.8.0-py3-none-any.whl", hash = "sha256:94e58501cc7fafaa505dd9daea3bddb4affa6e8efe8217323c06d7194a312f57"},
+    {file = "ansible_lint-26.8.0.tar.gz", hash = "sha256:65cb5efab1ffaedbe23af0fff241a8834294f8ac80a8c838c2143024afc103a4"},
 ]
 
 [package.dependencies]
 ansible-compat = ">=26.3.0"
-ansible-core = ">=2.16.14"
+ansible-core = ">=2.16.19,<2.17.dev0 || >=2.18.dev0"
 black = ">=24.3.0"
 cffi = ">=1.15.1"
 cryptography = ">=37"
@@ -102,7 +102,7 @@ distro = ">=1.9.0"
 filelock = ">=3.8.2"
 jsonschema = ">=4.10.0"
 packaging = ">=22.0"
-pathspec = ">=1.0.3,<1.1.0"
+pathspec = ">=1.0.3,<1.2.0"
 pyyaml = {version = ">=6.0.1", markers = "python_version >= \"3.14\""}
 referencing = ">=0.36.2"
 ruamel-yaml = ">=0.18.11"
@@ -2884,4 +2884,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "ruff", "sph
 [metadata]
 lock-version = "2.1"
 python-versions = "<3.15,>=3.14"
-content-hash = "e704bed6878703620cb31cc4c2020d6ac9a5b2ec1e5f4e9ffd9caaee74cbd9a2"
+content-hash = "2ab87953e3e2066e04532575581fc980925a6c1515aca7d721c231ecc8a01354"
