@@ -1,3 +1,5 @@
 ---
 - name: Import macosx playbook
   ansible.builtin.import_playbook: macos.yml
+- name: Import ubuntu playbook
+  ansible.builtin.import_playbook: ubuntu.yml
