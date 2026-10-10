@@ -1,0 +1,65 @@
+---
+- name: Ubuntu Playbook
+  hosts: ubuntu
+
+  vars_files:
+    - ../default.ubuntu.config.yml
+
+  pre_tasks:
+    - name: Include config override file, if it exists
+      ansible.builtin.include_vars: "{{ item }}"
+      with_fileglob:
+        - ../ubuntu.config.yml
+      tags: ['always']
+
+    - name: Update apt cache if needed
+      ansible.builtin.apt:
+        update_cache: true
+        cache_valid_time: 86400
+      tags: [init]
+      become: true
+
+    - name: Upgrade the OS
+      ansible.builtin.apt:
+        upgrade: safe
+      tags: [init]
+      become: true
+
+    - name: Update all packages to their latest version
+      ansible.builtin.apt:
+        name: "*"
+        state: latest  # noqa package-latest
+      tags: [init]
+      become: true
+
+    - name: Remove dependencies that are no longer required and purge their configuration files
+      ansible.builtin.apt:
+        autoremove: yes
+        purge: true
+      tags: [init]
+      become: true
+
+    - name: Run the equivalent of "apt-get clean" as a separate step
+      ansible.builtin.apt:
+        clean: yes
+      tags: [init]
+      become: true
+
+  tasks:
+
+    - name: Install APT packages
+      ansible.builtin.apt:
+        name: "{{ item.name | default(item) }}"
+        state: present
+      become: yes
+      tags: [apt]
+      loop: "{{ apt_installed_packages }}"
+
+    - name: Install Applications from the App Center
+      community.general.snap:
+        name: "{{ item.name | default(item) }}"
+        classic: "{{ item.classic | default(false) }}"
+        state: present
+      become: yes
+      tags: [snap]
+      loop: "{{ snap_installed_apps }}"
